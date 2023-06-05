@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fashion</title>
+    <!-- owl corusel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- font awesome link -->
     <link
       rel="stylesheet"
@@ -16,12 +31,12 @@
     <!-- scroll reveal library -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- bootstrap link -->
-    <!-- <link
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
-    /> -->
+    />
     <link rel="stylesheet" href="./assets/scss/main.css" />
   </head>
   <body>
@@ -184,13 +199,62 @@
     <!-- banner end -->
     <section id="products">
       <div class="container">
-        
+        <div class="products">
+          <h3>Shop by categories</h3>
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="./assets/images/7802636800_2_1_1.jpg" alt="" />
+              <h4>Dress</h4>
+            </div>
+            <div class="item">
+              <img src="./assets/images/1331210808_2_1_1.jpg" alt="" />
+              <h4>Shoes</h4>
+            </div>
+            <div class="item">
+              <img src="./assets/images/1971096620_1_1_1.jpg" alt="" />
+              <h4>Skirts</h4>
+            </div>
+            <div class="item">
+              <img src="./assets/images/8197264406_1_1_1.jpg" alt="" />
+              <h4>Jeans</h4>
+            </div>
+            <div class="item">
+              <img src="./assets/images/5770036052_1_1_1.jpg" alt="" />
+              <h4>Shirts</h4>
+            </div>
+            <div class="item">
+              <img src="./assets/images/0653205630_1_1_1.jpg" alt="" />
+              <h4>Accessory</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <script src="./assets/js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: false,
+        nav: true,
+        responsive: { 0: { items: 1 }, 600: { items: 3 }, 1000: { items: 5 } },
+      });
+    </script>
     <script>
       ScrollReveal().reveal(".headline");
     </script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

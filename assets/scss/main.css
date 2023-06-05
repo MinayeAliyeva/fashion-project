@@ -242,4 +242,43 @@ header .row .item-right a:hover {
 #banner .banner h4 {
   color: white;
   letter-spacing: 12px;
+}
+
+#products {
+  height: 100vh;
+}
+#products .products {
+  padding: 50px 0;
+}
+#products .products .owl-theme .item {
+  overflow: hidden;
+}
+#products .products .owl-theme .item:hover img {
+  transform: scale(1.1);
+}
+#products .products .owl-theme .item:hover h4 {
+  opacity: 1;
+}
+#products .products .owl-theme .item img {
+  transition: 0.4s;
+}
+#products .products .owl-theme .item h4 {
+  position: absolute;
+  top: 0;
+  font-weight: 300;
+  opacity: 0;
+  transition: 0.4s;
+  padding: 7px;
+  font-size: 19px;
+  background-color: rgba(0, 0, 0, 0.342);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#products .products h3 {
+  font-weight: 200;
+  letter-spacing: 10px;
 }/*# sourceMappingURL=main.css.map */
