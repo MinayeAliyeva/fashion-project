@@ -39,13 +39,28 @@ header .row {
   flex-wrap: wrap;
   align-items: center;
 }
+header .row .fa-bars {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  header .row .fa-bars {
+    display: block;
+  }
+}
 @media only screen and (max-width: 992px) {
   header .row {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 header .row .item-left {
   flex: 0 0 17%;
+}
+@media only screen and (max-width: 992px) {
+  header .row .item-left .logo {
+    flex: none;
+  }
 }
 header .row .item-left .logo a {
   font-size: 30px;
@@ -55,8 +70,19 @@ header .row .item-left .logo a {
 header .row .item-center {
   flex: 0 0 66%;
 }
+@media only screen and (max-width: 992px) {
+  header .row .item-center {
+    display: none;
+  }
+}
 header .row .item-center .menu ul {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 992px) {
+  header .row .item-center .menu ul {
+    display: none;
+    width: 0;
+  }
 }
 header .row .item-center .menu ul .menu-item-has-childeren .sub-menu.mega-menu {
   overflow: hidden;
@@ -154,6 +180,12 @@ header .row .item-right {
   flex: 0 0 17%;
   display: flex;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 992px) {
+  header .row .item-right {
+    flex: 0;
+    display: none;
+  }
 }
 header .row .item-right a {
   font-size: 16px;

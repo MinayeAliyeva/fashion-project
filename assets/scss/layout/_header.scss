@@ -8,12 +8,25 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    @media only screen and (max-width:992px){
-      flex-direction: column;
+    .fa-bars {
+      display: none;
+      @media only screen and (max-width: 992px) {
+        display: block;
+      }
+    }
+    @media only screen and (max-width: 992px) {
+      // flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .item-left {
       flex: 0 0 17%;
       .logo {
+        @media only screen and (max-width: 992px) {
+          // flex: content;
+          flex: none;
+        }
         a {
           font-size: 30px;
           font-weight: 700;
@@ -23,8 +36,15 @@ header {
     }
     .item-center {
       flex: 0 0 66%;
+      @media only screen and (max-width: 992px) {
+        display: none;
+      }
       .menu {
         ul {
+          @media only screen and (max-width: 992px) {
+            display: none;
+            width: 0;
+          }
           margin-bottom: 0;
           .menu-item-has-childeren {
             .sub-menu.mega-menu {
@@ -130,6 +150,10 @@ header {
       flex: 0 0 17%;
       display: flex;
       justify-content: flex-end;
+      @media only screen and (max-width: 992px) {
+        flex: 0;
+        display: none;
+      }
       a {
         font-size: 16px;
         color: #555555;
