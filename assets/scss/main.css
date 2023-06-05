@@ -19,7 +19,7 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 body {
@@ -31,7 +31,6 @@ header {
   position: fixed;
   display: block;
   width: 100%;
-  position: relative;
   z-index: 99;
   padding: 15px;
 }
@@ -39,6 +38,9 @@ header .row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+header .row .fa-xmark {
+  width: 0;
 }
 header .row .fa-bars {
   display: none;
@@ -74,17 +76,40 @@ header .row .item-center {
 @media only screen and (max-width: 992px) {
   header .row .item-center {
     flex: unset;
-    display: none !important;
   }
 }
 @media only screen and (max-width: 992px) {
   header .row .item-center .menu {
     display: none;
-    width: 0;
   }
+}
+header .row .item-center .menu.show {
+  display: block;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 97px;
 }
 header .row .item-center .menu ul {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 992px) {
+  header .row .item-center .menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 600px;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.4549019608);
+  }
+  header .row .item-center .menu ul li a {
+    color: white !important;
+  }
 }
 header .row .item-center .menu ul .menu-item-has-childeren .sub-menu.mega-menu {
   overflow: hidden;
@@ -200,26 +225,6 @@ header .row .item-right a:hover {
   color: rgb(146, 164, 168);
 }
 
-.menu-container {
-  width: 300px;
-  display: none;
-}
-.menu-container.show {
-  display: block;
-}
-.menu-container .menu ul {
-  margin: 0;
-}
-.menu-container .menu ul .dropdown {
-  margin: 0;
-}
-.menu-container .menu ul .dropdown button {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: black;
-}
-
 #banner {
   height: 700px;
   width: 100%;
@@ -229,7 +234,7 @@ header .row .item-right a:hover {
   background-position: center;
 }
 #banner .banner {
-  height: 100%;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;

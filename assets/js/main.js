@@ -1,5 +1,5 @@
 let meniIcon = document.querySelector("#menuIcon");
-let nav = document.querySelector(".menu-container");
+let nav = document.querySelector(".menu");
 console.log(nav);
 meniIcon.addEventListener("click", () => {
     nav.classList.toggle("show")
