@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,4 +6,65 @@
   list-style: none !important;
   text-decoration: none !important;
   outline: none;
+}
+
+body {
+  line-height: 1.5;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  padding: 15px;
+}
+header .row {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+}
+header .row .item-left {
+  flex: 0 0 17%;
+}
+header .row .item-left .logo a {
+  font-size: 30px;
+}
+header .row .item-center {
+  flex: 0 0 66%;
+}
+header .row .item-center .menu ul {
+  margin-bottom: 0;
+}
+header .row .item-center .menu ul li {
+  display: inline-block;
+  line-height: 50px;
+  margin-left: 25px;
+}
+header .row .item-right {
+  flex: 0 0 17%;
+}
+
+#banner {
+  background-color: red;
+  height: 700px;
+  width: 100%;
+  display: block;
+  background-image: url(/assets/images/2779446942_9_1_1.jpg);
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=main.css.map */

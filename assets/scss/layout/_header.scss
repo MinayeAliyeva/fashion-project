@@ -1,0 +1,36 @@
+header {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  padding: 15px;
+  .row {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    .item-left {
+      flex: 0 0 17%;
+      .logo{
+        a{
+            font-size: 30px;
+        }
+      }
+    }
+    .item-center {
+      flex: 0 0 66%;
+      .menu {
+        ul {
+          margin-bottom: 0;
+          li {
+            display: inline-block;
+            line-height: 50px;
+            margin-left: 25px;
+          }
+        }
+      }
+    }
+    .item-right {
+      flex: 0 0 17%;
+    }
+  }
+}
