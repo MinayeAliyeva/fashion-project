@@ -72,17 +72,17 @@ header .row .item-center {
 }
 @media only screen and (max-width: 992px) {
   header .row .item-center {
+    flex: unset;
+  }
+}
+@media only screen and (max-width: 992px) {
+  header .row .item-center .menu {
     display: none;
+    width: 0;
   }
 }
 header .row .item-center .menu ul {
   margin-bottom: 0;
-}
-@media only screen and (max-width: 992px) {
-  header .row .item-center .menu ul {
-    display: none;
-    width: 0;
-  }
 }
 header .row .item-center .menu ul .menu-item-has-childeren .sub-menu.mega-menu {
   overflow: hidden;

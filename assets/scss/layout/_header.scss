@@ -37,14 +37,14 @@ header {
     .item-center {
       flex: 0 0 66%;
       @media only screen and (max-width: 992px) {
-        display: none;
+        flex: unset;
       }
       .menu {
+        @media only screen and (max-width: 992px) {
+          display: none;
+          width: 0;
+        }
         ul {
-          @media only screen and (max-width: 992px) {
-            display: none;
-            width: 0;
-          }
           margin-bottom: 0;
           .menu-item-has-childeren {
             .sub-menu.mega-menu {
