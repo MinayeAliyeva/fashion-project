@@ -1,7 +1,8 @@
 let meniIcon = document.querySelector("#menuIcon");
-let nav = document.querySelector(".menu");
+let nav = document.querySelector(".menu-container");
 console.log(nav);
 meniIcon.addEventListener("click", () => {
+    nav.classList.toggle("show")
   meniIcon.classList.contains("fa-bars")
     ? (meniIcon.classList = "fa-solid fa-xmark")
     : (meniIcon.classList = "fa-solid fa-bars");
