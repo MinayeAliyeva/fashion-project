@@ -30,7 +30,7 @@ let passwordInput2 = document.querySelector(".passwordInput2");
 const PRODUCTS_URL = "http://localhost:3000/products";
 let arrCopy = [];
 let filteredData = [];
-let num = 4;
+let num = 7;
 let mainRow2 = document.querySelector(".mainRow2");
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);

@@ -48,10 +48,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  a{
+  a {
     color: black;
   }
-  
+
   .addProductBtn {
     padding: 5px 7px;
     background-color: rgb(85, 83, 83);
@@ -77,6 +77,9 @@
     display: flex;
     column-gap: 20px;
     .card {
+      &:hover .img img {
+        transform: scale(1.1);
+      }
       span {
         font-size: 11px;
       }
@@ -84,7 +87,7 @@
         display: flex;
         column-gap: 16px;
         align-items: center;
-        a{
+        a {
           color: black;
         }
         i {
@@ -93,9 +96,11 @@
       }
       .img {
         width: 100px;
+        overflow: hidden;
         img {
           width: 100%;
-          // border-radius: 50%;
+          transition: 0.4s;
+          box-shadow: 5px -20px 18px 20px rgb(74 91 95);
         }
       }
     }

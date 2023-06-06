@@ -1,6 +1,7 @@
 #best-selling-products {
-  height: 100vh;
+  // height: 100vh;
   .best-selling-products {
+    padding: 50px;
     h3 {
       font-weight: 400;
       font-size: 34px;
@@ -17,7 +18,8 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        row-gap: 16px;
+        row-gap: 26px;
+        column-gap: 25px;
         padding: 10px;
         i {
           padding: 8px;

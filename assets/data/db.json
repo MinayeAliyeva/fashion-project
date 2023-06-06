@@ -49,28 +49,10 @@
       "id": 16
     },
     {
-      "productName": "Avye Holmes",
-      "productprice": "534",
-      "img": "./assets/products-image/2502110002_6_1_1.jpg",
-      "id": 17
-    },
-    {
       "productName": "Perry Vasquez",
       "productprice": "567",
       "img": "./assets/products-image/2756378620_6_1_1.jpg",
       "id": 18
-    },
-    {
-      "productName": "Kay Delgado",
-      "productprice": "545",
-      "img": "./assets/products-image/3312586622_6_1_1.jpg",
-      "id": 19
-    },
-    {
-      "productName": "Jared Flynn",
-      "productprice": "842",
-      "img": "./assets/products-image/3627710513_6_1_1.jpg",
-      "id": 20
     }
   ],
   "users": [

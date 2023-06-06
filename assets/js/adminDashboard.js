@@ -6,7 +6,7 @@ addProductBtn.addEventListener("click", () => {
 let searchInput = document.querySelector(".searchInput");
 let arrCopy = [];
 let filteredData = [];
-let num = 8;
+let num = 10;
 let mainRow = document.querySelector(".mainRow");
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);
