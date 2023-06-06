@@ -192,8 +192,6 @@
     <!-- banner start -->
     <section id="banner">
       <div class="container">
-        <!-- // -->
-
         <div class="banner">
           <div class="signup-form">
             <div class="form">
@@ -202,10 +200,10 @@
                 <h1>Register Form</h1>
               </div>
               <form action="">
-                <div class="row">
+                <!-- <div class="row"> -->
                   <input type="text" placeholder="First name" />
                   <!-- <input type="text" placeholder="Last name" /> -->
-                </div>
+                <!-- </div> -->
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <input type="password" placeholder="Confirm password" />
@@ -226,7 +224,6 @@
               </form>
             </div>
           </div>
-          <!-- <h4 class="headline">New fashion collection</h4> -->
         </div>
       </div>
     </section>
@@ -323,7 +320,7 @@
         var popup = document.querySelector(".signup-form");
         popup.classList.toggle("active");
       }
-      function loginToogle(){
+      function loginToogle() {
         var container = document.querySelector(".banner");
         container.classList.toggle("active");
         var popup = document.querySelector(".login-form");
