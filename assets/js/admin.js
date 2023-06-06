@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
   let data = await res.data;
   data.forEach((obj) => {
     if (obj.userName == userName.value && obj.password == password.value) {
-      window.location = "home.html";
+      window.location = "adminDashboard.html";
     }
   });
 });

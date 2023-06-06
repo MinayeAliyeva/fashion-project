@@ -374,4 +374,91 @@ body #form button {
   background-color: rgb(41, 57, 194);
   border: none;
   border-radius: 4px;
+}
+
+#body {
+  background-color: #dfe9f5;
+}
+
+#nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background: #fff;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+#nav:hover {
+  width: 280px;
+}
+#nav .logout {
+  position: absolute;
+  bottom: 0;
+}
+#nav a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  width: 300px;
+  padding: 10px;
+  display: table;
+}
+#nav a:hover {
+  background: #eee;
+}
+#nav a .fa-solid {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+#nav a .nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 14px;
+}
+
+#admin-section {
+  margin-top: 80px;
+  margin-left: 300px;
+  row-gap: 27px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#admin-section .loadMore {
+  background-color: transparent;
+}
+#admin-section .row {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#admin-section .row .card span {
+  font-size: 11px;
+}
+#admin-section .row .card .img {
+  width: 100px;
+}
+#admin-section .row .card .img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#users-section {
+  margin-top: 100px;
+  margin-left: 380px;
+}
+#users-section .card .img {
+  overflow: hidden;
+}
+#users-section .card .img img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
