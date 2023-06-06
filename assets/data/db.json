@@ -7,9 +7,16 @@
   ],
   "products": [
     {
-      "productName": "Shoses",
-      "productprice": 124,
-      "id": 1
+      "productName": "Dexter Bowman",
+      "productprice": "246",
+      "img": "./assets/products-image/4786296805_6_1_1.jpg",
+      "id": 6
+    },
+    {
+      "productName": "Yoshio Patterson",
+      "productprice": "904",
+      "img": "./assets/products-image/2756378620_6_1_1.jpg",
+      "id": 7
     }
   ],
   "users": [

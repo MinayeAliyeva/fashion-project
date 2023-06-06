@@ -8,6 +8,7 @@ body {
     .input-control {
       display: flex;
       flex-direction: column;
+
       &:focus {
         outline: 0;
       }

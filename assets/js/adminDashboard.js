@@ -22,7 +22,7 @@ async function fillProducts() {
     <div class="col col-lg-3">
           <div class="card">
             <div class="img">
-              <img src="./assets/products-image/2337110001_6_1_1.jpg" alt="" />
+              <img src="${obj.img}" alt="" />
               <div class="text-side">
                 <span>${obj.productName}</span>
                 <span>Price:${obj.productprice}</span>
@@ -34,3 +34,4 @@ async function fillProducts() {
   });
 }
 fillProducts();
+
