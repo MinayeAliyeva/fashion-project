@@ -11,5 +11,13 @@
       "productprice": 124,
       "id": 1
     }
+  ],
+  "users": [
+    {
+      "name": "Emin",
+      "email": "emin@gmail.com",
+      "password": "122343",
+      "isSignin": "false"
+    }
   ]
 }
