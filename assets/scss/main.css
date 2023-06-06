@@ -463,6 +463,18 @@ body #form button {
 #admin-section .row .card span {
   font-size: 11px;
 }
+#admin-section .row .card .actions {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  align-items: center;
+}
+#admin-section .row .card .actions a {
+  color: black;
+}
+#admin-section .row .card .actions i {
+  font-size: 12px;
+}
 #admin-section .row .card .img {
   width: 100px;
 }

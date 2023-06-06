@@ -48,9 +48,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  .addProductBtn{
+  .addProductBtn {
     padding: 5px 7px;
-    background-color:  rgb(85, 83, 83);
+    background-color: rgb(85, 83, 83);
     color: white;
     border-radius: 5px;
     outline: none;
@@ -75,6 +75,17 @@
     .card {
       span {
         font-size: 11px;
+      }
+      .actions {
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+        a{
+          color: black;
+        }
+        i {
+          font-size: 12px;
+        }
       }
       .img {
         width: 100px;

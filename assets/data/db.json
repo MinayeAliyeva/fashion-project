@@ -7,33 +7,9 @@
   ],
   "products": [
     {
-      "productName": "Dexter Bowman",
-      "productprice": "246",
-      "img": "./assets/products-image/4786296805_6_1_1.jpg",
-      "id": 6
-    },
-    {
-      "productName": "Yoshio Patterson",
-      "productprice": "904",
-      "img": "./assets/products-image/2756378620_6_1_1.jpg",
-      "id": 7
-    },
-    {
-      "productName": "Jared Rosario",
-      "productprice": "43",
-      "img": "./assets/products-image/9878069251_6_1_1.jpg",
-      "id": 8
-    },
-    {
-      "productName": "Laith Rios",
-      "productprice": "558",
-      "img": "./assets/products-image/2337110001_6_1_1.jpg",
-      "id": 9
-    },
-    {
       "productName": "Germaine Joyce",
-      "productprice": "371",
-      "img": "./assets/products-image/3312586622_6_1_1.jpg",
+      "productprice": "379",
+      "img": "./assets/products-image/9878069251_6_1_1.jpg",
       "id": 10
     },
     {

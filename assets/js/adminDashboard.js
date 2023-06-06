@@ -19,18 +19,36 @@ async function fillProducts() {
   filteredData.forEach((obj) => {
     mainRow.innerHTML += `
     <div class="col col-lg-3">
-          <div class="card">
-            <div class="img">
-              <img src="${obj.img}" alt="" />
-              <div class="text-side">
-                <span>${obj.productName}</span>
-                <span>Price:${obj.productprice}</span>
-             
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="card">
+  <div class="img">
+    <img src="${obj.img}" alt="" />
+    <div class="text-side">
+      <span>${obj.productName}</span>
+      <span>Price:${obj.productprice}</span>
+    </div>
+  </div>
+  <div class="actions">
+    <i class="fa-solid fa-trash" onclick=delFun(${obj.id})></i>
+ <a href="add-edit-products-form.html?id=${obj.id}">   <i class="fa-solid fa-pen" ></i></a>
+    <i class="fa-solid fa-eye"></i>
+  </div>
+</div>
+</div>
+
 `;
   });
 }
 fillProducts();
+
+//delete
+console.log(PRODUCTS_URL);
+async function delFun(id) {
+  console.log(id);
+  await axios.delete(`${PRODUCTS_URL}/${id}`);
+  filteredData = arrCopy
+    .filter((obj) => {
+      obj.id != id;
+    })
+    .slice(0, num);
+}
+
