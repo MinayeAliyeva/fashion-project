@@ -48,6 +48,14 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  .addProductBtn{
+    padding: 5px 7px;
+    background-color:  rgb(85, 83, 83);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
   .searchInput {
     margin-left: 9px;
     width: 100px;

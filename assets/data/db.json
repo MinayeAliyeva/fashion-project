@@ -4,5 +4,12 @@
       "userName": "Minaya",
       "password": "Minaya1234"
     }
+  ],
+  "products": [
+    {
+      "productName": "Shoses",
+      "productprice": 124,
+      "id": 1
+    }
   ]
 }

@@ -46,7 +46,7 @@
         <div class="row main-row">
           <div class="header-item item-left">
             <div class="logo">
-              <a href="#">Shilly</a>
+              <a onclick="signupToogle()" href="#">Shilly</a>
             </div>
           </div>
           <!-- menu start here -->
@@ -160,8 +160,8 @@
                   <a href="">Pages <i class="fa-solid fa-angle-down"></i></a>
                   <div class="sub-menu">
                     <ul>
-                      <li><a href="">Login Page</a></li>
-                      <li><a href=""> Register Page</a></li>
+                      <li onclick="loginToogle()">Login Page</li>
+                      <li onclick="signupToogle()">Register Page</li>
                     </ul>
                   </div>
                 </li>
@@ -187,12 +187,46 @@
         </div>
       </div>
     </header>
+
     <!-- header end -->
     <!-- banner start -->
     <section id="banner">
       <div class="container">
+        <!-- // -->
+
         <div class="banner">
-          <h4 class="headline">New fashion collection</h4>
+          <div class="signup-form">
+            <div class="form">
+              <div class="close" onclick="signupToogle()">&times;</div>
+              <div class="text">
+                <h1>Register Form</h1>
+              </div>
+              <form action="">
+                <div class="row">
+                  <input type="text" placeholder="First name" />
+                  <!-- <input type="text" placeholder="Last name" /> -->
+                </div>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Confirm password" />
+                <input type="submit" value="Register" />
+              </form>
+            </div>
+          </div>
+          <div class="login-form">
+            <div class="form">
+              <div class="close" onclick="loginToogle()">&times;</div>
+              <div class="text">
+                <h1>Login Form</h1>
+              </div>
+              <form action="">
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <input type="submit" value="Login" />
+              </form>
+            </div>
+          </div>
+          <!-- <h4 class="headline">New fashion collection</h4> -->
         </div>
       </div>
     </section>
@@ -230,6 +264,7 @@
         </div>
       </div>
     </section>
+    <!-- best-selling-products section  -->
     <section id="best-selling-products">
       <div class="container">
         <div class="best-selling-products">
@@ -245,9 +280,7 @@
                   <i class="fa-regular fa-heart"></i>
                   <i class="fa-solid fa-eye"></i>
                 </div>
-                <div class="actions2">
-                  add basket
-                </div>
+                <div class="actions2">add basket</div>
                 <div class="text-side">
                   <h5>LINEN BLEND CROPPED BLAZER</h5>
                   <i><span> 1299 TL</span></i>
@@ -282,6 +315,20 @@
     </script>
     <script>
       ScrollReveal().reveal(".headline");
+    </script>
+    <script>
+      function signupToogle() {
+        var container = document.querySelector(".banner");
+        container.classList.toggle("active");
+        var popup = document.querySelector(".signup-form");
+        popup.classList.toggle("active");
+      }
+      function loginToogle(){
+        var container = document.querySelector(".banner");
+        container.classList.toggle("active");
+        var popup = document.querySelector(".login-form");
+        popup.classList.toggle("active");
+      }
     </script>
     <script src="./assets/js/main.js"></script>
   </body>

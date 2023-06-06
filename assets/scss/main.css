@@ -227,7 +227,6 @@ header .row .item-right a:hover {
 
 #banner {
   height: 700px;
-  width: 100%;
   display: block;
   background-image: url(/assets/images/2779446942_9_1_1.jpg);
   background-size: cover;
@@ -239,9 +238,54 @@ header .row .item-right a:hover {
   align-items: center;
   justify-content: center;
 }
-#banner .banner h4 {
-  color: white;
-  letter-spacing: 12px;
+#banner .banner .signup-form, #banner .banner .login-form {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+}
+#banner .banner .signup-form.active, #banner .banner .login-form.active {
+  top: 50%;
+  transition: 0.5s;
+  opacity: 1;
+}
+#banner .banner .signup-form .form, #banner .banner .login-form .form {
+  padding: 0 50px;
+}
+#banner .banner .signup-form .form .row, #banner .banner .login-form .form .row {
+  display: flex;
+  justify-content: space-between;
+}
+#banner .banner .signup-form .form .row input, #banner .banner .login-form .form .row input {
+  margin-bottom: 0;
+}
+#banner .banner .signup-form .form .row input:last-child, #banner .banner .login-form .form .row input:last-child {
+  margin-left: 10px;
+}
+#banner .banner .signup-form .form form, #banner .banner .login-form .form form {
+  display: block;
+  margin: auto;
+}
+#banner .banner .signup-form .form form input, #banner .banner .login-form .form form input {
+  width: 100%;
+  display: block;
+  border: 1px solid #000;
+  padding: 10px 13px;
+  margin: 20px auto;
+  outline: none;
+}
+#banner .banner .signup-form .form .text h1, #banner .banner .login-form .form .text h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+#banner .banner .signup-form .form .close, #banner .banner .login-form .form .close {
+  text-align: right;
+  cursor: pointer;
 }
 
 #products .products {
@@ -427,6 +471,14 @@ body #form button {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+#admin-section .addProductBtn {
+  padding: 5px 7px;
+  background-color: rgb(85, 83, 83);
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }
 #admin-section .searchInput {
   margin-left: 9px;
