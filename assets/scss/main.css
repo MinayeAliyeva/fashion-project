@@ -34,10 +34,49 @@ header {
   z-index: 99;
   padding: 15px;
 }
+header .res-row {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  header .res-row {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .res-row .logo a {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+  }
+  header .res-row nav {
+    background-color: red;
+    padding: 7px 10px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+  header .res-row nav ul {
+    margin: 0;
+  }
+  header .res-row nav ul li {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  header .res-row nav ul li a {
+    color: black;
+  }
+}
 header .row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+@media only screen and (max-width: 992px) {
+  header .row {
+    display: none;
+  }
 }
 header .row .fa-xmark {
   width: 0;
@@ -50,20 +89,8 @@ header .row .fa-bars {
     display: block;
   }
 }
-@media only screen and (max-width: 992px) {
-  header .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
 header .row .item-left {
   flex: 0 0 17%;
-}
-@media only screen and (max-width: 992px) {
-  header .row .item-left .logo {
-    flex: none;
-  }
 }
 header .row .item-left .logo a {
   font-size: 30px;
@@ -72,16 +99,6 @@ header .row .item-left .logo a {
 }
 header .row .item-center {
   flex: 0 0 66%;
-}
-@media only screen and (max-width: 992px) {
-  header .row .item-center {
-    flex: unset;
-  }
-}
-@media only screen and (max-width: 992px) {
-  header .row .item-center .menu {
-    display: none;
-  }
 }
 header .row .item-center .menu.show {
   display: block;
@@ -95,21 +112,6 @@ header .row .item-center .menu.show {
 }
 header .row .item-center .menu ul {
   margin-bottom: 0;
-}
-@media only screen and (max-width: 992px) {
-  header .row .item-center .menu ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    height: 600px;
-    padding: 0 20px;
-    background-color: rgba(0, 0, 0, 0.4549019608);
-  }
-  header .row .item-center .menu ul li a {
-    color: white !important;
-  }
 }
 header .row .item-center .menu ul .menu-item-has-childeren .sub-menu.mega-menu {
   overflow: hidden;
@@ -208,11 +210,20 @@ header .row .item-right {
   display: flex;
   justify-content: flex-end;
 }
-@media only screen and (max-width: 992px) {
-  header .row .item-right {
-    flex: 0;
-    display: none;
-  }
+header .row .item-right input {
+  width: 131px;
+  border-radius: 20px;
+  outline: none;
+  border: navajowhite;
+  background-color: rgba(0, 0, 0, 0.4705882353);
+  color: white;
+  padding: 3px 19px;
+}
+header .row .item-right input::-moz-placeholder {
+  color: white;
+}
+header .row .item-right input::placeholder {
+  color: white;
 }
 header .row .item-right a {
   font-size: 16px;
@@ -237,50 +248,6 @@ header .row .item-right a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#banner .banner .signup-form,
-#banner .banner .login-form {
-  display: none;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  color: black;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
-}
-#banner .banner .signup-form.active,
-#banner .banner .login-form.active {
-  transition: 0.5s;
-  display: block;
-}
-#banner .banner .signup-form .form,
-#banner .banner .login-form .form {
-  padding: 0 50px;
-}
-#banner .banner .signup-form .form form,
-#banner .banner .login-form .form form {
-  margin: auto;
-}
-#banner .banner .signup-form .form form input,
-#banner .banner .login-form .form form input {
-  width: 100%;
-  display: block;
-  border: 1px solid #000;
-  padding: 10px 13px;
-  margin: 20px auto;
-  outline: none;
-}
-#banner .banner .signup-form .form .text h1,
-#banner .banner .login-form .form .text h1 {
-  text-align: center;
-  margin: 30px 0;
-}
-#banner .banner .signup-form .form .close,
-#banner .banner .login-form .form .close {
-  text-align: right;
-  cursor: pointer;
 }
 
 #products .products {

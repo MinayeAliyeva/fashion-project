@@ -35,6 +35,12 @@
       "productprice": "371",
       "img": "./assets/products-image/3312586622_6_1_1.jpg",
       "id": 10
+    },
+    {
+      "productName": "Brooke Woods",
+      "productprice": "134",
+      "img": "./assets/products-image/4786296805_6_1_1.jpg",
+      "id": 11
     }
   ],
   "users": [

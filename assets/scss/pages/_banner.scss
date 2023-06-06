@@ -9,44 +9,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    .signup-form,
-    .login-form {
-      &.active {
-        // top: 50%;
-        transition: 0.5s;
-        display: block;
-      }
-      display: none;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      color: black;
-      border-radius: 10px;
-      box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
-      .form {
-        padding: 0 50px;
-        form {
-          margin: auto;
-          input {
-            width: 100%;
-            display: block;
-            border: 1px solid #000;
-            padding: 10px 13px;
-            margin: 20px auto;
-            outline: none;
-          }
-        }
-        .text h1 {
-          text-align: center;
-          margin: 30px 0;
-        }
-        .close {
-          text-align: right;
-          cursor: pointer;
-        }
-      }
-    }
+
   }
 }

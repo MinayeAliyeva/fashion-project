@@ -8,9 +8,16 @@ meniIcon.addEventListener("click", () => {
     : (meniIcon.classList = "fa-solid fa-bars");
 });
 
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.backgroundColor = "white";
+  header.style.transition = "0.5s ease";
+  if(scrollY==0){
+    header.style.backgroundColor = "transparent";
+  }
+});
 //
 const USERS_URL = "http://localhost:3000/users";
-// let form = document.querySelector(".signUpForm");
 let signUpForm = document.querySelector(".signUpForm");
 let nameInput = document.querySelector(".nameInput");
 let emailInput = document.querySelector(".emailInput");
