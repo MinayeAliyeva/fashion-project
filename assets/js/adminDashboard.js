@@ -41,9 +41,7 @@ async function fillProducts() {
 fillProducts();
 
 //delete
-console.log(PRODUCTS_URL);
 async function delFun(id) {
-  console.log(id);
   await axios.delete(`${PRODUCTS_URL}/${id}`);
   filteredData = arrCopy
     .filter((obj) => {
@@ -51,4 +49,15 @@ async function delFun(id) {
     })
     .slice(0, num);
 }
+//search
+searchInput.addEventListener("input", (e) => {
+  filteredData = arrCopy
+    .filter((obj) => {
+      return obj.productName
+        .toLocaleLowerCase()
+        .includes(e.target.value.toLocaleLowerCase());
+    })
+    .slice(0, num);
 
+  fillProducts();
+});
