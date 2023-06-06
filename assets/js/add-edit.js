@@ -13,3 +13,5 @@ form.addEventListener("submit", async (e) => {
   await axios.post(`${PRODUCT_URL}`, productObj);
   window.location = "adminDashboard.html";
 });
+
+

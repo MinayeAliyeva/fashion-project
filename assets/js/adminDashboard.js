@@ -3,14 +3,13 @@ let addProductBtn = document.querySelector(".addProductBtn");
 addProductBtn.addEventListener("click", () => {
   window.location = "add-edit-products-form.html";
 });
-const PRODUCTS_URL2 = "http://localhost:3000/products";
 let searchInput = document.querySelector(".searchInput");
 let arrCopy = [];
 let filteredData = [];
 let num = 3;
 let mainRow = document.querySelector(".mainRow");
 async function fillProducts() {
-  let res = await axios(PRODUCTS_URL2);
+  let res = await axios(PRODUCTS_URL);
   let data = await res.data;
   arrCopy = data;
   filteredData = filteredData.length
@@ -26,6 +25,7 @@ async function fillProducts() {
               <div class="text-side">
                 <span>${obj.productName}</span>
                 <span>Price:${obj.productprice}</span>
+             
               </div>
             </div>
           </div>
@@ -34,4 +34,3 @@ async function fillProducts() {
   });
 }
 fillProducts();
-
