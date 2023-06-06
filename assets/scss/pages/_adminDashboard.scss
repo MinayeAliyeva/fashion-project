@@ -48,6 +48,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  a{
+    color: black;
+  }
+  
   .addProductBtn {
     padding: 5px 7px;
     background-color: rgb(85, 83, 83);

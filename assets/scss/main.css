@@ -434,6 +434,9 @@ body #form button {
   justify-content: center;
   flex-direction: column;
 }
+#admin-section a {
+  color: black;
+}
 #admin-section .addProductBtn {
   padding: 5px 7px;
   background-color: rgb(85, 83, 83);

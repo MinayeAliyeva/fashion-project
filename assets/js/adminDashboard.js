@@ -6,7 +6,7 @@ addProductBtn.addEventListener("click", () => {
 let searchInput = document.querySelector(".searchInput");
 let arrCopy = [];
 let filteredData = [];
-let num = 3;
+let num = 8;
 let mainRow = document.querySelector(".mainRow");
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);
@@ -18,7 +18,7 @@ async function fillProducts() {
   mainRow.innerHTML = "";
   filteredData.forEach((obj) => {
     mainRow.innerHTML += `
-    <div class="col col-lg-3">
+    <div class="col col-lg-3 col-md-4 col-sm-6 ">
 <div class="card">
   <div class="img">
     <img src="${obj.img}" alt="" />
