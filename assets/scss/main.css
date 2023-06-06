@@ -240,7 +240,7 @@ header .row .item-right a:hover {
 }
 #banner .banner .signup-form,
 #banner .banner .login-form {
-  opacity: 0;
+  display: none;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -253,7 +253,7 @@ header .row .item-right a:hover {
 #banner .banner .signup-form.active,
 #banner .banner .login-form.active {
   transition: 0.5s;
-  opacity: 1;
+  display: block;
 }
 #banner .banner .signup-form .form,
 #banner .banner .login-form .form {
