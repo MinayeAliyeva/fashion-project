@@ -1,8 +1,9 @@
 #new-trending-outfits {
   padding: 50px;
   .new-trending-outfits {
-    .row {
+    .mainRow3 {
       .card {
+        margin-top: 20px;
         overflow: hidden;
         &:hover .content {
           bottom: 0;

@@ -12,7 +12,7 @@ let header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.style.backgroundColor = "white";
   header.style.transition = "0.5s ease";
-  if(scrollY==0){
+  if (scrollY == 0) {
     header.style.backgroundColor = "transparent";
   }
 });
@@ -23,8 +23,6 @@ let nameInput = document.querySelector(".nameInput");
 let emailInput = document.querySelector(".emailInput");
 let passwordInput = document.querySelector(".passwordInput");
 let passwordInput2 = document.querySelector(".passwordInput2");
-
-
 
 //products
 const PRODUCTS_URL = "http://localhost:3000/products";
@@ -65,3 +63,43 @@ async function fillProducts() {
 fillProducts();
 
 //new trending outfits
+const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";
+let arrCopy2 = [];
+let filteredData2 = [];
+let num2 = 7;
+let mainRow3 = document.querySelector(".mainRow3");
+async function fillProducts2() {
+  let res = await axios(NEW_TRENDINGS);
+  let data = await res.data;
+  arrCopy2 = data;
+  filteredData2 = filteredData2.length
+    ? filteredData2.slice(0, num)
+    : data.slice(0, num);
+  mainRow3.innerHTML = "";
+  filteredData2.forEach((obj) => {
+    mainRow3.innerHTML += `
+     <div class="col-lg-3 col-md-4 col-sm-12">
+    <div class="card">
+      <img
+        src="${obj.img}"
+        alt=""
+      />
+      <div class="content">
+        <div class="text">
+      <div> <div class="actions">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-eye"></i>
+      </div>
+      <div class="actions2">add basket</div></div>
+          <div class="text-side">
+            <h5>${obj.productName}</h5>
+            <i><span> ${obj.productprice}</span></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+  });
+}
+fillProducts2();

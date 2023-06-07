@@ -597,17 +597,18 @@ body #form button {
 #new-trending-outfits {
   padding: 50px;
 }
-#new-trending-outfits .new-trending-outfits .row .card {
+#new-trending-outfits .new-trending-outfits .mainRow3 .card {
+  margin-top: 20px;
   overflow: hidden;
 }
-#new-trending-outfits .new-trending-outfits .row .card:hover .content {
+#new-trending-outfits .new-trending-outfits .mainRow3 .card:hover .content {
   bottom: 0;
 }
-#new-trending-outfits .new-trending-outfits .row .card img {
+#new-trending-outfits .new-trending-outfits .mainRow3 .card img {
   width: 100%;
   height: auto;
 }
-#new-trending-outfits .new-trending-outfits .row .card .content {
+#new-trending-outfits .new-trending-outfits .mainRow3 .card .content {
   position: absolute;
   bottom: -100%;
   width: 100%;
@@ -616,7 +617,7 @@ body #form button {
   color: white;
   background-color: rgba(0, 0, 0, 0.285);
 }
-#new-trending-outfits .new-trending-outfits .row .card .content .text {
+#new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text {
   position: absolute;
   bottom: 1px;
   color: white;
