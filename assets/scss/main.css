@@ -354,7 +354,7 @@ header .row .item-right a:hover {
   width: 300px;
   margin: 20vh auto 0 auto;
   padding: 20px;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.3215686275);
 }
 .bodyForm #form .input-control {
   display: flex;
@@ -641,7 +641,10 @@ body #form button {
   width: 300px;
   margin: 20vh auto 0 auto;
   padding: 20px;
-  background-color: rgb(245, 245, 245);
+  background-color: rgba(245, 245, 245, 0.44);
+}
+#body2 #form2 .input-group #imgInput2 {
+  margin-top: 13px;
 }
 #body2 #form2 .input-control2 {
   display: flex;

@@ -63,6 +63,24 @@
       "productprice": "313",
       "img": "./assets/products-image/0120847999_6_1_1.jpg",
       "id": 24
+    },
+    {
+      "productName": "Yolanda Morse",
+      "productprice": "415",
+      "img": "./assets/products-image/2818110002_6_1_1.jpg",
+      "id": 25
+    },
+    {
+      "productName": "Amela Glass",
+      "productprice": "130",
+      "img": "./assets/products-image/3666939706_6_1_1.jpg",
+      "id": 26
+    },
+    {
+      "productName": "Sopoline Sharpe",
+      "productprice": "696",
+      "img": "./assets/products-image/3619041400_6_1_1.jpg",
+      "id": 27
     }
   ]
 }
