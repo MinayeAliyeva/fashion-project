@@ -62,5 +62,12 @@
       "password": "122343",
       "isSignin": "false"
     }
+  ],
+  "newtrending-products": [
+    {
+      "productName": "Perry Vasquez",
+      "productprice": "567",
+      "id": 18
+    }
   ]
 }

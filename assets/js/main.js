@@ -63,3 +63,5 @@ async function fillProducts() {
   });
 }
 fillProducts();
+
+//new trending outfits
