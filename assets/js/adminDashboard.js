@@ -61,3 +61,14 @@ searchInput.addEventListener("input", (e) => {
 
   fillProducts();
 });
+//sort
+let select = document.querySelector("#select");
+select.addEventListener("change", (e) => {
+  if (e.target.value == "from cheap to expensive") {
+    filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
+    fillProducts();
+  } else if (e.target.value == "from expensive to cheap") {
+    filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
+    fillProducts();
+  }
+});
