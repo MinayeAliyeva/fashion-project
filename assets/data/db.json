@@ -13,12 +13,6 @@
       "id": 10
     },
     {
-      "productName": "Brooke Woods",
-      "productprice": "134",
-      "img": "./assets/products-image/4786296805_6_1_1.jpg",
-      "id": 11
-    },
-    {
       "productName": "Jonas Erickson",
       "productprice": "300",
       "img": "./assets/products-image/0120520999_6_1_1.jpg",
@@ -43,16 +37,34 @@
       "id": 15
     },
     {
-      "productName": "Adara Downs",
-      "productprice": "957",
-      "img": "./assets/products-image/4786293642_6_1_1.jpg",
-      "id": 16
-    },
-    {
       "productName": "Perry Vasquez",
       "productprice": "567",
       "img": "./assets/products-image/2756378620_6_1_1.jpg",
       "id": 18
+    },
+    {
+      "productName": "Melissa Kramer",
+      "productprice": "83",
+      "img": "./assets/products-image/2731245330_6_1_1.jpg",
+      "id": 19
+    },
+    {
+      "productName": "Hadley Blanchard",
+      "productprice": "359",
+      "img": "./assets/products-image/3627710513_6_1_1.jpg",
+      "id": 20
+    },
+    {
+      "productName": "Kiayada Hill",
+      "productprice": "509",
+      "img": "./assets/products-image/2502110002_6_1_1.jpg",
+      "id": 21
+    },
+    {
+      "productName": "William Gibbs",
+      "productprice": "694",
+      "img": "./assets/products-image/2337110001_6_1_1.jpg",
+      "id": 22
     }
   ],
   "users": [

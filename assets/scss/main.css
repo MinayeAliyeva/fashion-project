@@ -405,9 +405,13 @@ body #form button {
   height: 100%;
   left: 0;
   background: #fff;
-  width: 280px;
+  width: 90px;
   overflow: hidden;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+#nav:hover {
+  width: 280px;
 }
 #nav .logout {
   position: absolute;
@@ -439,10 +443,9 @@ body #form button {
 }
 
 #admin-section {
-  margin-top: 80px;
-  margin-left: 300px;
+  margin-top: 10px;
+  margin-left: 100px;
   row-gap: 27px;
-  display: flex;
   justify-content: center;
   flex-direction: column;
 }
@@ -451,6 +454,7 @@ body #form button {
 }
 #admin-section .addProductBtn {
   padding: 5px 7px;
+  margin: 10px;
   background-color: rgb(85, 83, 83);
   color: white;
   border-radius: 5px;
@@ -458,6 +462,7 @@ body #form button {
   border: none;
 }
 #admin-section .searchInput {
+  margin: 10px;
   margin-left: 9px;
   width: 100px;
   padding: 0 7px;
