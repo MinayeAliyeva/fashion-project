@@ -763,6 +763,7 @@ body #form button {
   border-radius: 6px;
   overflow: hidden;
   width: 85%;
+  height: 100px;
 }
 #video-images .video-images .col1 .small-img-row p {
   margin-left: 20px;
