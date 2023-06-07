@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -249,6 +250,11 @@ header .row .item-right a:hover {
   align-items: center;
   justify-content: center;
 }
+#banner .banner h4 {
+  color: white;
+  font-size: 90px;
+  font-family: "Dancing Script", cursive;
+}
 
 #products .products {
   padding: 50px 0;
@@ -286,23 +292,27 @@ header .row .item-right a:hover {
   letter-spacing: 10px;
 }
 
-#best-selling-products .best-selling-products {
+#best-selling-products {
   padding: 50px;
 }
-#best-selling-products .best-selling-products h3 {
+#best-selling-products .best-selling-products .mainRow2 {
+  padding: 50px;
+}
+#best-selling-products .best-selling-products .mainRow2 h3 {
   font-weight: 400;
   font-size: 34px;
 }
-#best-selling-products .best-selling-products .card {
+#best-selling-products .best-selling-products .mainRow2 .card {
   position: relative;
   border: none;
+  margin: 6px;
 }
-#best-selling-products .best-selling-products .card .actions2 {
+#best-selling-products .best-selling-products .mainRow2 .card .actions2 {
   position: absolute;
   left: 30%;
   bottom: 80px;
 }
-#best-selling-products .best-selling-products .card .actions {
+#best-selling-products .best-selling-products .mainRow2 .card .actions {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -311,26 +321,26 @@ header .row .item-right a:hover {
        column-gap: 25px;
   padding: 10px;
 }
-#best-selling-products .best-selling-products .card .actions i {
+#best-selling-products .best-selling-products .mainRow2 .card .actions i {
   padding: 8px;
   border: 1px solid;
   border-radius: 50%;
 }
-#best-selling-products .best-selling-products .card .text-side {
+#best-selling-products .best-selling-products .mainRow2 .card .text-side {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#best-selling-products .best-selling-products .card .text-side i span {
+#best-selling-products .best-selling-products .mainRow2 .card .text-side i span {
   font-weight: 300;
   font-size: 15px;
 }
-#best-selling-products .best-selling-products .card .text-side h5 {
+#best-selling-products .best-selling-products .mainRow2 .card .text-side h5 {
   font-weight: 300;
   font-size: 15px;
   margin-bottom: 0;
 }
-#best-selling-products .best-selling-products .card img {
+#best-selling-products .best-selling-products .mainRow2 .card img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -562,13 +572,14 @@ body #form button {
 }
 #extra-summer-collaction .tet-side a {
   border: 1px solid;
+  margin-top: 20px;
   color: black;
   width: 120px;
-  padding: 10px;
+  padding: 10px 8px;
   transition: 0.6s;
+  text-align: center;
 }
 #extra-summer-collaction .tet-side a:hover {
-  background-color: rgb(127, 122, 80);
   color: white;
-  border: none;
+  background-color: rgb(127, 122, 80);
 }/*# sourceMappingURL=main.css.map */
