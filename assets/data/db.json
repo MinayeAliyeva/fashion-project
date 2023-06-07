@@ -63,6 +63,12 @@
       "productprice": "368",
       "img": "./assets/products-image/1856228808_6_1_1.jpg",
       "id": 23
+    },
+    {
+      "productName": "Griffin Campos",
+      "productprice": "313",
+      "img": "./assets/products-image/0120847999_6_1_1.jpg",
+      "id": 24
     }
   ]
 }
