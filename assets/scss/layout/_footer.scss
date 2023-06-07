@@ -1,0 +1,24 @@
+footer {
+  margin-top: 100px;
+  .footer {
+    padding: 30px;
+    input{
+        padding: 7px 10px;
+    }
+    p {
+      color: rgba(0, 0, 0, 0.477);
+    }
+    h3 {
+      font-size: 19px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        a {
+          color: rgba(0, 0, 0, 0.477);
+        }
+      }
+    }
+  }
+}
