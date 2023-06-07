@@ -44,10 +44,18 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      @media only screen and (max-width: 991px) {
+        flex-direction: column;
+      }
     }
     .col1 {
       flex-basis: 50%;
       min-width: 250px;
+      @media only screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .small-img-row {
         display: flex;
         background-color: #efefef;

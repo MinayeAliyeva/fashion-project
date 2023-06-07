@@ -754,9 +754,21 @@ body #form button {
   align-items: center;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 991px) {
+  #video-images .video-images .row1 {
+    flex-direction: column;
+  }
+}
 #video-images .video-images .col1 {
   flex-basis: 50%;
   min-width: 250px;
+}
+@media only screen and (max-width: 992px) {
+  #video-images .video-images .col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 #video-images .video-images .col1 .small-img-row {
   display: flex;
