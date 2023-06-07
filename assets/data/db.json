@@ -84,8 +84,33 @@
   "newtrending-products": [
     {
       "productName": "Perry Vasquez",
-      "productprice": "567",
-      "id": 18
+      "productprice": "560",
+      "id": 18,
+      "img": "./assets/products-image/7521244506_6_1_1.jpg"
+    },
+    {
+      "productName": "Jonah Sherman",
+      "productprice": "612",
+      "img": "./assets/products-image/9863054400_6_1_1.jpg",
+      "id": 19
+    },
+    {
+      "productName": "Hiram Petty",
+      "productprice": "166",
+      "img": "./assets/products-image/4103110800_6_1_1.jpg",
+      "id": 20
+    },
+    {
+      "productName": "Deacon Guy",
+      "productprice": "843",
+      "img": "./assets/products-image/4786243300_6_1_1.jpg",
+      "id": 21
+    },
+    {
+      "productName": "MacKensie Britt",
+      "productprice": "139",
+      "img": "./assets/products-image/3666939706_6_1_1.jpg",
+      "id": 22
     }
   ]
 }

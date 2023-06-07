@@ -72,3 +72,47 @@ select.addEventListener("change", (e) => {
     fillProducts();
   }
 });
+
+//new trendings
+const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";
+let addProductBtn2 = document.querySelector(".addProductBtn2");
+addProductBtn2.addEventListener("click", () => {
+  window.location = "add-edit-new-products-form.html";
+});
+
+let searchInput2 = document.querySelector(".searchInput2");
+let arrCopy2 = [];
+let filteredData2 = [];
+let num2 = 10;
+let mainRow2 = document.querySelector(".mainRow2");
+async function fillProducts2() {
+  let res = await axios(NEW_TRENDINGS);
+  let data = await res.data;
+  arrCopy2 = data;
+  filteredData2 = filteredData2.length
+    ? filteredData2.slice(0, num2)
+    : data.slice(0, num2);
+  mainRow2.innerHTML = "";
+  filteredData2.forEach((obj) => {
+    mainRow2.innerHTML += `
+    <div class="col col-lg-3 col-md-4 col-sm-6 ">
+<div class="card">
+  <div class="img">
+    <img src="${obj.img}" alt="" />
+    <div class="text-side">
+      <span>${obj.productName}</span>
+      <span>Price:${obj.productprice}</span>
+    </div>
+  </div>
+  <div class="actions">
+    <i class="fa-solid fa-trash" onclick=delFun(${obj.id})></i>
+ <a href="add-edit-new-products-form.html?id=${obj.id}">   <i class="fa-solid fa-pen" ></i></a>
+    <i class="fa-solid fa-eye"></i>
+  </div>
+</div>
+</div>
+
+`;
+  });
+}
+fillProducts2();
