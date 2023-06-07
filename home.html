@@ -336,13 +336,14 @@
       <section id="video-images">
         <div class="container">
           <div class="video-images">
-            <h1>How To make video gallery</h1>
+            <h1>About Us</h1>
             <div class="row1">
               <div class="col1">
                 <div class="feautured-img">
                   <img src="./assets/images/gigi.png" alt="" width="100%" />
                   <img
                     src="./assets/images/play-button.png"
+                    onclick="playVideo()"
                     alt=""
                     class="play-btn"
                   />
@@ -356,11 +357,12 @@
                       src="./assets/images/play-button.png"
                       alt=""
                       class="play-btn"
+                      onclick="playVideo()"
                     />
                   </div>
                   <p>
-                    How to add multiple Lorem ipsum dolor sit <br />
-                    amet consectetur adipisicing elit.
+                    On other hand, we denounce with righteous <br />indignation
+                    and dislike men who are so beguiled
                   </p>
                 </div>
                 <div class="small-img-row">
@@ -370,11 +372,12 @@
                       src="./assets/images/play-button.png"
                       alt=""
                       class="play-btn"
+                      onclick="playVideo()"
                     />
                   </div>
                   <p>
-                    How to add multiple Lorem ipsum dolor sit <br />
-                    amet consectetur adipisicing elit.
+                    On other hand, we denounce with righteous <br />indignation
+                    and dislike men who are so beguiled
                   </p>
                 </div>
                 <div class="small-img-row">
@@ -384,23 +387,33 @@
                       src="./assets/images/play-button.png"
                       alt=""
                       class="play-btn"
+                      onclick="playVideo()"
                     />
                   </div>
                   <p>
-                    How to add multiple Lorem ipsum dolor sit <br />
-                    amet consectetur adipisicing elit.
+                    On other hand, we denounce with righteous <br />indignation
+                    and dislike men who are so beguiled
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="video-player">
-            <video controls autoplay width="100%" src="">
-              <source
+            <div class="video-player" id="videoPlayer">
+              <video
+                id="myVideo"
+                controls
+                autoplay
+                width="100%"
                 src="./videos/vid1.mp4"
-                type="video/mp4"
+              >
+                <source src="./videos/vid1.mp4" type="video/mp4" />
+              </video>
+              <img
+                src="./assets/images/close.png"
+                alt=""
+                class="close-btn"
+                onclick="stopVideo()"
               />
-            </video>
+            </div>
           </div>
         </div>
       </section>

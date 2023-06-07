@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -575,11 +576,14 @@ body #form button {
 }
 #extra-summer-collaction .tet-side h4 {
   font-size: 60px;
+  font-family: "Satisfy", cursive;
 }
 #extra-summer-collaction .tet-side p {
   font-size: 16px;
+  font-family: "Satisfy", cursive;
 }
 #extra-summer-collaction .tet-side a {
+  font-family: "Satisfy", cursive;
   border: 1px solid;
   margin-top: 20px;
   color: black;
@@ -701,6 +705,27 @@ body #form button {
   transition: 0.5s;
 }
 
+#video-images .video-images {
+  position: relative;
+}
+#video-images .video-images .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  cursor: pointer;
+}
+#video-images .video-images .video-player {
+  display: none;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#video-images .video-images .video-player video:focus {
+  outline: none;
+}
 #video-images .video-images .feautured-img {
   width: 83%;
   margin: auto;

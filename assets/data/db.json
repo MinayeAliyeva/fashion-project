@@ -35,12 +35,6 @@
       "productprice": "694",
       "img": "./assets/products-image/2337110001_6_1_1.jpg",
       "id": 22
-    },
-    {
-      "productName": "Kirby Foley",
-      "productprice": "100",
-      "img": "./assets/products-image/2644110001_6_1_1.jpg",
-      "id": 23
     }
   ],
   "users": [

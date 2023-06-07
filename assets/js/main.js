@@ -103,3 +103,14 @@ async function fillProducts2() {
   });
 }
 fillProducts2();
+
+//video
+let videoPlayer = document.querySelector("#videoPlayer");
+let myVideo = document.querySelector("#myVideo");
+function stopVideo() {
+  videoPlayer.style.display = "none";
+}
+function playVideo(file) {
+  myVideo.scr = file;
+  videoPlayer.style.display = "block";
+}
