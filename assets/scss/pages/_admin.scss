@@ -1,5 +1,7 @@
-body {
+.bodyForm {
   font-family: "Poppins", sans-serif;
+  background-image: url(/assets/images/IMAGE-landscape-default-fill-53c67ecf-62ae-4087-a1a7-2c575c06c8f2-default_0.jpg);
+  background-position: center;
   #form {
     width: 300px;
     margin: 20vh auto 0 auto;
@@ -38,8 +40,8 @@ body {
       padding: 10px;
       margin-top: 10px;
       width: 100%;
-      color: white;
-      background-color: rgb(85, 83, 83);
+      color: black;
+      background-color: rgb(249, 187, 40) !important;
       border: none;
       border-radius: 4px;
     }
