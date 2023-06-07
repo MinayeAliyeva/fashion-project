@@ -25,40 +25,10 @@
       "id": 13
     },
     {
-      "productName": "Shaine Blackburn",
-      "productprice": "992",
-      "img": "./assets/products-image/2818110002_6_1_1.jpg",
-      "id": 14
-    },
-    {
-      "productName": "Bertha Townsend",
-      "productprice": "736",
-      "img": "./assets/products-image/2949025507_6_1_1.jpg",
-      "id": 15
-    },
-    {
       "productName": "Perry Vasquez",
       "productprice": "567",
       "img": "./assets/products-image/2756378620_6_1_1.jpg",
       "id": 18
-    },
-    {
-      "productName": "Melissa Kramer",
-      "productprice": "83",
-      "img": "./assets/products-image/2731245330_6_1_1.jpg",
-      "id": 19
-    },
-    {
-      "productName": "Hadley Blanchard",
-      "productprice": "359",
-      "img": "./assets/products-image/3627710513_6_1_1.jpg",
-      "id": 20
-    },
-    {
-      "productName": "Kiayada Hill",
-      "productprice": "509",
-      "img": "./assets/products-image/2502110002_6_1_1.jpg",
-      "id": 21
     },
     {
       "productName": "William Gibbs",
@@ -83,34 +53,16 @@
   ],
   "newtrending-products": [
     {
-      "productName": "Perry Vasquez",
-      "productprice": "560",
-      "id": 18,
-      "img": "./assets/products-image/7521244506_6_1_1.jpg"
-    },
-    {
-      "productName": "Jonah Sherman",
-      "productprice": "612",
-      "img": "./assets/products-image/9863054400_6_1_1.jpg",
-      "id": 19
-    },
-    {
       "productName": "Hiram Petty",
       "productprice": "166",
       "img": "./assets/products-image/4103110800_6_1_1.jpg",
       "id": 20
     },
     {
-      "productName": "Deacon Guy",
-      "productprice": "843",
-      "img": "./assets/products-image/4786243300_6_1_1.jpg",
-      "id": 21
-    },
-    {
-      "productName": "MacKensie Britt",
-      "productprice": "139",
-      "img": "./assets/products-image/3666939706_6_1_1.jpg",
-      "id": 22
+      "productName": "Noel Holder",
+      "productprice": "368",
+      "img": "./assets/products-image/1856228808_6_1_1.jpg",
+      "id": 23
     }
   ]
 }

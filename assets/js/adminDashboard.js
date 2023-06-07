@@ -105,7 +105,7 @@ async function fillProducts2() {
     </div>
   </div>
   <div class="actions">
-    <i class="fa-solid fa-trash" onclick=delFun(${obj.id})></i>
+    <i class="fa-solid fa-trash" onclick=delFun2(${obj.id})></i>
  <a href="add-edit-new-products-form.html?id=${obj.id}">   <i class="fa-solid fa-pen" ></i></a>
     <i class="fa-solid fa-eye"></i>
   </div>
@@ -116,3 +116,36 @@ async function fillProducts2() {
   });
 }
 fillProducts2();
+
+//delete
+async function delFun2(id) {
+  await axios.delete(`${NEW_TRENDINGS }/${id}`);
+  filteredData = arrCopy
+    .filter((obj) => {
+      obj.id != id;
+    })
+    .slice(0, num);
+}
+//search
+searchInput2.addEventListener("input", (e) => {
+  filteredData2 = arrCopy2
+    .filter((obj) => {
+      return obj.productName
+        .toLocaleLowerCase()
+        .includes(e.target.value.toLocaleLowerCase());
+    })
+    .slice(0, num);
+
+  fillProducts2();
+});
+// //sort
+// let select = document.querySelector("#select");
+// select.addEventListener("change", (e) => {
+//   if (e.target.value == "from cheap to expensive") {
+//     filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
+//     fillProducts();
+//   } else if (e.target.value == "from expensive to cheap") {
+//     filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
+//     fillProducts();
+//   }
+// });

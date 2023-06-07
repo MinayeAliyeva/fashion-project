@@ -6,7 +6,7 @@ let imgInput2 = document.querySelector("#imgInput2");
 //edit
 let id = new URLSearchParams(window.location.search).get("id");
 async function fillInputsValue() {
-  let res = await axios(`${NEW_TRENDINGS }/${id}`);
+  let res = await axios(`${NEW_TRENDINGS}/${id}`);
   let data = await res.data;
   productName2.value = data.productName;
   productPrice2.value = data.productprice;
