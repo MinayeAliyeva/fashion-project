@@ -154,9 +154,10 @@ header .header nav .navUl .dropdown .dropdown-menu {
 #best-selling-products {
   padding: 50px;
 }
-#best-selling-products .best-selling-products .mainRow2 h3 {
+#best-selling-products .best-selling-products h3 {
   font-weight: 400;
   font-size: 34px;
+  font-family: "Satisfy", cursive;
 }
 #best-selling-products .best-selling-products .mainRow2 .card {
   position: relative;
@@ -482,6 +483,10 @@ body #form button {
 #new-trending-outfits {
   padding: 50px;
 }
+#new-trending-outfits .new-trending-outfits h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 45px;
+}
 #new-trending-outfits .new-trending-outfits .mainRow3 .card {
   margin-top: 20px;
   overflow: hidden;
@@ -593,6 +598,9 @@ body #form button {
 #video-images .video-images {
   position: relative;
 }
+#video-images .video-images h1 {
+  font-family: "Satisfy", cursive;
+}
 #video-images .video-images .close-btn {
   position: absolute;
   top: 10px;
@@ -682,6 +690,68 @@ body #form button {
   width: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#summer-collaction-woman .summer-collaction-woman h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 55px;
+}
+#summer-collaction-woman .summer-collaction-woman .row img {
+  height: 450px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion {
+  max-width: 530px;
+  width: 100%;
+  background-color: #fff;
+  margin: 0 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content {
+  border-radius: 4px;
+  background-color: #fff7f0;
+  border: 1px solid #ffd6b3;
+  margin: 10px 0;
+  overflow: hidden;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content.open {
+  padding-bottom: 10px;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content.open .header1 {
+  min-height: 35px;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .description {
+  padding: 0 15px;
+  font-size: 12px;
+  color: #333;
+  font-weight: 400;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .header1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  min-height: 50px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .header1 i {
+  font-size: 15px;
+  color: #333;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .header1 .title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .description {
+  padding: 0 15px;
+  height: 0;
+  transition: all 0.2s linear;
 }
 
 footer {
