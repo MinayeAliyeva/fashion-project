@@ -713,10 +713,22 @@ body #form button {
 }
 #summer-collaction-woman .summer-collaction-woman .accardion .accardion-content {
   border-radius: 4px;
-  background-color: #fff7f0;
-  border: 1px solid #ffd6b3;
+  background-color: rgb(180, 73, 89);
+  border-color: rgb(242, 4, 36);
   margin: 10px 0;
   overflow: hidden;
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content:nth-child(2) {
+  background-color: rgb(180, 73, 89);
+  border-color: rgb(242, 4, 36);
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content:nth-child(3) {
+  background-color: rgb(180, 73, 89);
+  border-color: rgb(242, 4, 36);
+}
+#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content:nth-child(4) {
+  background-color: rgb(180, 73, 89);
+  border-color: rgb(242, 4, 36);
 }
 #summer-collaction-woman .summer-collaction-woman .accardion .accardion-content.open {
   padding-bottom: 10px;
