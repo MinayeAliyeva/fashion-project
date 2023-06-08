@@ -1,0 +1,68 @@
+// font-family: 'Poppins', sans-serif;
+#summer-collaction {
+  .summer-collaction {
+    .accardion {
+      max-width: 530px;
+      width: 100%;
+      background-color: #fff;
+      margin: 0 15px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      .accardion-content {
+        border-radius: 4px;
+        background-color: #fff7f0;
+        border: 1px solid #ffd6b3;
+        margin: 10px 0;
+        overflow: hidden;
+        &:nth-child(2){
+            background-color:#f0fafafa ;
+            border-color:#cceeff ;
+        }
+        &:nth-child(3){
+            background-color:#fff0f3 ;
+            border-color:#ffccd6 ;
+        }
+        &:nth-child(4){
+            background-color:#f0f0ff ;
+            border-color:#ccccff ;
+        }
+        &.open {
+          padding-bottom: 10px;
+          .header1 {
+            min-height: 35px;
+          }
+        }
+        .description {
+          padding: 0 15px;
+          font-size: 12px;
+          color: #333;
+          font-weight: 400;
+        }
+        .header1 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 15px;
+          min-height: 50px;
+          transition: all 0.2s linear;
+          cursor: pointer;
+          i {
+            font-size: 15px;
+            color: #333;
+          }
+          .title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+          }
+        }
+        .description {
+          padding: 0 15px;
+          height: 0;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+  }
+}
