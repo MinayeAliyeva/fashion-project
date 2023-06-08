@@ -34,43 +34,66 @@ header {
   width: 100%;
   padding: 10px 5px;
   z-index: 1000;
+  left: 0;
+  top: 0;
 }
 header .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .header input {
-  background: transparent;
-  padding: 5px 6px;
-  background-color: rgba(0, 0, 0, 0.282);
-  border-radius: 35px;
-  border: none;
+header .header .fa-bars {
+  display: none;
 }
-header .header input::-moz-placeholder {
-  color: white;
-  padding: 0 5px 0;
-}
-header .header input::placeholder {
-  color: white;
-  padding: 0 5px 0;
+@media only screen and (max-width: 992px) {
+  header .header .fa-bars {
+    display: block;
+    font-size: 24px;
+  }
 }
 header .header h2 {
   font-size: 28px;
   font-weight: 600;
+}
+header .header nav.show {
+  display: block;
 }
 @media only screen and (max-width: 992px) {
   header .header nav {
     display: none;
   }
 }
+header .header nav input {
+  background: transparent;
+  padding: 5px 6px;
+  background-color: rgba(0, 0, 0, 0.282);
+  border-radius: 35px;
+  border: none;
+}
+header .header nav input::-moz-placeholder {
+  color: white;
+  padding: 0 5px 0;
+}
+header .header nav input::placeholder {
+  color: white;
+  padding: 0 5px 0;
+}
 header .header nav .navUl {
   display: flex;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   margin: 0;
   padding: 0;
+}
+@media only screen and (max-width: 992px) {
+  header .header nav .navUl {
+    flex-direction: column;
+    position: absolute;
+    row-gap: 30px;
+    top: 50px;
+    right: 0;
+  }
 }
 header .header nav .navUl a {
   color: black;

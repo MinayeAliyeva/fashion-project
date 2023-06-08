@@ -1,22 +1,22 @@
-// let meniIcon = document.querySelector("#menuIcon");
-// let nav = document.querySelector(".menu");
-// console.log(nav);
-// meniIcon.addEventListener("click", () => {
-//   nav.classList.toggle("show");
-//   meniIcon.classList.contains("fa-bars")
-//     ? (meniIcon.classList = "fa-solid fa-xmark")
-//     : (meniIcon.classList = "fa-solid fa-bars");
-// });
+let meniIcon = document.querySelector("#menuIcon");
+let nav = document.querySelector("nav");
+console.log(nav);
+meniIcon.addEventListener("click", () => {
+  nav.classList.toggle("show");
+  meniIcon.classList.contains("fa-bars")
+    ? (meniIcon.classList = "fa-solid fa-xmark")
+    : (meniIcon.classList = "fa-solid fa-bars");
+});
 
-// let header = document.querySelector("header");
-// window.addEventListener("scroll", () => {
-//   header.style.backgroundColor = "white";
-//   header.style.transition = "0.5s ease";
-//   if (scrollY == 0) {
-//     header.style.backgroundColor = "transparent";
-//   }
-// });
-//
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.backgroundColor = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+  }
+});
+
 const USERS_URL = "http://localhost:3000/users";
 let signUpForm = document.querySelector(".signUpForm");
 let nameInput = document.querySelector(".nameInput");
