@@ -1,8 +1,10 @@
 #body {
   background-color: #dfe9f5;
+  
 }
 #nav {
   position: absolute;
+  z-index: 1000;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -12,6 +14,15 @@
   overflow: hidden;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 20px;
+  }
   &:hover {
     width: 280px;
   }
@@ -25,7 +36,7 @@
     color: rgb(85, 83, 83);
     font-size: 14px;
     width: 300px;
-    padding: 10px;
+    // padding: 10px;
     display: table;
     &:hover {
       background: #eee;
@@ -38,6 +49,10 @@
       font-size: 20px;
       text-align: center;
     }
+    i {
+      padding: 0;
+      margin: 0;
+    }
     .nav-item {
       position: relative;
       top: 12px;
@@ -49,15 +64,19 @@
   margin-top: 10px;
   margin-left: 100px;
   row-gap: 27px;
-  // display: flex;
+  padding: 16px;
   justify-content: center;
   flex-direction: column;
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
   #select {
     border: navajowhite;
     outline: navajowhite;
     background-color: transparent;
     font-size: 17px;
-    option{
+    option {
       border: none;
       outline: none;
     }
@@ -66,14 +85,15 @@
     color: black;
   }
 
+  .addProductBtn2,
   .addProductBtn {
-    padding: 5px 7px;
-    margin: 10px;
-    background-color: rgb(85, 83, 83);
-    color: white;
-    border-radius: 5px;
-    outline: none;
     border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid;
+    padding: 5px;
+    margin: 16px 0 10px 0;
+    border-radius: 15px;
   }
   .searchInput {
     margin: 10px;
@@ -91,8 +111,12 @@
   }
   .row {
     display: flex;
-    column-gap: 20px;
+    column-gap: 20px !important;
+    row-gap: 20px !important;
     .card {
+      width: 100px;
+      background: transparent;
+      border: none;
       &:hover .img img {
         transform: scale(1.1);
       }
@@ -111,10 +135,11 @@
         }
       }
       .img {
-        width: 100px;
+        // width: 100px;
         overflow: hidden;
         img {
           width: 100%;
+
           transition: 0.4s;
           box-shadow: 5px -20px 18px 20px rgb(74 91 95);
         }
@@ -122,4 +147,3 @@
     }
   }
 }
-

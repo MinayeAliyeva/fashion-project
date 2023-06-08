@@ -258,6 +258,7 @@ header .header nav .navUl .dropdown .dropdown-menu {
 
 #nav {
   position: absolute;
+  z-index: 1000;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -267,6 +268,15 @@ header .header nav .navUl .dropdown .dropdown-menu {
   overflow: hidden;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
+}
+#nav ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 10px;
+}
+#nav h1 {
+  font-size: 20px;
 }
 #nav:hover {
   width: 280px;
@@ -280,7 +290,6 @@ header .header nav .navUl .dropdown .dropdown-menu {
   color: rgb(85, 83, 83);
   font-size: 14px;
   width: 300px;
-  padding: 10px;
   display: table;
 }
 #nav a:hover {
@@ -294,6 +303,10 @@ header .header nav .navUl .dropdown .dropdown-menu {
   font-size: 20px;
   text-align: center;
 }
+#nav a i {
+  padding: 0;
+  margin: 0;
+}
 #nav a .nav-item {
   position: relative;
   top: 12px;
@@ -304,8 +317,13 @@ header .header nav .navUl .dropdown .dropdown-menu {
   margin-top: 10px;
   margin-left: 100px;
   row-gap: 27px;
+  padding: 16px;
   justify-content: center;
   flex-direction: column;
+}
+#admin-section h2 {
+  padding: 0;
+  margin: 0;
 }
 #admin-section #select {
   border: navajowhite;
@@ -320,14 +338,15 @@ header .header nav .navUl .dropdown .dropdown-menu {
 #admin-section a {
   color: black;
 }
+#admin-section .addProductBtn2,
 #admin-section .addProductBtn {
-  padding: 5px 7px;
-  margin: 10px;
-  background-color: rgb(85, 83, 83);
-  color: white;
-  border-radius: 5px;
-  outline: none;
   border: none;
+  outline: none;
+  background: transparent;
+  border: 1px solid;
+  padding: 5px;
+  margin: 16px 0 10px 0;
+  border-radius: 15px;
 }
 #admin-section .searchInput {
   margin: 10px;
@@ -345,8 +364,14 @@ header .header nav .navUl .dropdown .dropdown-menu {
 }
 #admin-section .row {
   display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 20px !important;
+       column-gap: 20px !important;
+  row-gap: 20px !important;
+}
+#admin-section .row .card {
+  width: 100px;
+  background: transparent;
+  border: none;
 }
 #admin-section .row .card:hover .img img {
   transform: scale(1.1);
@@ -367,7 +392,6 @@ header .header nav .navUl .dropdown .dropdown-menu {
   font-size: 12px;
 }
 #admin-section .row .card .img {
-  width: 100px;
   overflow: hidden;
 }
 #admin-section .row .card .img img {
