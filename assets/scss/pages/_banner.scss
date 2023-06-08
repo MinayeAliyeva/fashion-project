@@ -1,18 +1,6 @@
 #banner {
-  height: 700px;
-  display: block;
-  background-image: url(../../assets/images/2779446942_9_1_1.jpg);
-  background-size: cover;
-  background-position: center;
-  .banner {
-    height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    h4 {
-      color: white;
-      font-size: 90px;
-      font-family: "Dancing Script", cursive;
-    }
-  }
+img{
+  height: 100vh;
+  object-fit: cover;
+}
 }

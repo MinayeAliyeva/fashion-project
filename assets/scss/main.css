@@ -86,23 +86,10 @@ header .header nav .navUl .dropdown .dropdown-menu {
   outline: none;
 }
 
-#banner {
-  height: 700px;
-  display: block;
-  background-image: url(../../assets/images/2779446942_9_1_1.jpg);
-  background-size: cover;
-  background-position: center;
-}
-#banner .banner {
-  height: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#banner .banner h4 {
-  color: white;
-  font-size: 90px;
-  font-family: "Dancing Script", cursive;
+#banner img {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #products .products {
