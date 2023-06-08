@@ -732,6 +732,9 @@ header {
   text-transform: uppercase;
   position: relative;
 }
+#hero-section .hero-section .girl {
+  display: flex;
+}
 #hero-section .hero-section .girl a {
   color: white;
   padding: 10px;
@@ -770,11 +773,12 @@ header {
   }
 }
 
-#kids-pruducts {
-  height: 100vh;
-}
 #kids-pruducts .kids-products {
   padding: 10px;
+}
+#kids-pruducts .kids-products .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #kids-pruducts .kids-products .content {
   display: flex;
@@ -805,4 +809,10 @@ header {
     -webkit-clip-path: polygon(0% 53%, 10% 65%, 23% 82%, 44% 79%, 61% 36%, 88% 29%, 98% 47%, 99% 99%, 1% 98%);
             clip-path: polygon(0% 53%, 10% 65%, 23% 82%, 44% 79%, 61% 36%, 88% 29%, 98% 47%, 99% 99%, 1% 98%);
   }
+}
+#wear-us {
+  background-image: url(/assets/images/1331210808_2_1_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=main.css.map */

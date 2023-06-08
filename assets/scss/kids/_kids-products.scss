@@ -1,7 +1,12 @@
 #kids-pruducts {
-  height: 100vh;
+//   height: 100vh;
   .kids-products {
     padding: 10px ;
+    .card{
+        img{
+            object-fit: cover;
+        }
+    }
     .content {
       display: flex;
       align-items: center;

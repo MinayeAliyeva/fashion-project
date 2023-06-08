@@ -20,6 +20,8 @@ header {
       }
     }
     .girl {
+      display: flex;
+      // flex-direction: row-reverse;
       a {
         color: white;
         padding: 10px;
