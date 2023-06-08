@@ -40,11 +40,31 @@ header .header {
   align-items: center;
   justify-content: space-between;
 }
+header .header input {
+  background: transparent;
+  padding: 5px 6px;
+  background-color: rgba(0, 0, 0, 0.282);
+  border-radius: 35px;
+  border: none;
+}
+header .header input::-moz-placeholder {
+  color: white;
+  padding: 0 5px 0;
+}
+header .header input::placeholder {
+  color: white;
+  padding: 0 5px 0;
+}
 header .header h2 {
   font-size: 28px;
   font-weight: 600;
 }
-header .header .navUl {
+@media only screen and (max-width: 992px) {
+  header .header nav {
+    display: none;
+  }
+}
+header .header nav .navUl {
   display: flex;
   align-items: center;
   -moz-column-gap: 20px;
@@ -52,19 +72,20 @@ header .header .navUl {
   margin: 0;
   padding: 0;
 }
-header .header .navUl a {
+header .header nav .navUl a {
   color: black;
 }
-header .header .navUl .dropdown button {
+header .header nav .navUl .dropdown button {
   outline: none;
   border: none;
   background-color: transparent;
   color: black;
 }
-header .header .navUl .dropdown .dropdown-menu {
+header .header nav .navUl .dropdown .dropdown-menu {
   border: none;
   outline: none;
 }
+
 #banner {
   height: 700px;
   display: block;
