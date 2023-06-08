@@ -1,6 +1,13 @@
 // font-family: 'Poppins', sans-serif;
 #summer-collaction {
   .summer-collaction {
+    .row {
+      img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
     .accardion {
       max-width: 530px;
       width: 100%;
@@ -15,17 +22,17 @@
         border: 1px solid #ffd6b3;
         margin: 10px 0;
         overflow: hidden;
-        &:nth-child(2){
-            background-color:#f0fafafa ;
-            border-color:#cceeff ;
+        &:nth-child(2) {
+          background-color: #f0fafafa;
+          border-color: #cceeff;
         }
-        &:nth-child(3){
-            background-color:#fff0f3 ;
-            border-color:#ffccd6 ;
+        &:nth-child(3) {
+          background-color: #fff0f3;
+          border-color: #ffccd6;
         }
-        &:nth-child(4){
-            background-color:#f0f0ff ;
-            border-color:#ccccff ;
+        &:nth-child(4) {
+          background-color: #f0f0ff;
+          border-color: #ccccff;
         }
         &.open {
           padding-bottom: 10px;

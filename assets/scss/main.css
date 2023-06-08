@@ -898,6 +898,12 @@ header {
      object-fit: cover;
 }
 
+#summer-collaction .summer-collaction .row img {
+  height: 450px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 #summer-collaction .summer-collaction .accardion {
   max-width: 530px;
   width: 100%;
