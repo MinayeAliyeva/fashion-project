@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fashion</title>
+
     <!-- owl corusel -->
     <link
       rel="stylesheet"
@@ -38,6 +39,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/scss/main.css" />
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <!-- header start -->
@@ -147,8 +150,8 @@
     <section id="products">
       <div class="container">
         <div class="products">
-          <h3>Shop by categories</h3>
-          <div class="owl-carousel owl-theme">
+          <h3 class="products-title">Shop by categories</h3>
+          <div class="owl-carousel owl-theme products-title">
             <div class="item">
               <img src="./assets/images/7802636800_2_1_1.jpg" alt="" />
               <h4>Dress</h4>
@@ -181,8 +184,8 @@
     <section id="best-selling-products">
       <div class="container">
         <div class="best-selling-products">
-          <h3 class="text-center">Best selling fashion items</h3>
-          <div class="row mainRow2">
+          <h3 class="text-center selling-title">Best selling fashion items</h3>
+          <div class="row mainRow2 selling-products">
             <!-- <div class="col-lg-3 col-md-4 col-sm-12">
               <div class="card">
                 <img
@@ -207,13 +210,13 @@
     <section id="extra-summer-collaction">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 extra-img">
             <div class="img">
               <img src="./assets/images/0774735544_1_1_1.jpg" alt="" />
             </div>
           </div>
           <div class="col-lg-6 tet-side-container">
-            <div class="tet-side">
+            <div class="tet-side extra-text">
               <h4>Extra 10% off on summer collection</h4>
               <p>
                 On other hand, we denounce with righteous indignation and
@@ -228,7 +231,7 @@
     <section id="new-trending-outfits">
       <div class="container">
         <div class="new-trending-outfits">
-          <h3 class="text-center">New trending outfits</h3>
+          <h3 class="text-center trending-title">New trending outfits</h3>
           <div class="row mainRow3">
             <!-- <div class="col-lg-3 col-md-4 col-sm-12">
               <div class="card">
@@ -255,31 +258,31 @@
         </div>
       </div>
     </section>
-    <section id="fashion-friendly">
-      <div class="container">
-        <div class="fashion-friendly">
-          <div class="row vh-100">
-            <div class="col-lg-6 col-md-12 col-sm-12"></div>
-            <div
-              class="col col-lg-6 col-md-12 col-sm-12 d-flex flex-column align-items-center justify-content-center p-5"
-            >
-              <h4>Fashion-friendly clothes for fashion enthusiasts.</h4>
-              <p>
-                On other hand, we denounce with righteous indignation and
-                dislike men who are so beguiled
-              </p>
-              <a href="">Shop Now</a>
-            </div>
+    <section id="fashion-friendly" class="fashion-friendly">
+      <!-- <div class="container"> -->
+      <div class="fashion-friendly">
+        <div class="row vh-100">
+          <div class="col-lg-6 col-md-12 col-sm-12"></div>
+          <div
+            class="col col-lg-6 col-md-12 col-sm-12 d-flex flex-column align-items-center justify-content-center p-5"
+          >
+            <h4>Fashion-friendly clothes for fashion enthusiasts.</h4>
+            <p>
+              On other hand, we denounce with righteous indignation and dislike
+              men who are so beguiled
+            </p>
+            <a href="">Shop Now</a>
           </div>
         </div>
       </div>
+      <!-- </div> -->
     </section>
     <section id="video-images">
       <div class="container">
         <div class="video-images">
-          <h1>Our Works</h1>
+          <h1 class="video-title">Our Works</h1>
           <div class="row1">
-            <div class="col1">
+            <div class="col1 big-img">
               <div class="feautured-img">
                 <img src="./assets/images/gigi.png" alt="" width="100%" />
                 <img
@@ -372,7 +375,7 @@
         <div class="footer">
           <div class="row row-gap-4">
             <div
-              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center"
+              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center fotter-item"
             >
               <h3>Quick Link</h3>
               <ul>
@@ -385,7 +388,7 @@
               </ul>
             </div>
             <div
-              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center"
+              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center fotter-item"
             >
               <h3>Customer Service</h3>
               <ul>
@@ -398,7 +401,7 @@
               </ul>
             </div>
             <div
-              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center"
+              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center fotter-item"
             >
               <h3>More</h3>
               <ul>
@@ -411,7 +414,7 @@
               </ul>
             </div>
             <div
-              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center"
+              class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center fotter-item"
             >
               <h3>Don't Miss Any Update</h3>
               <p>
@@ -456,8 +459,38 @@
         responsive: { 0: { items: 1 }, 600: { items: 3 }, 1000: { items: 5 } },
       });
     </script>
+    <!-- scrollreveal -->
     <script>
-      ScrollReveal().reveal(".headline");
+      ScrollReveal({
+        reset: true,
+        distance: "10px",
+        duration: 2500,
+        delay: 500,
+      });
+      ScrollReveal().reveal(
+        ".products-title,.selling-title,.video-title,.big-img",
+        {
+          delay: 500,
+          origin: "left",
+        }
+      );
+      ScrollReveal().reveal("footer .fotter-item,.selling-products,.extra-text", {
+        delay: 500,
+        origin: "bottom",
+        // interval: 200,
+      });
+      ScrollReveal().reveal(".extra-img,.trending-title", {
+        delay: 500,
+        origin: "right",
+        // interval: 200,
+      });
+      ScrollReveal().reveal(
+        ".fashion-friendly,.small-img-row",
+        {
+          delay: 500,
+          origin: "left",
+        }
+      );
     </script>
     <script src="./assets/js/main.js"></script>
   </body>

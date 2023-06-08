@@ -40,8 +40,8 @@ async function fillProducts() {
   mainRow2.innerHTML = "";
   filteredData.forEach((obj) => {
     mainRow2.innerHTML += `
-    <div class="col-lg-3 col-md-4 col-sm-12">
-    <div class="card">
+    <div class="col-lg-3 col-md-4 col-sm-12 products-title">
+    <div class="card ">
       <img
         src="${obj.img}"
         alt=""
