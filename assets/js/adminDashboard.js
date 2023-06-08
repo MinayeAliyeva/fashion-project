@@ -70,6 +70,9 @@ select.addEventListener("change", (e) => {
   } else if (e.target.value == "from expensive to cheap") {
     filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
     fillProducts();
+  } else {
+    filteredData = arrCopy;
+    fillProducts();
   }
 });
 
@@ -119,7 +122,7 @@ fillProducts2();
 
 //delete
 async function delFun2(id) {
-  await axios.delete(`${NEW_TRENDINGS }/${id}`);
+  await axios.delete(`${NEW_TRENDINGS}/${id}`);
   filteredData = arrCopy
     .filter((obj) => {
       obj.id != id;

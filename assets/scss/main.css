@@ -811,8 +811,29 @@ header {
   }
 }
 #wear-us {
-  background-image: url(/assets/images/1331210808_2_1_1.jpg);
+  background-image: url(../../../assets/kids-img//bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+#wear-us h4 {
+  color: wheat;
+  font-size: 34px;
+  font-weight: 900;
+  transition: 0.5s;
+  font-family: "Satisfy", cursive;
+}
+#wear-us p {
+  color: white;
+}
+#wear-us a {
+  color: rgb(59, 24, 20);
+  background: wheat;
+  padding: 6px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+#wear-us a:hover {
+  background-color: rgb(179, 112, 24);
+  color: wheat;
 }/*# sourceMappingURL=main.css.map */
