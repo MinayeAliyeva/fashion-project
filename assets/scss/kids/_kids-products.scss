@@ -1,0 +1,55 @@
+#kids-pruducts {
+  height: 100vh;
+  .kids-products {
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    //   position: relative;
+      h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px #03a9f4;
+      }
+      h2:nth-child(2) {
+        color: #03a9f4;
+        animation: animate 4s ease-in-out infinite;
+      }
+      h2 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 53%,
+      0 25%,
+      15% 27%,
+      44% 79%,
+      75% 74%,
+      96% 76%,
+      100% 73%,
+      99% 99%,
+      1% 98%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 53%,
+      10% 65%,
+      23% 82%,
+      44% 79%,
+      61% 36%,
+      88% 29%,
+      98% 47%,
+      99% 99%,
+      1% 98%
+    );
+  }
+}
