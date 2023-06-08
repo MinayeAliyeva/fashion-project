@@ -822,6 +822,14 @@ header {
   font-weight: 900;
   transition: 0.5s;
   font-family: "Satisfy", cursive;
+  padding: 50px;
+}
+#wear-us h5 {
+  color: wheat;
+  font-size: 34px;
+  font-weight: 900;
+  transition: 0.5s;
+  font-family: "Satisfy", cursive;
 }
 #wear-us p {
   color: white;
