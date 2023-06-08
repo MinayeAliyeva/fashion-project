@@ -773,6 +773,9 @@ header {
 #kids-pruducts {
   height: 100vh;
 }
+#kids-pruducts .kids-products {
+  padding: 10px;
+}
 #kids-pruducts .kids-products .content {
   display: flex;
   align-items: center;
