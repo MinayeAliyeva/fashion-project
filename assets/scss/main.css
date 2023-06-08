@@ -565,9 +565,9 @@ body #form button {
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.821);
 }
 #fashion-friendly .fashion-friendly {
-  background-color: rgba(0, 0, 0, 0.425);
   width: 100%;
 }
 #fashion-friendly .fashion-friendly h4 {
@@ -705,4 +705,67 @@ footer .footer ul {
 }
 footer .footer ul li a {
   color: rgba(0, 0, 0, 0.477);
+}
+
+header {
+  background-color: white;
+}
+
+#hero-section {
+  background-color: rgba(0, 0, 0, 0.781);
+}
+#hero-section .hero-section {
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+#hero-section .hero-section .boy {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#hero-section .hero-section .boy a {
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+#hero-section .hero-section .girl a {
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 992px) {
+  #hero-section .hero-section {
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+  }
+}
+#hero-section .hero-section img {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 992px) {
+  #hero-section .hero-section img {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  #hero-section .hero-section img {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #hero-section .hero-section img {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 269px) {
+  #hero-section .hero-section img {
+    width: 100px;
+  }
 }/*# sourceMappingURL=main.css.map */

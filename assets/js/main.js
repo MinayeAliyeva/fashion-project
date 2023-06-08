@@ -30,6 +30,7 @@ let arrCopy = [];
 let filteredData = [];
 let num = 7;
 let mainRow2 = document.querySelector(".mainRow2");
+console.log(mainRow2);
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);
   let data = await res.data;
