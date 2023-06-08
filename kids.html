@@ -150,25 +150,105 @@
         </div>
       </div>
     </section>
-
     <section id="wear-us">
       <div class="container">
         <div class="wear-us">
           <div class="row vh-100">
             <div class="col-lg-6 col-md-12 col-sm-12">
-              <h4>COMPOSITION
-                We work with monitoring programmes to ensure compliance with our social, environmental and health and safety standards for our garments.
-                </h4>
+              <h4 class="heading">
+                COMPOSITION We work with monitoring programmes to ensure
+                compliance with our social, environmental and health and safety
+                standards for our garments.
+              </h4>
             </div>
             <div
               class="col col-lg-6 col-md-12 col-sm-12 d-flex flex-column align-items-center justify-content-center p-5"
             >
-              <h4>Fashion-friendly clothes for fashion enthusiasts.</h4>
-              <p>
+              <h4 class="heading">
+                Fashion-friendly clothes for fashion enthusiasts.
+              </h4>
+              <p class="text">
                 On other hand, we denounce with righteous indignation and
                 dislike men who are so beguiled
               </p>
-              <a href="">Shop Now</a>
+              <a class="button" href="">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="best-sellers-kids">
+      <div class="container">
+        <div class="best-sellers-kids">
+          <h3 class="text-center selling-title">Best selling items</h3>
+          <div class="row mainRow2 selling-products">
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="card">
+                <img
+                  src="./assets/kids-img/6917794505_6_1_1.jpg"
+                  alt=""
+                />
+                <div class="actions">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="actions2">add basket</div>
+                <div class="text-side">
+                  <h5>LINEN BLEND CROPPED BLAZER</h5>
+                  <i><span> 1299 TL</span></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="card">
+                <img
+                  src="./assets/kids-img/3854683639_6_1_1.jpg"
+                  alt=""
+                />
+                <div class="actions">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="actions2">add basket</div>
+                <div class="text-side">
+                  <h5>LINEN BLEND CROPPED BLAZER</h5>
+                  <i><span> 1299 TL</span></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="card">
+                <img
+                  src="./assets/kids-img/6917662505_6_1_1.jpg"
+                  alt=""
+                />
+                <div class="actions">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="actions2">add basket</div>
+                <div class="text-side">
+                  <h5>LINEN BLEND CROPPED BLAZER</h5>
+                  <i><span> 1299 TL</span></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="card">
+                <img
+                  src="./assets/kids-img/6917794505_6_1_1.jpg"
+                  alt=""
+                />
+                <div class="actions">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="actions2">add basket</div>
+                <div class="text-side">
+                  <h5>LINEN BLEND CROPPED BLAZER</h5>
+                  <i><span> 1299 TL</span></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -180,23 +260,28 @@
         reset: true,
         distance: "10px",
         duration: 2500,
-        delay: 500,
+        delay: 400,
       });
       ScrollReveal().reveal(".boy", {
-        delay: 600,
+        delay: 300,
         origin: "left",
       });
-      ScrollReveal().reveal(".girl", {
-        delay: 600,
+      ScrollReveal().reveal(".girl,.content,.text,.button", {
+        delay: 300,
         origin: "right",
       });
-      ScrollReveal().reveal(".content", {
-        delay: 600,
-        origin: "right",
-      });
+      // ScrollReveal().reveal(".content", {
+      //   delay: 600,
+      //   origin: "right",
+      // });
       ScrollReveal().reveal(".card ", {
-        delay: 800,
+        delay: 300,
         origin: "top",
+        interval: 200,
+      });
+      ScrollReveal().reveal(".card,.heading ", {
+        delay: 300,
+        origin: "left",
         interval: 200,
       });
     </script>
