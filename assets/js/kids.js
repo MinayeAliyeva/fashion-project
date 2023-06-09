@@ -50,3 +50,21 @@ function removeOpen(index1) {
     }
   });
 }
+
+//
+let toTop = document.getElementById("toTop");
+toTop.style.display = "none";
+window.addEventListener("scroll", () => {
+  if (this.scrollY > 110) {
+    toTop.style.display = "block";
+  } else {
+    toTop.style.display = "none";
+  }
+});
+
+toTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior:'smooth'
+  });
+});
