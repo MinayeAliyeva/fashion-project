@@ -2,6 +2,7 @@
   background-color: #eaeaeaea;
   overflow: hidden;
   margin-top: 80px;
+  overflow: hidden;
   .buttons {
     position: absolute;
     bottom: 30px;
@@ -21,6 +22,7 @@
   }
   .container1 {
     position: absolute;
+    // overflow: hidden;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

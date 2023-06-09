@@ -144,7 +144,24 @@ function removeOpen(index1) {
       item2.classList.remove("open");
       let des = item2.querySelector(".description");
       des.style.height = "0px";
-      item2.querySelector("i").classList.replace("fa-minus","fa-plus")
+      item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
     }
   });
 }
+//
+let toTop = document.getElementById("toTop");
+toTop.style.display = "none";
+window.addEventListener("scroll", () => {
+  if (this.scrollY > 110) {
+    toTop.style.display = "block";
+  } else {
+    toTop.style.display = "none";
+  }
+});
+
+toTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior:'smooth'
+  });
+});
