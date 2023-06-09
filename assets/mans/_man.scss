@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&family=Tilt+Prism&display=swap");
+#man-fashion {
+  height: 100vh;
+  //   background-image: url(../../assets/mans-img/8574368638_2_4_1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.585);
+  width: 100%;
+  .man-fashion {
+    .right-side {
+      img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+      }
+      h2 {
+        font-size: 35px;
+        font-family: "Tilt Prism", cursive;
+        font-weight: 500;
+      }
+      p {
+        color: white;
+        font-family: "Tilt Prism", cursive;
+      }
+    }
+    .left-side {
+      img {
+        height: 500px;
+      }
+    }
+  }
+}

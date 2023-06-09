@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&family=Tilt+Prism&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1063,4 +1064,31 @@ header {
   padding: 0 15px;
   height: 0;
   transition: all 0.2s linear;
+}
+
+#man-fashion {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.585);
+  width: 100%;
+}
+#man-fashion .man-fashion .right-side img {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#man-fashion .man-fashion .right-side h2 {
+  font-size: 35px;
+  font-family: "Tilt Prism", cursive;
+  font-weight: 500;
+}
+#man-fashion .man-fashion .right-side p {
+  color: white;
+  font-family: "Tilt Prism", cursive;
+}
+#man-fashion .man-fashion .left-side img {
+  height: 500px;
 }/*# sourceMappingURL=main.css.map */
