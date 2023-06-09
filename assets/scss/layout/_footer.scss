@@ -1,7 +1,21 @@
 footer {
   margin-top: 100px;
+  background-color: bisque;
   .footer {
     padding: 30px;
+    .cards-side{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .card-right-container{
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        img{
+          width: 50px;
+        }
+      }
+    }
     input{
         padding: 7px 10px;
     }

@@ -768,9 +768,24 @@ body #form button {
 
 footer {
   margin-top: 100px;
+  background-color: bisque;
 }
 footer .footer {
   padding: 30px;
+}
+footer .footer .cards-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer .cards-side .card-right-container {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+footer .footer .cards-side .card-right-container img {
+  width: 50px;
 }
 footer .footer input {
   padding: 7px 10px;
