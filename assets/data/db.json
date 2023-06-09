@@ -75,18 +75,6 @@
       "productprice": "130",
       "img": "./assets/products-image/3666939706_6_1_1.jpg",
       "id": 26
-    },
-    {
-      "productName": "Sopoline Sharpe",
-      "productprice": "696",
-      "img": "./assets/products-image/3619041400_6_1_1.jpg",
-      "id": 27
-    },
-    {
-      "productName": "helll dreaa",
-      "productprice": "7676",
-      "img": "./assets/products-image/7521244506_6_1_1.jpg",
-      "id": 28
     }
   ]
 }

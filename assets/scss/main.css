@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&family=Tilt+Prism&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -714,22 +713,8 @@ body #form button {
 }
 #summer-collaction-woman .summer-collaction-woman .accardion .accardion-content {
   border-radius: 4px;
-  background-color: rgb(180, 73, 89);
-  border-color: rgb(242, 4, 36);
   margin: 10px 0;
   overflow: hidden;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content:nth-child(2) {
-  background-color: rgb(180, 73, 89);
-  border-color: rgb(242, 4, 36);
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content:nth-child(3) {
-  background-color: rgb(180, 73, 89);
-  border-color: rgb(242, 4, 36);
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content:nth-child(4) {
-  background-color: rgb(180, 73, 89);
-  border-color: rgb(242, 4, 36);
 }
 #summer-collaction-woman .summer-collaction-woman .accardion .accardion-content.open {
   padding-bottom: 10px;

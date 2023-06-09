@@ -1,0 +1,16 @@
+#logos {
+  margin-top: 100px;
+  .logos {
+    .logo-text {
+      display: flex;
+      align-items: center;
+      column-gap: 19px;
+      p{
+        color: gray;
+      }
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
