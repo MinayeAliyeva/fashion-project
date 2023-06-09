@@ -1091,4 +1091,69 @@ header {
 }
 #man-fashion .man-fashion .left-side img {
   height: 500px;
+}
+
+#men-best-selling-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #16384c;
+}
+#men-best-selling-products .row {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+#men-best-selling-products .row .card1 {
+  max-width: 300px;
+  height: 215px;
+  position: relative;
+  background-color: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+#men-best-selling-products .row .card1 .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+#men-best-selling-products .row .card1:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -10px;
+  transition-delay: 0.3s;
+}
+#men-best-selling-products .row .card1:hover {
+  height: 420px;
+}
+#men-best-selling-products .row .card1 .img {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+#men-best-selling-products .row .card1 .img img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */
