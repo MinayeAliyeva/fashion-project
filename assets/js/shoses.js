@@ -6,15 +6,15 @@ window.addEventListener("scroll", () => {
     header.style.backgroundColor = "transparent";
   }
 });
-//
-document.getElementById("next").onclick = function () {
-  let lists = document.querySelectorAll(".item");
-  document.getElementById("slide").appendChild(lists[0]);
-};
-document.getElementById("prev").onclick = function () {
-  let lists = document.querySelectorAll(".item");
-  document.getElementById("slide").prepend(lists[lists.length-1]);
-};
+let meniIcon = document.querySelector("#menuIcon");
+let nav = document.querySelector("nav");
+console.log(nav);
+meniIcon.addEventListener("click", () => {
+  nav.classList.toggle("show");
+  meniIcon.classList.contains("fa-bars")
+    ? (meniIcon.classList = "fa-solid fa-xmark")
+    : (meniIcon.classList = "fa-solid fa-bars");
+});
 //
 let toTop = document.getElementById("toTop");
 toTop.style.display = "none";
