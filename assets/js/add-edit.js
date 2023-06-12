@@ -1,7 +1,4 @@
 const PRODUCTS_URL = "http://localhost:3000/products";
-window.addEventListener("load", async function () {
-  let response = await axios(PRODUCTS_URL);
-});
 let form = document.querySelector(".add-edit-form");
 let productName = document.querySelector("#productName");
 let productPrice = document.querySelector("#productPrice");
@@ -23,8 +20,13 @@ form.addEventListener("submit", async (e) => {
     productprice: productPrice.value,
     img: base64,
   };
-  await axios.post(`${PRODUCTS_URL}`, productObj);
-  window.location = "adminDashboard.html";
+  if (id) {
+    await axios.patch(`${PRODUCTS_URL}/${id}`, productObj);
+    window.location = "adminDashboard.html";
+  } else {
+    await axios.post(`${PRODUCTS_URL}`, productObj);
+    window.location = "adminDashboard.html";
+  }
 });
 
 const convertBase64 = (file) => {

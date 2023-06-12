@@ -78,11 +78,25 @@
         <div class="users">
           <h4>Users</h4>
         </div>
-        <input
-          class="searchInput"
-          type="text"
-          placeholder="Search product..."
-        />
+        <div class="input-select">
+          <input
+            class="searchInput"
+            type="text"
+            placeholder="Search product..."
+          />
+          <select name="" id="select">
+            <option value="Select By Price" disabled selected>
+              Select By Price
+            </option>
+            <option value="from cheap to expensive">
+              from cheap to expensive
+            </option>
+            <option value="from expensive to cheap">
+              from expensive to cheap
+            </option>
+            <option value="default prices">default prices</option>
+          </select>
+        </div>
         <table class="table mt-5 table-hover">
           <thead>
             <tr>
@@ -93,26 +107,7 @@
               <th scope="col">Actions</th>
             </tr>
           </thead>
-          <tbody>
-            <!-- <tr>
-              <td>
-                <img
-                  src="./assets/products-image/1856228808_6_1_1.jpg"
-                  alt=""
-                />
-              </td>
-              <td>ssss</td>
-              <td>ssss</td>
-              <td>ssss</td>
-              <td>
-               <div class="actions">
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash"></i>
-                <i class="fa-solid fa-eye"></i>
-               </div>
-              </td>
-            </tr> -->
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </section>

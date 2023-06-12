@@ -346,23 +346,37 @@ header .header nav .navUl .dropdown .dropdown-menu {
   font-family: "Crimson Text", serif;
 }
 #body .header .side-nav .admin .admin-img {
-  width: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
 }
 #body #users {
   margin-left: 290px;
   margin-top: 50px;
 }
+#body #users .input-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
 #body #users table .actions {
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
+#body #users table .actions a {
+  color: black;
+}
 #body #users table img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #body #users .title-add {
   font-family: "Crimson Text", serif;

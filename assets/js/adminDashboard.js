@@ -8,9 +8,7 @@ async function drawTable() {
   let res = await axios(PRODUCTS_URL);
   let data = await res.data;
   arrCopy = data;
-  filteredData = filteredData.length
-    ? filteredData.slice(0, num)
-    : data.slice(0, num);
+  filteredData = filteredData.length ? filteredData : data;
   tBody.innerHTML = "";
   filteredData.forEach((obj) => {
     tBody.innerHTML += `
@@ -22,7 +20,7 @@ async function drawTable() {
         <td>
         <div class="actions">
          <a href="add-edit-products-form.html?id=${obj.id}"><i class="fa-solid fa-pen"></i></a>
-         <i class="fa-solid fa-trash"></i>
+         <i class="fa-solid fa-trash"  onclick=delFun(${obj.id})></i>
          <i class="fa-solid fa-eye"></i>
         </div>
        </td>
@@ -32,79 +30,37 @@ async function drawTable() {
 }
 drawTable();
 
-// let addProductBtn = document.querySelector(".addProductBtn");
-// addProductBtn.addEventListener("click", () => {
-//   window.location = "add-edit-products-form.html";
-// });
+//delete
+async function delFun(id) {
+  await axios.delete(`${PRODUCTS_URL}/${id}`);
+  filteredData = arrCopy.filter((obj) => {
+    obj.id != id;
+  });
+}
+//search
+searchInput.addEventListener("input", (e) => {
+  filteredData = arrCopy.filter((obj) => {
+    return obj.productName
+      .toLocaleLowerCase()
+      .includes(e.target.value.toLocaleLowerCase());
+  });
 
-// let mainRow = document.querySelector(".mainRow");
-// async function fillProducts() {
-//   let res = await axios(PRODUCTS_URL);
-//   let data = await res.data;
-//   arrCopy = data;
-//   filteredData = filteredData.length
-//     ? filteredData.slice(0, num)
-//     : data.slice(0, num);
-//   mainRow.innerHTML = "";
-//   filteredData.forEach((obj) => {
-//     mainRow.innerHTML += `
-//     <div class="col col-lg-1 ">
-// <div class="card">
-//   <div class="img">
-//     <img src="${obj.img}" alt="" />
-//     <div class="text-side">
-//       <span>${obj.productName}</span>
-//       <span>Price:${obj.productprice}</span>
-//     </div>
-//   </div>
-//   <div class="actions">
-//     <i class="fa-solid fa-trash" onclick=delFun(${obj.id})></i>
-//  <a href="add-edit-products-form.html?id=${obj.id}">   <i class="fa-solid fa-pen" ></i></a>
-//     <i class="fa-solid fa-eye"></i>
-//   </div>
-// </div>
-// </div>
-
-// `;
-//   });
-// }
-// fillProducts();
-
-// //delete
-// async function delFun(id) {
-//   await axios.delete(`${PRODUCTS_URL}/${id}`);
-//   filteredData = arrCopy
-//     .filter((obj) => {
-//       obj.id != id;
-//     })
-//     .slice(0, num);
-// }
-// //search
-// searchInput.addEventListener("input", (e) => {
-//   filteredData = arrCopy
-//     .filter((obj) => {
-//       return obj.productName
-//         .toLocaleLowerCase()
-//         .includes(e.target.value.toLocaleLowerCase());
-//     })
-//     .slice(0, num);
-
-//   fillProducts();
-// });
-// //sort
-// let select = document.querySelector("#select");
-// select.addEventListener("change", (e) => {
-//   if (e.target.value == "from cheap to expensive") {
-//     filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
-//     fillProducts();
-//   } else if (e.target.value == "from expensive to cheap") {
-//     filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
-//     fillProducts();
-//   } else {
-//     filteredData = arrCopy;
-//     fillProducts();
-//   }
-// });
+  drawTable();
+});
+//sort
+let select = document.querySelector("#select");
+select.addEventListener("change", (e) => {
+  if (e.target.value == "from cheap to expensive") {
+    filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
+    drawTable();
+  } else if (e.target.value == "from expensive to cheap") {
+    filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
+    drawTable();
+  } else {
+    filteredData = arrCopy;
+    drawTable();
+  }
+});
 
 // //new trendings
 // const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";

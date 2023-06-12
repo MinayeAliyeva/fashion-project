@@ -76,23 +76,35 @@
           font-family: "Crimson Text", serif;
         }
         .admin-img {
-          width: 40px;
+          width: 60px;
+          height: 60px;
           border-radius: 50%;
+          object-fit: cover;
           margin: 0;
         }
       }
     }
   }
   #users {
+    .input-select{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
     table {
       .actions {
         display: flex;
         column-gap: 20px;
+        a{
+          color: black;
+        }
       }
       img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
+        object-fit: cover;
       }
     }
     margin-left: 290px;
