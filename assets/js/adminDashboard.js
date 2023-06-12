@@ -1,10 +1,18 @@
 const PRODUCTS_URL = "http://localhost:3000/products";
 let tBody = document.querySelector("tbody");
-async function drawTable(arr) {
+let searchInput = document.querySelector(".searchInput");
+let arrCopy = [];
+let filteredData = [];
+let num = 10;
+async function drawTable() {
   let res = await axios(PRODUCTS_URL);
   let data = await res.data;
+  arrCopy = data;
+  filteredData = filteredData.length
+    ? filteredData.slice(0, num)
+    : data.slice(0, num);
   tBody.innerHTML = "";
-  data.forEach((obj) => {
+  filteredData.forEach((obj) => {
     tBody.innerHTML += `
         <tr>
         <td>${obj.id}</td>
@@ -13,7 +21,7 @@ async function drawTable(arr) {
         <td>${obj.productprice}</td>
         <td>
         <div class="actions">
-         <a href="add-edit-products-form.html"><i class="fa-solid fa-pen"></i></a>
+         <a href="add-edit-products-form.html?id=${obj.id}"><i class="fa-solid fa-pen"></i></a>
          <i class="fa-solid fa-trash"></i>
          <i class="fa-solid fa-eye"></i>
         </div>
@@ -28,10 +36,7 @@ drawTable();
 // addProductBtn.addEventListener("click", () => {
 //   window.location = "add-edit-products-form.html";
 // });
-// let searchInput = document.querySelector(".searchInput");
-// let arrCopy = [];
-// let filteredData = [];
-// let num = 10;
+
 // let mainRow = document.querySelector(".mainRow");
 // async function fillProducts() {
 //   let res = await axios(PRODUCTS_URL);
