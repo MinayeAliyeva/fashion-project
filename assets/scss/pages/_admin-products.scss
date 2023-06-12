@@ -2,8 +2,14 @@
     .input-select{
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       padding: 0 30px;
+      button{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: black;
+      }
     }
     table {
       .actions {
@@ -20,7 +26,6 @@
         object-fit: cover;
       }
     }
-    // margin-left: 290px;
     margin-top: 50px;
     .title-add {
       font-family: "Crimson Text", serif;

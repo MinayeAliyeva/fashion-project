@@ -1098,8 +1098,14 @@ header {
 #users .input-select {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 30px;
+}
+#users .input-select button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: black;
 }
 #users table .actions {
   display: flex;
