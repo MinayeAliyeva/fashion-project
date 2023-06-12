@@ -22,102 +22,100 @@
     <link rel="stylesheet" href="./assets/scss/main.css" />
   </head>
   <body id="body">
-    <nav id="nav">
-      <ul>
-        <li>
-          <a href="">
-            <!-- logo -->
-            <h1>Shilly</h1>
-          </a>
-        </li>
-        <li>
-          <a href="home.html">
-            <i class="fa-solid fa-house"></i>
-            <span class="nav-item"> Home </span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fa-solid fa-user"></i>
-            <span class="nav-item">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="users.html">
-            <i class="fa-solid fa-users"></i>
-            <span class="nav-item"> Users </span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fa-solid fa-chart-line"></i>
-            <span class="nav-item"> Analytics </span>
-          </a>
-        </li>
-        <li>
-          <a href="products.html">
-            <i class="fa-solid fa-brands fa-product-hunt"></i>
-            <span class="nav-item"> Products </span>
-          </a>
-        </li>
-        <li class="logout">
-          <a href="home.html">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <span class="nav-item"> Logout </span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <section id="admin-section">
-      <h2 class="p-3">Admin Panel</h2>
-      <p>Admin :Minaya Aliyeva</p>
-      <div><button class="addProductBtn">Add product</button></div>
-      <div >
-        Search Product:<input class=" searchInput" type="text" />
-      </div>
-      <select id="select" name="" id="">
-        <option value="" selected disabled>according to the price</option>
-        <option value="from cheap to expensive">from cheap to expensive</option>
-        <option value="from expensive to cheap">from expensive to cheap</option>
-        <option value="own order">own order</option>
-      </select>
-      <h3>Products:</h3>
-      <div class="row mainRow ">
-        <!-- <div class="col col-lg-3">
-          <div class="card">
-            <div class="img">
-              <img src="${obj.img}" alt="" />
-              <div class="text-side">
-                <span>${obj.productName}</span>
-                <span>Price:${obj.productprice}</span>
-             
-              </div>
-            </div>
+    <div class="header">
+      <div class="side-nav">
+        <div class="admin">
+          <img src="./assets/images/rAdmin.png" alt="" class="admin-img" />
+          <div>
+            <h2>Minaya Aliyeva</h2>
+            <p>Admin</p>
           </div>
-        </div> -->
+        </div>
+        <ul>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-users"></i>
+              <p>Users</p></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-shirt"></i>
+              <p>Products</p></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-shirt"></i>
+              <p>New Products</p></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-message"></i>
+              <p>Messages</p></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-chart-simple"></i>
+              <p>Charts</p></a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <p>Logout</p></a
+            >
+          </li>
+        </ul>
       </div>
-      <div></div>
-      <hr>
-      <div><button class="addProductBtn2 ">Add New trendings</button></div>
-      <div class="">
-        Search Product:<input class=" searchInput2" type="text" />
-      </div>
-      <h3>New Trendings:</h3>
-      <div class="row mainRow2 ">
-        <!-- <div class="col col-lg-3">
-          <div class="card">
-            <div class="img">
-              <img src="./assets/products-image/1226110050_6_1_1.jpg" alt="" />
-              <div class="text-side">
-                <span>${obj.productName}</span>
-                <span>Price:${obj.productprice}</span>
-             
-              </div>
+    </div>
+    <section id="users">
+      <div class="container">
+        <div class="users">
+          <h4>Users</h4>
+        </div>
+        <input
+          class="searchInput"
+          type="text"
+          placeholder="Search product..."
+        />
+        <table class="table mt-5 table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Product Image</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Price</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="row">
+          <h1 class="title-add text-center">Add Or Edit product</h1>
+          <form class="add-edit-form" id="form" action="">
+            <h1>Add or Edit Product</h1>
+            <div class="input-control">
+              <label for="productName">Product Name</label>
+              <input id="productName" name="productName" type="text" />
             </div>
-          </div>
-        </div> -->
+            <div class="input-control">
+              <label for="productPrice">Price</label>
+              <input id="productPrice" type="number" />
+            </div>
+            <div class="input-group mb-3">
+              <input type="file" class="form-control" id="imgInput" />
+            </div>
+            <button type="submit">Add</button>
+          </form>
+        </div>
       </div>
     </section>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
       integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="

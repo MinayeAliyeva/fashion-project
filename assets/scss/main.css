@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -270,183 +271,110 @@ header .header nav .navUl .dropdown .dropdown-menu {
   border-radius: 4px;
 }
 
-#body {
-  background-color: #dfe9f5;
-}
-
-#nav {
-  position: absolute;
-  z-index: 1000;
-  top: 0;
-  bottom: 0;
+#body .header .side-nav {
+  width: 250px;
   height: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
-  background: #fff;
-  width: 90px;
-  overflow: hidden;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-  transition: 0.5s;
-}
-#nav ul {
+  padding: 30px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  row-gap: 20px;
-  padding: 10px;
+  transition: width 0.5s;
 }
-#nav h1 {
-  font-size: 20px;
-}
-#nav:hover {
-  width: 280px;
-}
-#nav .logout {
-  position: absolute;
-  bottom: 0;
-}
-#nav a {
-  position: relative;
-  color: rgb(85, 83, 83);
-  font-size: 14px;
-  width: 300px;
-  display: table;
-}
-#nav a:hover {
-  background: #eee;
-}
-#nav a .fa-solid {
-  position: relative;
-  width: 70px;
-  height: 40px;
-  top: 14px;
-  font-size: 20px;
-  text-align: center;
-}
-#nav a i {
-  padding: 0;
+#body .header .side-nav ul {
+  padding: 0 15px;
   margin: 0;
 }
-#nav a .nav-item {
-  position: relative;
-  top: 12px;
-  margin-left: 14px;
-}
-
-#admin-section {
-  margin-top: 10px;
-  margin-left: 100px;
-  row-gap: 27px;
-  padding: 16px;
-  justify-content: center;
+#body .header .side-nav ul li {
+  margin: 30px 0;
+  display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: 0.8s;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 16px;
+  border-radius: 8px;
 }
-#admin-section h2 {
-  padding: 0;
-  margin: 0;
+#body .header .side-nav ul li:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
-#admin-section #select {
-  border: navajowhite;
-  outline: navajowhite;
-  background-color: transparent;
-  font-size: 17px;
-}
-#admin-section #select option {
-  border: none;
-  outline: none;
-}
-#admin-section a {
-  color: black;
-}
-#admin-section .addProductBtn2,
-#admin-section .addProductBtn {
-  border: none;
-  outline: none;
-  background: transparent;
-  border: 1px solid;
-  padding: 5px;
-  margin: 16px 0 10px 0;
-  border-radius: 15px;
-}
-#admin-section .searchInput {
-  margin: 10px;
-  margin-left: 9px;
-  width: 100px;
-  padding: 0 7px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  background-color: transparent;
-  color: black;
-}
-#admin-section .loadMore {
-  background-color: transparent;
-}
-#admin-section .row {
-  display: flex;
-  -moz-column-gap: 20px !important;
-       column-gap: 20px !important;
-  row-gap: 20px !important;
-}
-#admin-section .row .card {
-  width: 100px;
-  background: transparent;
-  border: none;
-}
-#admin-section .row .card:hover .img img {
-  transform: scale(1.1);
-}
-#admin-section .row .card span {
-  font-size: 11px;
-}
-#admin-section .row .card .actions {
-  display: flex;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+#body .header .side-nav ul li a {
+  display: flex !important;
+  justify-content: flex-start;
   align-items: center;
-}
-#admin-section .row .card .actions a {
   color: black;
+  font-family: "Crimson Text", serif;
 }
-#admin-section .row .card .actions i {
+#body .header .side-nav ul li a p {
+  display: block;
+  white-space: nowrap;
+  margin: 0;
+}
+#body .header .side-nav ul li a i {
+  width: 30px;
+  margin-right: 10px;
+}
+#body .header .side-nav .admin {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 12px;
-}
-#admin-section .row .card .img {
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
-#admin-section .row .card .img img {
-  width: 100%;
-  transition: 0.4s;
-  box-shadow: 5px -20px 18px 20px rgb(74, 91, 95);
+#body .header .side-nav .admin div {
+  display: block;
 }
-
-body {
-  font-family: "Poppins", sans-serif;
+#body .header .side-nav .admin h2 {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-family: "Crimson Text", serif;
 }
-body #form {
+#body .header .side-nav .admin .admin-img {
+  width: 40px;
+  border-radius: 50%;
+  margin: 0;
+}
+#body #users {
+  margin-left: 290px;
+  margin-top: 50px;
+}
+#body #users .title-add {
+  font-family: "Crimson Text", serif;
+}
+#body #users #form {
   width: 300px;
   margin: 20vh auto 0 auto;
   padding: 20px;
   background-color: whitesmoke;
 }
-body #form .input-control {
+#body #users #form .input-control {
   display: flex;
   flex-direction: column;
 }
-body #form .input-control:focus {
+#body #users #form .input-control:focus {
   outline: 0;
 }
-body #form .input-control input {
-  border: 2px solid #f0f0f0;
-  border-radius: 4px;
-  display: block;
-  font-size: 12px;
-  padding: 10px;
-  width: 100%;
-}
-body #form h1 {
+#body #users #form h1 {
   text-align: center;
   color: #0f2027;
 }
-body #form button {
+#body #users #form button {
   padding: 10px;
   margin-top: 10px;
   width: 100%;
@@ -454,6 +382,26 @@ body #form button {
   background-color: rgb(85, 83, 83);
   border: none;
   border-radius: 4px;
+}
+#body .searchInput {
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid;
+}
+#body .searchInput::-moz-placeholder {
+  color: black;
+}
+#body .searchInput::placeholder {
+  color: black;
+}
+#body .users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#body .users h4 {
+  font-size: 58px;
+  font-family: "Crimson Text", serif;
 }
 
 #extra-summer-collaction .img img {
