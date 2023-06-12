@@ -1,6 +1,15 @@
-#shoses{
-  img{
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+#shoses {
+  img {
     height: 100vh;
     object-fit: cover;
+  }
+  h5 {
+    font-size: 65px;
+    font-family: 'Caveat', cursive;
+  }
+  p{
+    font-family: 'Caveat', cursive;
+    font-size: 33px;
   }
 }

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@100;200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1071,4 +1072,12 @@ header {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#shoses h5 {
+  font-size: 65px;
+  font-family: "Caveat", cursive;
+}
+#shoses p {
+  font-family: "Caveat", cursive;
+  font-size: 33px;
 }/*# sourceMappingURL=main.css.map */
