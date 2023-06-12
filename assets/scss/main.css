@@ -1090,4 +1090,80 @@ header {
 #shoses p {
   font-family: "Caveat", cursive;
   font-size: 33px;
+}
+
+#users {
+  margin-top: 50px;
+}
+#users .input-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+#users table .actions {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#users table .actions a {
+  color: black;
+}
+#users table img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#users .title-add {
+  font-family: "Crimson Text", serif;
+}
+#users #form {
+  width: 300px;
+  margin: 20vh auto 0 auto;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+#users #form .input-control {
+  display: flex;
+  flex-direction: column;
+}
+#users #form .input-control:focus {
+  outline: 0;
+}
+#users #form h1 {
+  text-align: center;
+  color: #0f2027;
+}
+#users #form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgb(85, 83, 83);
+  border: none;
+  border-radius: 4px;
+}
+
+.searchInput {
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid;
+}
+.searchInput::-moz-placeholder {
+  color: black;
+}
+.searchInput::placeholder {
+  color: black;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.users h4 {
+  font-size: 58px;
+  font-family: "Crimson Text", serif;
 }/*# sourceMappingURL=main.css.map */
