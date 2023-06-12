@@ -1065,4 +1065,10 @@ header {
   padding: 0 15px;
   height: 0;
   transition: all 0.2s linear;
+}
+
+#shoses img {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
