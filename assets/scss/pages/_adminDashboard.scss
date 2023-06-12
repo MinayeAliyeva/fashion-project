@@ -84,6 +84,17 @@
     }
   }
   #users {
+    table {
+      .actions {
+        display: flex;
+        column-gap: 20px;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
     margin-left: 290px;
     margin-top: 50px;
     .title-add {

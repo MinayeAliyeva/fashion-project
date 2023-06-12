@@ -354,6 +354,16 @@ header .header nav .navUl .dropdown .dropdown-menu {
   margin-left: 290px;
   margin-top: 50px;
 }
+#body #users table .actions {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#body #users table img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 #body #users .title-add {
   font-family: "Crimson Text", serif;
 }

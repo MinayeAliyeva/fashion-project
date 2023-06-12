@@ -1,24 +1,28 @@
 const PRODUCTS_URL = "http://localhost:3000/products";
 let tBody = document.querySelector("tbody");
-function drawTable(arr) {
+async function drawTable(arr) {
+  let res = await axios(PRODUCTS_URL);
+  let data = await res.data;
   tBody.innerHTML = "";
-  arr.forEach((obj) => {
+  data.forEach((obj) => {
     tBody.innerHTML += `
         <tr>
         <td>${obj.id}</td>
-        <td>${obj.img}</td>
+        <td>  <img src="${obj.img}" alt=""></td>
         <td>${obj.productName}</td>
         <td>${obj.productprice}</td>
-        <td>action</td>
+        <td>
+        <div class="actions">
+         <a href="add-edit-products-form.html"><i class="fa-solid fa-pen"></i></a>
+         <i class="fa-solid fa-trash"></i>
+         <i class="fa-solid fa-eye"></i>
+        </div>
+       </td>
       </tr>
         `;
   });
 }
-
-window.addEventListener("load", async function () {
-  let response = await axios(PRODUCTS_URL);
-  drawTable(response.data);
-});
+drawTable();
 
 // let addProductBtn = document.querySelector(".addProductBtn");
 // addProductBtn.addEventListener("click", () => {
