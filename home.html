@@ -49,7 +49,7 @@
   </head>
   <body>
     <div class="loader">
-      <img src="./assets/images/06-loader_telega.gif" alt="">
+      <img src="./assets/images/06-loader_telega.gif" alt="" />
     </div>
     <!-- header start -->
 
@@ -223,7 +223,7 @@
               <img src="./assets/images/0774735544_1_1_1.jpg" alt="" />
             </div>
           </div>
-          <div class="col-lg-6 tet-side-container">
+          <div class="col-lg-6 text-side-container">
             <div class="tet-side extra-text">
               <h4>Extra 10% off on summer collection</h4>
               <p>
@@ -568,9 +568,7 @@
               <img src="./assets/images-for-evry/indir (8).png" alt="" />
               <img src="./assets/images-for-evry/indir (9).png" alt="" />
             </div>
-            <div class="card-left-side">
-        
-            </div>
+            <div class="card-left-side"></div>
           </div>
         </div>
       </div>
@@ -611,19 +609,30 @@
     <!-- scrollreveal -->
 
     <script>
-      // ScrollReveal({
-      //   reset: true,
-      //   distance: "10px",
-      //   duration: 2500,
-      //   delay: 500,
-      // });
-      // ScrollReveal().reveal(
-      //   ".products-title,.selling-title",
-      //   {
-      //     delay:600,
-      //     origin: "left",
-      //   }
-      // );
+      ScrollReveal({
+        reset: true,
+        distance: "10px",
+        duration: 2500,
+        delay: 500,
+      });
+      ScrollReveal().reveal(".products-title,.selling-title", {
+        delay: 500,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".mainRow2,.fashion-friendly,.video-title", {
+        delay: 500,
+        origin: "right",
+      });
+      ScrollReveal().reveal(".selling-title,.selling-products", {
+        delay: 500,
+        origin: "right",
+   
+      });
+      ScrollReveal().reveal(".extra-summer,.extra-img,.text-side-container", {
+        delay: 500,
+        origin: "top",
+   
+      });
     </script>
     <script src="./assets/js/main.js"></script>
   </body>
