@@ -433,6 +433,11 @@ header .header nav .navUl .dropdown .dropdown-menu {
 #body #home-admin {
   margin-left: 300px;
 }
+#body #home-admin #myChart {
+  width: 900px !important;
+  max-width: 900px !important;
+  height: 400px;
+}
 
 body {
   font-family: "Poppins", sans-serif;

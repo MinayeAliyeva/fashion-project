@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 #body {
-  .admin-arrow{
+  .admin-arrow {
     color: black;
   }
   .header {
@@ -89,7 +89,7 @@
     }
   }
   #users {
-    .input-select{
+    .input-select {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -99,7 +99,7 @@
       .actions {
         display: flex;
         column-gap: 20px;
-        a{
+        a {
           color: black;
         }
       }
@@ -161,7 +161,12 @@
       font-family: "Crimson Text", serif;
     }
   }
-  #home-admin{
+  #home-admin {
     margin-left: 300px;
+    #myChart {
+      width: 900px !important;
+      max-width: 900px !important;
+      height: 400px;
+    }
   }
 }
