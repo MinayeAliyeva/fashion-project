@@ -1107,6 +1107,12 @@ header {
   background-color: transparent;
   color: black;
 }
+#users .arrow {
+  color: black;
+}
+#users .arrow i {
+  color: black;
+}
 #users table .actions {
   display: flex;
   -moz-column-gap: 20px;

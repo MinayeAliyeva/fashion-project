@@ -1,78 +1,84 @@
 #users {
-    .input-select{
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      padding: 0 30px;
-      button{
-        border: none;
-        outline: none;
-        background-color: transparent;
-        color: black;
-      }
-    }
-    table {
-      .actions {
-        display: flex;
-        column-gap: 20px;
-        a{
-          color: black;
-        }
-      }
-      img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-    }
-    margin-top: 50px;
-    .title-add {
-      font-family: "Crimson Text", serif;
-    }
-    #form {
-      width: 300px;
-      margin: 20vh auto 0 auto;
-      padding: 20px;
-      background-color: whitesmoke;
-      .input-control {
-        display: flex;
-        flex-direction: column;
-        &:focus {
-          outline: 0;
-        }
-      }
-      h1 {
-        text-align: center;
-        color: #0f2027;
-      }
-      button {
-        padding: 10px;
-        margin-top: 10px;
-        width: 100%;
-        color: white;
-        background-color: rgb(85, 83, 83);
-        border: none;
-        border-radius: 4px;
-      }
-    }
-  }
-
-  .searchInput {
-    width: 350px;
-    border: none;
-    border-bottom: 1px solid;
-    &::placeholder {
+  .input-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30px;
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
       color: black;
     }
   }
-  .users {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h4 {
-      font-size: 58px;
-      font-family: "Crimson Text", serif;
+  .arrow {
+    color: black;
+    i {
+      color: black;
     }
   }
+  table {
+    .actions {
+      display: flex;
+      column-gap: 20px;
+      a {
+        color: black;
+      }
+    }
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  margin-top: 50px;
+  .title-add {
+    font-family: "Crimson Text", serif;
+  }
+  #form {
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    .input-control {
+      display: flex;
+      flex-direction: column;
+      &:focus {
+        outline: 0;
+      }
+    }
+    h1 {
+      text-align: center;
+      color: #0f2027;
+    }
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+      color: white;
+      background-color: rgb(85, 83, 83);
+      border: none;
+      border-radius: 4px;
+    }
+  }
+}
+
+.searchInput {
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid;
+  &::placeholder {
+    color: black;
+  }
+}
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    font-size: 58px;
+    font-family: "Crimson Text", serif;
+  }
+}
