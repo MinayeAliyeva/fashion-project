@@ -1552,4 +1552,15 @@ header {
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#about-us .row-container {
+  background-color: rgba(0, 0, 0, 0.44);
+}
+#about-us .row-container h4 {
+  color: white;
+  font-size: 45px;
+}
+#about-us .row-container p {
+  color: rgba(248, 245, 245, 0.5);
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

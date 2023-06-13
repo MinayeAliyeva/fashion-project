@@ -1,9 +1,19 @@
-#about-us{
-    height: 100vh;
-    background-image: url(../../../assets/about-images/bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-  
+#about-us {
+  height: 100vh;
+  background-image: url(../../../assets/about-images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  .row-container {
+    background-color: rgba(0, 0, 0, 0.44);
+    h4 {
+      color: white;
+      font-size: 45px;
+    }
+    p {
+      color: rgba(248, 245, 245, 0.5);
+      text-align: center;
+    }
+  }
 }
