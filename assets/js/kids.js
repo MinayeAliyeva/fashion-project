@@ -8,12 +8,31 @@ meniIcon.addEventListener("click", () => {
     : (meniIcon.classList = "fa-solid fa-bars");
 });
 
+let heading = document.querySelector(".header h2");
+let anchors = document.querySelectorAll(".navUl a");
+let drops = document.querySelectorAll(".dropdown button");
+console.log(drops);
 let header = document.querySelector("header");
+console.log(drops);
 window.addEventListener("scroll", () => {
   header.style.backgroundColor = "white";
+  heading.style.color = "black";
   header.style.transition = "0.5s";
+  anchors.forEach((a) => {
+    a.style.color = "black";
+  });
+  drops.forEach((drop) => {
+    drop.style.color = "black";
+  });
   if (scrollY == 0) {
     header.style.backgroundColor = "transparent";
+    heading.style.color = "white";
+    anchors.forEach((a) => {
+      a.style.color = "white";
+    });
+    drops.forEach((drop) => {
+      drop.style.color = "white";
+    });
   }
 });
 
@@ -54,7 +73,7 @@ function removeOpen(index1) {
       item2.classList.remove("open");
       let des = item2.querySelector(".description");
       des.style.height = "0px";
-      item2.querySelector("i").classList.replace("fa-minus","fa-plus")
+      item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
     }
   });
 }
@@ -73,6 +92,6 @@ window.addEventListener("scroll", () => {
 toTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior:'smooth'
+    behavior: "smooth",
   });
 });
