@@ -19,3 +19,17 @@
     box-shadow: none;
   }
 }
+.loader {
+  position: fixed;
+  z-index: 99999999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}

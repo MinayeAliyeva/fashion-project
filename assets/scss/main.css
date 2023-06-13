@@ -133,6 +133,21 @@ header .header nav .navUl .dropdown .dropdown-menu {
   box-shadow: none;
 }
 
+.loader {
+  position: fixed;
+  z-index: 99999999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.loader img {
+  width: 300px;
+  height: 300px;
+}
+
 #products .products {
   padding: 50px 0;
 }
