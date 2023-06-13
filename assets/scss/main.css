@@ -1665,4 +1665,85 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 10px 5px;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+header .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .head .fa-bars {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  header .head .fa-bars {
+    display: block;
+    font-size: 24px;
+  }
+}
+header .head h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: wheat !important;
+}
+header .head nav.show {
+  display: block;
+}
+@media only screen and (max-width: 992px) {
+  header .head nav {
+    display: none;
+  }
+}
+header .head nav input {
+  background: transparent;
+  padding: 5px 6px;
+  background-color: rgba(0, 0, 0, 0.282);
+  border-radius: 35px;
+  border: none;
+}
+header .head nav input::-moz-placeholder {
+  color: white;
+  padding: 0 5px 0;
+}
+header .head nav input::placeholder {
+  color: white;
+  padding: 0 5px 0;
+}
+header .head nav .navUl {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 992px) {
+  header .head nav .navUl {
+    flex-direction: column;
+    position: absolute;
+    row-gap: 30px;
+    top: 50px;
+    right: 0;
+  }
+}
+header .head nav .navUl a {
+  color: black;
+}
+header .head nav .navUl .dropdown button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: black;
+}
+header .head nav .navUl .dropdown .dropdown-menu {
+  border: none;
+  outline: none;
 }/*# sourceMappingURL=main.css.map */
