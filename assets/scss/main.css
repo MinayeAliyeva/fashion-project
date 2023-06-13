@@ -271,6 +271,14 @@ header .header nav .navUl .dropdown .dropdown-menu {
   border-radius: 4px;
 }
 
+#body .light-dark {
+  margin-left: 1400px;
+  margin-top: 50px;
+}
+#body .light-dark i {
+  font-size: 50px;
+  cursor: pointer;
+}
 #body h3 {
   font-size: 43px;
   font-family: "Caveat", cursive;

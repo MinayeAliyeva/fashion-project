@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 #body {
   // background-color: #80828272;
-  h3{
+  .light-dark {
+    margin-left: 1400px;
+    margin-top: 50px;
+    i {
+      font-size: 50px;
+      cursor: pointer;
+    }
+  }
+  h3 {
     font-size: 43px;
-    font-family: 'Caveat', cursive;
+    font-family: "Caveat", cursive;
     padding: 10px 0;
   }
   #catagories {
@@ -15,7 +23,7 @@
         align-items: center;
         row-gap: 10px;
         box-shadow: 3px 3px 20px 4px rgb(204, 204, 204);
-        i{
+        i {
           font-size: 39px;
         }
       }
