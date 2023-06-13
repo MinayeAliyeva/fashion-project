@@ -1,0 +1,28 @@
+#our-workers {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  .our-workers {
+    // background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
