@@ -43,7 +43,33 @@ new Chart("myChart2", {
   options: {
     title: {
       display: true,
-      text: "Wie"
+      text: "Catagories"
+    }
+  }
+});
+var xValues3 = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues3 = [55, 49, 44, 24, 15];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart3", {
+  type: "pie",
+  data: {
+    labels: xValues3,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues3
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Which countries works us"
     }
   }
 });
