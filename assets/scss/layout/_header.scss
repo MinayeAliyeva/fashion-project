@@ -67,6 +67,10 @@ header {
           .dropdown-menu {
             border: none;
             outline: none;
+            .dropdown-item{
+              background-color: transparent !important;
+            }
+      
           }
         }
       }

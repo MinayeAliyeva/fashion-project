@@ -110,6 +110,9 @@ header .header nav .navUl .dropdown .dropdown-menu {
   border: none;
   outline: none;
 }
+header .header nav .navUl .dropdown .dropdown-menu .dropdown-item {
+  background-color: transparent !important;
+}
 
 #banner img {
   height: 100vh;

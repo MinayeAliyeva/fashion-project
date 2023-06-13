@@ -17,6 +17,14 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//spinner
+let loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
+});
+
 //accardion
 const accardionContent = document.querySelectorAll(".accardion-content");
 accardionContent.forEach((item, index) => {
