@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 #body {
-  // background-color: #8899a0;
+  // background-color: #80828272;
+  h3{
+    font-size: 43px;
+    font-family: 'Caveat', cursive;
+    padding: 10px 0;
+  }
+  #catagories {
+    margin-left: 300px;
+    .catagories {
+      .card {
+        display: flex !important;
+        padding: 10px 0;
+        align-items: center;
+        row-gap: 10px;
+        box-shadow: 3px 3px 20px 4px rgb(204, 204, 204);
+        i{
+          font-size: 39px;
+        }
+      }
+    }
+  }
   .admin-arrow {
     color: black;
   }
@@ -168,6 +188,8 @@
       width: 900px !important;
       max-width: 900px !important;
       height: 400px;
+      // background-color: rgba(204, 204, 204, 0.67);
+      padding: 50px;
     }
   }
 }

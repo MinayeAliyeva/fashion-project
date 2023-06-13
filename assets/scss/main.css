@@ -271,6 +271,24 @@ header .header nav .navUl .dropdown .dropdown-menu {
   border-radius: 4px;
 }
 
+#body h3 {
+  font-size: 43px;
+  font-family: "Caveat", cursive;
+  padding: 10px 0;
+}
+#body #catagories {
+  margin-left: 300px;
+}
+#body #catagories .catagories .card {
+  display: flex !important;
+  padding: 10px 0;
+  align-items: center;
+  row-gap: 10px;
+  box-shadow: 3px 3px 20px 4px rgb(204, 204, 204);
+}
+#body #catagories .catagories .card i {
+  font-size: 39px;
+}
 #body .admin-arrow {
   color: black;
 }
@@ -437,6 +455,7 @@ header .header nav .navUl .dropdown .dropdown-menu {
   width: 900px !important;
   max-width: 900px !important;
   height: 400px;
+  padding: 50px;
 }
 
 body {
