@@ -82,7 +82,12 @@ new Chart("myChart3", {
 });
 //light mood
 const toggle = document.querySelector("#toogleDark");
+const icons=document.querySelectorAll('.anchor')
+console.log(icons);
 console.log(toggle);
+let table=document.querySelector("#myChart")
+let table2=document.querySelector("#myChart2")
+let table3=document.querySelector("#myChart3")
 const body = document.querySelector("body");
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("bi-moon-fill");
@@ -90,9 +95,18 @@ toggle.addEventListener("click", () => {
     body.style.background = "white";
     body.style.color = "black";
     body.style.transition = "2s";
+    icons.forEach((i)=>{
+      i.style.color="black"
+    })
   } else {
     body.style.background = "black";
     body.style.color = "white";
     body.style.transition = "2s";
+    table.style.background='white'
+    table2.style.background='white'
+    icons.forEach((i)=>{
+      i.style.color="white"
+    })
+    table3.style.background='white'
   }
 });

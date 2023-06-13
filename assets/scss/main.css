@@ -276,7 +276,7 @@ header .header nav .navUl .dropdown .dropdown-menu {
   margin-top: 50px;
 }
 #body .light-dark i {
-  font-size: 50px;
+  font-size: 20px;
   cursor: pointer;
 }
 #body h3 {
@@ -457,13 +457,17 @@ header .header nav .navUl .dropdown .dropdown-menu {
   font-family: "Crimson Text", serif;
 }
 #body #home-admin {
-  margin-left: 300px;
+  margin-left: 210px;
+  margin-bottom: 100px;
 }
 #body #home-admin #myChart {
   width: 900px !important;
   max-width: 900px !important;
   height: 400px;
   padding: 50px;
+}
+#body #home-admin #myChart canvas {
+  margin: 10px;
 }
 
 body {
