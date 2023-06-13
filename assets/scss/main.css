@@ -271,6 +271,9 @@ header .header nav .navUl .dropdown .dropdown-menu {
   border-radius: 4px;
 }
 
+#body .admin-arrow {
+  color: black;
+}
 #body .header .side-nav {
   width: 250px;
   height: 100%;
@@ -1409,6 +1412,10 @@ header {
   border-radius: 4px;
 }
 
+.admin-arrow {
+  color: black;
+}
+
 .searchInput {
   width: 350px;
   border: none;
@@ -1429,4 +1436,8 @@ header {
 .users h4 {
   font-size: 58px;
   font-family: "Crimson Text", serif;
+}
+
+.admin-arrow {
+  color: black;
 }/*# sourceMappingURL=main.css.map */
