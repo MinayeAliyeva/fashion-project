@@ -20,6 +20,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/scss/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </head>
   <body id="body">
     <div class="header">
@@ -73,7 +74,13 @@
         </ul>
       </div>
     </div>
-
+    <section id="home-admin">
+      <div class="container">
+        <div class="home-admin">
+          <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+        </div>
+      </div>
+    </section>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
