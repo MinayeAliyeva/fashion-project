@@ -1558,9 +1558,31 @@ header {
 }
 #about-us .row-container h4 {
   color: white;
-  font-size: 45px;
+  font-size: 85px;
+  font-family: "Caveat", cursive;
 }
 #about-us .row-container p {
   color: rgba(248, 245, 245, 0.5);
   text-align: center;
+  font-size: 25px;
+  font-family: "Caveat", cursive;
+}
+
+#our-story {
+  margin-top: 100px;
+}
+#our-story .our-story img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#our-story .our-story h5 {
+  font-size: 44px;
+  font-family: "Caveat", cursive;
+}
+#our-story .our-story p {
+  font-size: 23px;
+  font-family: "Caveat", cursive;
 }/*# sourceMappingURL=main.css.map */
