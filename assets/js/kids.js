@@ -77,3 +77,4 @@ toTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
