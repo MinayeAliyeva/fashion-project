@@ -1631,6 +1631,10 @@ header {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+#our-workers h3 {
+  font-size: 74px;
+  font-family: "Caveat", cursive;
+}
 #our-workers .our-workers {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
