@@ -1657,4 +1657,12 @@ header {
 #our-workers .our-workers .swiper .swiper-slide .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+#team {
+  height: 100vh;
+  background-image: url(../../../assets/team-images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */
