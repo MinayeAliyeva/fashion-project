@@ -8,8 +8,6 @@ meniIcon.addEventListener("click", () => {
     : (meniIcon.classList = "fa-solid fa-bars");
 });
 
-
-
 const USERS_URL = "http://localhost:3000/users";
 let signUpForm = document.querySelector(".signUpForm");
 let nameInput = document.querySelector(".nameInput");
@@ -108,6 +106,20 @@ function playVideo(file) {
   myVideo.scr = file;
   videoPlayer.style.display = "block";
 }
+//
+// let heading = document.querySelector(".header h2");
+// let anchors = document.querySelectorAll(".navUl a");
+// let drops = document.querySelectorAll(".dropdown button");
+// console.log(drops);
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.backgroundColor = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+    heading.style.color = "white";
+  }
+});
 //accardion
 const accardionContent = document.querySelectorAll(".accardion-content");
 accardionContent.forEach((item, index) => {
