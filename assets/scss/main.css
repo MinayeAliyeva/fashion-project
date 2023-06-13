@@ -1552,6 +1552,7 @@ header {
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 50px;
 }
 #about-us .row-container {
   background-color: rgba(0, 0, 0, 0.44);
@@ -1571,18 +1572,57 @@ header {
 #our-story {
   margin-top: 100px;
 }
-#our-story .our-story img {
+#our-story .our-story .row img {
   width: 500px;
   height: 500px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#our-story .our-story h5 {
-  font-size: 44px;
+@media only screen and (max-width: 576px) {
+  #our-story .our-story .row img {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #our-story .our-story .row img {
+    width: 200px;
+  }
+}
+#our-story .our-story .row h5 {
+  font-size: 64px;
   font-family: "Caveat", cursive;
 }
-#our-story .our-story p {
+#our-story .our-story .row p {
+  font-size: 23px;
+  font-family: "Caveat", cursive;
+}
+
+#latest-trendings {
+  margin-top: 60px;
+}
+#latest-trendings .latest-trendings h3 {
+  font-size: 56px !important;
+  font-family: "Caveat", cursive;
+}
+#latest-trendings .latest-trendings img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 576px) {
+  #latest-trendings .latest-trendings img {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #latest-trendings .latest-trendings img {
+    width: 200px;
+  }
+}
+#latest-trendings .latest-trendings p {
   font-size: 23px;
   font-family: "Caveat", cursive;
 }/*# sourceMappingURL=main.css.map */

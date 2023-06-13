@@ -1,0 +1,25 @@
+#latest-trendings{
+    margin-top: 60px;
+    .latest-trendings{
+        h3{
+            font-size: 56px !important;
+            font-family: "Caveat", cursive;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 50%;
+            @media only screen and (max-width: 576px) {
+                width: 300px;
+              }
+              @media only screen and (max-width: 320px) {
+                width: 200px;
+              }
+        }
+        p{
+            font-size: 23px;
+            font-family: "Caveat", cursive;
+        }
+    }
+}
