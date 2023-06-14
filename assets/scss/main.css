@@ -1783,6 +1783,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
 
 .contact-sec {
   margin-top: 50px;
+  background-image: url(../../../assets/images/contact.jpg);
 }
 .contact-sec .contact {
   position: relative;
@@ -1799,13 +1800,16 @@ header .head nav .navUl .dropdown .dropdown-menu {
   text-align: center;
 }
 .contact-sec .contact .content h2 {
-  font-size: 36px;
+  font-size: 66px;
   font-weight: 500;
   color: #fff;
+  font-family: "Caveat", cursive;
 }
 .contact-sec .contact .content p {
   font-weight: 300;
   color: #fff;
+  font-family: "Caveat", cursive;
+  font-size: 23px;
 }
 .contact-sec .contact .container1 {
   width: 100%;
@@ -1832,7 +1836,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 .contact-sec .contact .container1 .contactForm .inputBox input[type=submit] {
   width: 100px;
-  background: #00bcd4;
+  background: rgb(80, 80, 80);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -1844,10 +1848,12 @@ header .head nav .navUl .dropdown .dropdown-menu {
   left: 0;
   padding: 5px 0;
   font-size: 16px;
+  font-size: 23px;
   margin: 10px 0;
   pointer-events: none;
   transition: 0.5s;
   color: #666;
+  font-family: "Caveat", cursive;
 }
 .contact-sec .contact .container1 .contactForm .inputBox textarea {
   width: 100%;
@@ -1861,12 +1867,12 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 .contact-sec .contact .container1 .contactForm .inputBox textarea:focus ~ span {
   color: #e91e63;
-  font-size: 12px;
+  font-size: 20px;
   transform: translateY(-20px);
 }
 .contact-sec .contact .container1 .contactForm .inputBox textarea:valid ~ span {
   color: #e91e63;
-  font-size: 12px;
+  font-size: 20px;
   transform: translateY(-20px);
 }
 .contact-sec .contact .container1 .contactForm .inputBox input {
@@ -1892,6 +1898,8 @@ header .head nav .navUl .dropdown .dropdown-menu {
   font-size: 30px;
   font-weight: 500;
   color: #333;
+  font-family: "Caveat", cursive;
+  font-size: 23px;
 }
 .contact-sec .contact .container1 .contactInfo {
   width: 50%;
@@ -1913,6 +1921,12 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 .contact-sec .contact .container1 .contactInfo .box .text h3 {
   font-weight: 500;
+  font-family: "Caveat", cursive;
+  font-size: 23px;
+}
+.contact-sec .contact .container1 .contactInfo .box .text p {
+  font-family: "Caveat", cursive;
+  font-size: 23px;
 }
 .contact-sec .contact .container1 .contactInfo .box .icon {
   min-width: 60px;
