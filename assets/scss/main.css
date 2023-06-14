@@ -1945,6 +1945,14 @@ header .head nav .navUl .dropdown .dropdown-menu {
   justify-content: center;
   flex-direction: column;
 }
+#map .container4 h1 {
+  color: #333;
+  margin-bottom: 60px;
+}
+#map .container4 iframe {
+  width: 80%;
+  height: 500px;
+}
 
 #favs {
   margin-top: 100px;
