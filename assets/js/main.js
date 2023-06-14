@@ -79,7 +79,7 @@ async function fillProducts2() {
       <div class="content">
         <div class="text">
       <div> <div class="actions">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart" )></i>
         <i class="fa-solid fa-eye"></i>
       </div>
       <div class="actions2">add basket</div></div>
@@ -178,3 +178,5 @@ window.addEventListener("load", () => {
     loader.style.display = "none";
   }, 2000);
 });
+
+//fav
