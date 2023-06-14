@@ -1944,4 +1944,15 @@ header .head nav .navUl .dropdown .dropdown-menu {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+#favs {
+  margin-top: 100px;
+}
+#favs .favs table img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */

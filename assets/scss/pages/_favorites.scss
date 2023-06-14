@@ -1,0 +1,13 @@
+#favs {
+  margin-top: 100px;
+  .favs {
+    table {
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}

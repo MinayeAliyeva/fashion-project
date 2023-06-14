@@ -197,7 +197,6 @@ toTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
 //spinner
 let loader = document.querySelector(".loader");
 window.addEventListener("load", () => {
