@@ -45,10 +45,18 @@
   ],
   "users": [
     {
-      "name": "Emin",
-      "email": "emin@gmail.com",
-      "password": "122343",
-      "isSignin": "false"
+      "userName": "Rhea",
+      "lastName": "Terry",
+      "email": "gynygil@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 1
+    },
+    {
+      "userName": "Minaya",
+      "lastName": "Aliyeva",
+      "email": "mmm@fff.com",
+      "password": "12345",
+      "id": 2
     }
   ],
   "newtrending-products": [

@@ -1,6 +1,5 @@
 let meniIcon = document.querySelector("#menuIcon");
 let nav = document.querySelector("nav");
-console.log(nav);
 meniIcon.addEventListener("click", () => {
   nav.classList.toggle("show");
   meniIcon.classList.contains("fa-bars")
@@ -21,7 +20,6 @@ let arrCopy = [];
 let filteredData = [];
 let num = 7;
 let mainRow2 = document.querySelector(".mainRow2");
-console.log(mainRow2);
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);
   let data = await res.data;
@@ -39,7 +37,7 @@ async function fillProducts() {
         alt=""
       />
       <div class="actions">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
         <i class="fa-solid fa-eye"></i>
       </div>
       <div class="actions2">add basket</div>
@@ -54,6 +52,17 @@ async function fillProducts() {
 }
 fillProducts();
 
+let signinUsers = JSON.parse(localStorage.getItem("isSign"));
+
+async function addFav(id) {
+  let res = await axios(`${PRODUCTS_URL}/${id}`);
+  let data = await res.data;
+  if (signinUsers == true) {
+    console.log("addFav");
+  }else{
+    console.log(" go sign in");
+  }
+}
 //new trending outfits
 const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";
 let arrCopy2 = [];
@@ -79,12 +88,12 @@ async function fillProducts2() {
       <div class="content">
         <div class="text">
       <div> <div class="actions">
-        <i class="fa-regular fa-heart" )></i>
+       <i class="fa-solid fa-heart" onclick=addFav(${obj.id},this)></i>
         <i class="fa-solid fa-eye"></i>
       </div>
       <div class="actions2">add basket</div></div>
           <div class="text-side">
-            <h5>${obj.productName}</h5>
+            <h5 >${obj.productName}</h5>
             <i><span> ${obj.productprice}</span></i>
           </div>
         </div>
