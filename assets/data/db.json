@@ -134,6 +134,48 @@
       "email": "damal@mailinator.com",
       "password": "Pa$$w0rd!",
       "id": 13
+    },
+    {
+      "userName": "Gisela",
+      "lastName": "Wolfe",
+      "email": "gobudo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 14
+    },
+    {
+      "userName": "Aquila",
+      "lastName": "Anderson",
+      "email": "javir@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 15
+    },
+    {
+      "userName": "Angela",
+      "lastName": "Oneil",
+      "email": "jafezawa@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 16
+    },
+    {
+      "userName": "Hamish",
+      "lastName": "Decker",
+      "email": "soqipaniz@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 17
+    },
+    {
+      "userName": "Scott",
+      "lastName": "Gardner",
+      "email": "xesumys@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 18
+    },
+    {
+      "userName": "Cooper",
+      "lastName": "Valencia",
+      "email": "kofow@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 19
     }
   ],
   "newtrending-products": [

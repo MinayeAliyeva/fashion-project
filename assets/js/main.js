@@ -57,22 +57,25 @@ let profile = document.querySelector(".profile");
 const FAV_URL = "http://localhost:3000/favorites";
 let signinUsers = JSON.parse(localStorage.getItem("isSign"));
 let logProfile = document.querySelector(".fa-arrow-right-from-bracket");
-logProfile.addEventListener("click",()=>{
-  localStorage.clear()
+logProfile.addEventListener("click", () => {
+  localStorage.clear("signinUsers");
   console.log("o");
-})
-if (signinUsers) {
-  profile.style.display = "block";
-} else {
-  profile.style.display = "none";
-}
+});
+profile.display = "none";
+window.addEventListener("load", () => {
+  if (signinUsers) {
+    profile.style.display = "block";
+    console.log("j");
+  } else {
+    profile.style.display = "none";
+  }
+});
+
 async function addFav(id) {
   let res = await axios(`${PRODUCTS_URL}/${id}`);
   let obj = await res.data;
-
   if (signinUsers == true) {
-    await axios.post(`${FAV_URL}`, obj);
-    console.log(obj);
+    axios.post(`${FAV_URL}`, obj);
   } else {
     alert("Sign in Pleas!!!");
   }
@@ -195,12 +198,10 @@ toTop.addEventListener("click", () => {
   });
 });
 
-// //spinner
-// let loader = document.querySelector(".loader");
-// window.addEventListener("load", () => {
-//   setTimeout(() => {
-//     loader.style.display = "none";
-//   }, 2000);
-// });
-
-//fav
+//spinner
+let loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
+});
