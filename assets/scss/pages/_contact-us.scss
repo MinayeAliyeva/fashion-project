@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
 #body-contact {
   background: linear-gradient(
     90deg,
@@ -17,6 +18,7 @@
       font-size: 2em;
       h2 {
         color: #fff;
+        font-family: "Poppins", sans-serif;
       }
     }
   }
@@ -32,6 +34,44 @@
       padding: 40px;
       background: #fff;
       box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+      .formBox {
+        position: relative;
+        width: 100%;
+        .row100 {
+          .inputBox {
+            width: 100%;
+          }
+        }
+        .inputBox {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+          width: 50%;
+          span {
+            color: #18b7ff;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: 500;
+          }
+          input {
+            padding: 10px;
+            font-size: 1.1em;
+          }
+        }
+        .row50 {
+          display: flex;
+          gap: 20px;
+          .inputBox {
+          }
+        }
+      }
+      h3 {
+        color: #0e3959;
+        font-weight: 500;
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        font-family: "Poppins", sans-serif;
+      }
     }
     .form {
       grid-area: form;
