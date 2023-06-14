@@ -65,7 +65,6 @@ profile.display = "none";
 window.addEventListener("load", () => {
   if (signinUsers) {
     profile.style.display = "block";
-    console.log("j");
   } else {
     profile.style.display = "none";
   }
@@ -76,6 +75,7 @@ async function addFav(id) {
   let obj = await res.data;
   if (signinUsers == true) {
     axios.post(`${FAV_URL}`, obj);
+    window.location = "favorites.html";
   } else {
     alert("Sign in Pleas!!!");
   }

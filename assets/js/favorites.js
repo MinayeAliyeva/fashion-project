@@ -18,10 +18,20 @@ async function fillTable() {
     <td>${obj.productprice}$</td>
     <td>
       <button class="btn btn-success">Add basket</button>
-      <button class="btn btn-danger">Remove Favorites</button>
+      <button class="btn btn-danger" onclick=deletefav(${obj.id})>Remove Favorites</button>
     </td>
   </tr>
     `;
   });
 }
 fillTable();
+
+//delete fav
+async function deletefav(id) {
+  await axios.delete(`${FAV_URL}/${id}`);
+  let res = await axios(`${FAV_URL}`);
+  let data = res.data;
+  data.filter((obj) => {
+    obj.id != id;
+  });
+}
