@@ -57,6 +57,13 @@
       "email": "mmm@fff.com",
       "password": "12345",
       "id": 2
+    },
+    {
+      "userName": "Abdul",
+      "lastName": "Patterson",
+      "email": "qosexera@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 3
     }
   ],
   "newtrending-products": [

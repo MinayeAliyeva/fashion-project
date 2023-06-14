@@ -53,14 +53,13 @@ async function fillProducts() {
 fillProducts();
 
 let signinUsers = JSON.parse(localStorage.getItem("isSign"));
-
 async function addFav(id) {
   let res = await axios(`${PRODUCTS_URL}/${id}`);
   let data = await res.data;
   if (signinUsers == true) {
     console.log("addFav");
-  }else{
-    console.log(" go sign in");
+  } else {
+    console.log("go sign in");
   }
 }
 //new trending outfits
@@ -88,7 +87,7 @@ async function fillProducts2() {
       <div class="content">
         <div class="text">
       <div> <div class="actions">
-       <i class="fa-solid fa-heart" onclick=addFav(${obj.id},this)></i>
+       <i class="fa-solid fa-heart" onclick=addFav2(${obj.id},this)></i>
         <i class="fa-solid fa-eye"></i>
       </div>
       <div class="actions2">add basket</div></div>
@@ -104,6 +103,11 @@ async function fillProducts2() {
   });
 }
 fillProducts2();
+function addFav2(id,icon) {
+  console.log(id);
+  console.log(icon);
+
+}
 
 //video
 let videoPlayer = document.querySelector("#videoPlayer");
