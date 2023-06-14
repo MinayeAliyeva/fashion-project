@@ -52,16 +52,32 @@ async function fillProducts() {
 }
 fillProducts();
 
+//add fav
+let profile = document.querySelector(".profile");
+const FAV_URL = "http://localhost:3000/favorites";
 let signinUsers = JSON.parse(localStorage.getItem("isSign"));
+let logProfile = document.querySelector(".fa-arrow-right-from-bracket");
+logProfile.addEventListener("click",()=>{
+  localStorage.clear()
+  console.log("o");
+})
+if (signinUsers) {
+  profile.style.display = "block";
+} else {
+  profile.style.display = "none";
+}
 async function addFav(id) {
   let res = await axios(`${PRODUCTS_URL}/${id}`);
-  let data = await res.data;
+  let obj = await res.data;
+
   if (signinUsers == true) {
-    console.log("addFav");
+    await axios.post(`${FAV_URL}`, obj);
+    console.log(obj);
   } else {
-    console.log("go sign in");
+    alert("Sign in Pleas!!!");
   }
 }
+
 //new trending outfits
 const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";
 let arrCopy2 = [];
@@ -103,10 +119,9 @@ async function fillProducts2() {
   });
 }
 fillProducts2();
-function addFav2(id,icon) {
+function addFav2(id, icon) {
   console.log(id);
   console.log(icon);
-
 }
 
 //video
@@ -120,10 +135,6 @@ function playVideo(file) {
   videoPlayer.style.display = "block";
 }
 //
-// let heading = document.querySelector(".header h2");
-// let anchors = document.querySelectorAll(".navUl a");
-// let drops = document.querySelectorAll(".dropdown button");
-// console.log(drops);
 let header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.style.backgroundColor = "white";
@@ -184,12 +195,12 @@ toTop.addEventListener("click", () => {
   });
 });
 
-//spinner
-let loader = document.querySelector(".loader");
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 2000);
-});
+// //spinner
+// let loader = document.querySelector(".loader");
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     loader.style.display = "none";
+//   }, 2000);
+// });
 
 //fav

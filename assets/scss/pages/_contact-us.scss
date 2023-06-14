@@ -73,11 +73,11 @@
               font-size: 12px;
               transform: translateY(-20px);
             }
-            // &:valid ~ span {
-            //   color: #e91e63;
-            //   font-size: 12px;
-            //   transform: translateY(-20px);
-            // }
+            &:valid ~ span {
+              color: #e91e63;
+              font-size: 12px;
+              transform: translateY(-20px);
+            }
           }
           input {
             width: 100%;

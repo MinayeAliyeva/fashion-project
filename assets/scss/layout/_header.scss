@@ -5,6 +5,22 @@ header {
   z-index: 1000;
   left: 0;
   top: 0;
+  .profile {
+    i{
+      font-size: 10px;
+    }
+    img {
+      width: 30px;
+      border-radius: 50%;
+      height: 30px;
+      object-fit: cover;
+    }
+    p {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
   .header {
     display: flex;
     align-items: center;
@@ -67,11 +83,10 @@ header {
           .dropdown-menu {
             border: none;
             outline: none;
-            .dropdown-item{
+            .dropdown-item {
               background-color: transparent !important;
               color: black !important;
             }
-      
           }
         }
       }

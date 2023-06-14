@@ -11,7 +11,6 @@ form.addEventListener("submit", async (e) => {
         obj.userName == allInputs[0].value && obj.password == allInputs[1].value
     )
   ) {
-    localStorage.setItem("isSign", JSON.stringify(true));
   } else {
     alert("please sign in");
   }
