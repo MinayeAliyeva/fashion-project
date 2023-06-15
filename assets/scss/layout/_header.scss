@@ -3,6 +3,67 @@ header {
   z-index: 1000;
   left: 0;
   top: 0;
+  .cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    min-height: 100vh;
+    padding: 25px;
+    background-color: #fff;
+    #close{
+      position: absolute;
+      top: 16px;
+    }
+    button {
+      display: flex;
+      margin: 25px auto 0 auto;
+      background: transparent;
+      padding: 6px 10px;
+      border-radius: 18px;
+      outline: none;
+    }
+    .title {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    .total {
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid;
+      margin-top: 15px;
+      padding: 5px;
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+    .cart-content {
+      .cart-box {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        margin-top: 10px;
+        // padding: 25px;
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+        }
+      }
+      .details-box {
+        display: flex;
+        row-gap: 5px;
+        flex-direction: column;
+      }
+      .fa-trash {
+        font-size: 20px;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
   .profile {
     i {
       font-size: 10px;

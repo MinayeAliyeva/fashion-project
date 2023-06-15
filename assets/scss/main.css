@@ -37,6 +37,65 @@ header {
   left: 0;
   top: 0;
 }
+header .cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  min-height: 100vh;
+  padding: 25px;
+  background-color: #fff;
+}
+header .cart #close {
+  position: absolute;
+  top: 16px;
+}
+header .cart button {
+  display: flex;
+  margin: 25px auto 0 auto;
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 18px;
+  outline: none;
+}
+header .cart .title {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+header .cart .total {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid;
+  margin-top: 15px;
+  padding: 5px;
+}
+header .cart .total h2 {
+  font-size: 16px;
+}
+header .cart .cart-content .cart-box {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+header .cart .cart-content .cart-box img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .cart .cart-content .details-box {
+  display: flex;
+  row-gap: 5px;
+  flex-direction: column;
+}
+header .cart .cart-content .fa-trash {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
 header .profile i {
   font-size: 10px;
 }
