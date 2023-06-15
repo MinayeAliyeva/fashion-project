@@ -1,4 +1,4 @@
-const NEWPRODUCTS_URL = "http://localhost:3000/newtrending-products";
+const NEWPRODUCTS_URL = "http://localhost:3000/newProducts";
 let tBody = document.querySelector("tbody");
 let searchInput = document.querySelector(".searchInput");
 let arrCopy = [];
@@ -21,7 +21,7 @@ async function drawTable() {
         <div class="actions">
          <a href="add-edit-new-products-form.html?id=${obj.id}"><i class="fa-solid fa-pen"></i></a>
          <i class="fa-solid fa-trash"  onclick=delFun(${obj.id})></i>
-         <i class="fa-solid fa-eye"></i>
+    
         </div>
        </td>
       </tr>

@@ -21,7 +21,7 @@ async function drawTable() {
         <div class="actions">
          <a href="add-edit-products-form.html?id=${obj.id}"><i class="fa-solid fa-pen"></i></a>
          <i class="fa-solid fa-trash"  onclick=delFun(${obj.id})></i>
-         <i class="fa-solid fa-eye"></i>
+     
         </div>
        </td>
       </tr>

@@ -2022,4 +2022,39 @@ header .head nav .navUl .dropdown .dropdown-menu {
   font-size: 45px;
   font-family: "Caveat", cursive;
   text-transform: uppercase;
+}
+
+#profiles {
+  margin-left: 260px;
+  margin-top: 30px;
+}
+#profiles .profiles h3 {
+  font-size: 73px;
+  font-family: "Caveat", cursive;
+}
+#profiles .card {
+  border: none !important;
+  border-radius: 5px;
+}
+#profiles .card .text-side p {
+  font-family: "Caveat", cursive;
+  font-size: 23px;
+  margin-bottom: 0;
+}
+#profiles .card .text-side span {
+  font-family: "Caveat", cursive;
+  font-size: 23px;
+}
+#profiles .card .text-side button {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid;
+  font-family: "Caveat", cursive;
+  font-size: 23px;
+}
+#profiles .card img {
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,4 @@
-const NEWPRODUCTS_URL = "http://localhost:3000/newtrending-products";
+const NEWPRODUCTS_URL = "http://localhost:3000/newProducts";
 let form2 = document.querySelector("#form2");
 let productName2 = document.querySelector("#productName2");
 let productPrice2 = document.querySelector("#productPrice2");
