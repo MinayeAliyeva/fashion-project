@@ -1694,10 +1694,18 @@ header {
 
 #team {
   height: 100vh;
-  background-image: url(../../../assets/team-images/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+}
+#team .team {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#team .team .backround-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   background-size: cover;
+  width: 16/9;
 }
 
 header {
@@ -1713,6 +1721,9 @@ header .head {
   align-items: center;
   justify-content: space-between;
 }
+header .head .header h2 {
+  color: white !important;
+}
 header .head .fa-bars {
   display: none;
 }
@@ -1725,7 +1736,7 @@ header .head .fa-bars {
 header .head h2 {
   font-size: 28px;
   font-weight: 600;
-  color: wheat !important;
+  color: white !important;
 }
 header .head nav.show {
   display: block;
@@ -1768,7 +1779,7 @@ header .head nav .navUl {
   }
 }
 header .head nav .navUl a {
-  color: black;
+  color: white;
 }
 header .head nav .navUl .dropdown button {
   outline: none;
