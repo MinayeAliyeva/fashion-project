@@ -40,7 +40,7 @@ async function fillProducts() {
         <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
         <i class="fa-solid fa-eye"></i>
       </div>
-      <div class="actions2">add basket</div>
+      <div class="actions2" onclick=addBasket(${obj.id})>add basket</div>
       <div class="text-side">
         <h5>${obj.productName}</h5>
         <i><span> ${obj.productprice} TL</span></i>
@@ -80,7 +80,15 @@ async function addFav(id) {
     alert("Sign in Pleas!!!");
   }
 }
+//basket
 
+let counter = document.querySelector(".counter");
+async function addBasket(id) {
+  let res = await axios(`${PRODUCTS_URL}/${id}`);
+  let obj = await res.data;
+  counter += 1;
+  console.log(counter);
+}
 //new trending outfits
 const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";
 let arrCopy2 = [];
@@ -109,7 +117,7 @@ async function fillProducts2() {
        <i class="fa-solid fa-heart" onclick=addFav2(${obj.id},this)></i>
         <i class="fa-solid fa-eye"></i>
       </div>
-      <div class="actions2">add basket</div></div>
+      <div class="actions2" onclick=addBasket(${obj.id})>add basket</div></div>
           <div class="text-side">
             <h5 >${obj.productName}</h5>
             <i><span> ${obj.productprice}</span></i>
@@ -138,15 +146,15 @@ function playVideo(file) {
   videoPlayer.style.display = "block";
 }
 //
-let header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-  header.style.backgroundColor = "white";
-  header.style.transition = "0.5s";
-  if (scrollY == 0) {
-    header.style.backgroundColor = "transparent";
-    heading.style.color = "white";
-  }
-});
+// let header = document.querySelector("header");
+// window.addEventListener("scroll", () => {
+//   header.style.backgroundColor = "white";
+//   header.style.transition = "0.5s";
+//   if (scrollY == 0) {
+//     header.style.backgroundColor = "transparent";
+//     heading.style.color = "white";
+//   }
+// });
 //accardion
 const accardionContent = document.querySelectorAll(".accardion-content");
 accardionContent.forEach((item, index) => {
@@ -197,10 +205,10 @@ toTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-//spinner
-let loader = document.querySelector(".loader");
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 2000);
-});
+// //spinner
+// let loader = document.querySelector(".loader");
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     loader.style.display = "none";
+//   }, 2000);
+// });
