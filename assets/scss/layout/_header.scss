@@ -20,6 +20,24 @@ header {
   }
 
   .header {
+    .shopping-card {
+      position: relative;
+      .fa-bag-shopping {
+        font-size: 23px;
+      }
+      p {
+        color: red;
+        // top: 0;
+        font-size: 13px;
+        position: absolute;
+        bottom: 1px;
+        left: 15px;
+        border-radius: 50%;
+        padding: 0 4px;
+        font-size: 8px;
+        background-color: pink;
+      }
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;

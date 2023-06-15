@@ -51,6 +51,14 @@
       "password": "Pa$$w0rd!",
       "img": "./assets/userImg/user1.png",
       "id": 2
+    },
+    {
+      "userName": "Ila",
+      "lastName": "Moses",
+      "email": "bole@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "img": "./assets/userImg/undefined",
+      "id": 3
     }
   ],
   "newProducts": [

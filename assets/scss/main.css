@@ -56,6 +56,23 @@ header .header {
   align-items: center;
   justify-content: space-between;
 }
+header .header .shopping-card {
+  position: relative;
+}
+header .header .shopping-card .fa-bag-shopping {
+  font-size: 23px;
+}
+header .header .shopping-card p {
+  color: red;
+  font-size: 13px;
+  position: absolute;
+  bottom: 1px;
+  left: 15px;
+  border-radius: 50%;
+  padding: 0 4px;
+  font-size: 8px;
+  background-color: pink;
+}
 header .header .cart {
   display: flex;
   background-color: antiquewhite;
@@ -2057,22 +2074,6 @@ header .head nav .navUl .dropdown .dropdown-menu {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-#makeup {
-  height: 100vh;
-}
-#makeup .makeup {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-#makeup .makeup .backround-clip {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  width: 16/9;
 }
 
 #workers h4 {
