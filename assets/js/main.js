@@ -38,7 +38,9 @@ async function fillProducts() {
       />
       <div class="actions">
         <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
-        <i class="fa-solid fa-eye"></i>
+      <button  type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal">  <i class="fa-solid fa-eye" onclick=details(${obj.id})></i></button>
       </div>
       <div class="actions2" onclick=addBasket(${obj.id})>add basket</div>
       <div class="text-side">
@@ -52,6 +54,10 @@ async function fillProducts() {
 }
 fillProducts();
 
+///
+function details() {
+  console.log("jjj");
+}
 //add fav
 let profile = document.querySelector(".profile");
 const FAV_URL = "http://localhost:3000/favorites";
@@ -212,3 +218,50 @@ window.addEventListener("load", () => {
     loader.style.display = "none";
   }, 2000);
 });
+//modal
+let modalDialog = document.querySelector(".modal-dialog");
+
+async function details(id) {
+  let res = await axios(`${PRODUCTS_URL}/${id}`);
+  let obj = await res.data;
+  modalDialog.innerHTML = `
+  <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Details
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col col-6">
+                      <div class="img">
+                        <img
+                          src="./assets/products-image/2756378620_6_1_1.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col col-6">
+                      <div class="actions">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-eye"></i>
+                      </div>
+                      <div class="actions2">add basket</div>
+                      <div class="text-side">
+                        <h5>LINEN BLEND CROPPED BLAZER</h5>
+                        <i><span> ${obj.productprice} TL</span></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer"></div>
+              </div>
+`;
+}
+details();
