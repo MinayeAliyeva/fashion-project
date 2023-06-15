@@ -1988,4 +1988,10 @@ header .head nav .navUl .dropdown .dropdown-menu {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+
+#team-line h3 {
+  font-size: 45px;
+  font-family: "Caveat", cursive;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
