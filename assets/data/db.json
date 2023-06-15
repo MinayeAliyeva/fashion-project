@@ -45,14 +45,6 @@
   ],
   "users": [
     {
-      "userName": "Sonya",
-      "lastName": "Battle",
-      "email": "badyk@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "img": "./assets/userImg/user2.png",
-      "id": 1
-    },
-    {
       "userName": "Matthew",
       "lastName": "Miller",
       "email": "pamig@mailinator.com",
