@@ -6,12 +6,15 @@ header {
   .cart {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 360px;
     min-height: 100vh;
     padding: 25px;
     background-color: #fff;
-    #close{
+    &.active {
+      right: 0;
+    }
+    #close {
       position: absolute;
       top: 16px;
     }
@@ -57,7 +60,7 @@ header {
         row-gap: 5px;
         flex-direction: column;
       }
-      .fa-trash {
+      .fa-trash-can {
         font-size: 20px;
         color: red;
         cursor: pointer;

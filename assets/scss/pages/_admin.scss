@@ -2,8 +2,14 @@
   font-family: "Poppins", sans-serif;
   background-image: url(/assets/images/IMAGE-landscape-default-fill-53c67ecf-62ae-4087-a1a7-2c575c06c8f2-default_0.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   #form {
-    width: 300px;
+    width: 400px;
     margin: 20vh auto 0 auto;
     padding: 20px;
     background-color: #f5f5f552;;

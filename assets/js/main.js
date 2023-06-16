@@ -38,9 +38,8 @@ async function fillProducts() {
       />
       <div class="actions">
         <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
-      <button  type="button"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal">  <i class="fa-solid fa-eye" onclick=details(${obj.id})></i></button>
+ <i  data-bs-toggle="modal"
+     data-bs-target="#exampleModal" class="fa-solid fa-eye" onclick=details(${obj.id})></i>
       </div>
       <div class="actions2" onclick=addBasket(${obj.id})>add basket</div>
       <div class="text-side">
@@ -53,7 +52,6 @@ async function fillProducts() {
   });
 }
 fillProducts();
-
 ///
 function details() {
   console.log("jjj");
@@ -86,15 +84,15 @@ async function addFav(id) {
     alert("Sign in Pleas!!!");
   }
 }
-//basket
+// //basket
 
-let counter = document.querySelector(".counter");
-async function addBasket(id) {
-  let res = await axios(`${PRODUCTS_URL}/${id}`);
-  let obj = await res.data;
-  counter += 1;
-  console.log(counter);
-}
+// let counter = document.querySelector(".counter");
+// async function addBasket(id) {
+//   let res = await axios(`${PRODUCTS_URL}/${id}`);
+//   let obj = await res.data;
+//   counter += 1;
+//   console.log(counter);
+// }
 //new trending outfits
 const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";
 let arrCopy2 = [];
@@ -211,13 +209,13 @@ toTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-//spinner
-let loader = document.querySelector(".loader");
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 2000);
-});
+// //spinner
+// let loader = document.querySelector(".loader");
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     loader.style.display = "none";
+//   }, 2000);
+// });
 //modal
 let modalDialog = document.querySelector(".modal-dialog");
 
@@ -228,7 +226,7 @@ async function details(id) {
   <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    Details
+                    View Details:
                   </h1>
                   <button
                     type="button"
@@ -241,22 +239,26 @@ async function details(id) {
                   <div class="row">
                     <div class="col col-6">
                       <div class="img">
-                        <img
-                          src="./assets/products-image/2756378620_6_1_1.jpg"
+                        <img style="height: 400px;
+                        width: 100%;
+                        object-fit: cover;"
+                          src="${obj.img}"
                           alt=""
                         />
                       </div>
                     </div>
-                    <div class="col col-6">
-                      <div class="actions">
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-eye"></i>
-                      </div>
-                      <div class="actions2">add basket</div>
+                    <div class="col col-6" style="display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                    padding: 40px 0;">
+  
                       <div class="text-side">
-                        <h5>LINEN BLEND CROPPED BLAZER</h5>
+                        <h5>${obj.productName}</h5>
                         <i><span> ${obj.productprice} TL</span></i>
                       </div>
+                      <div class="description"> <h5>Description:</h5>Thin straps, straight neck dress. Cotton fabric, side gathers, medallion-trimmed tassels and concealed back zip.</div>
+                      <div><h6>STOCK STATUS IN THE STORE:
+                    </h6><p>  SHIPPING, EXCHANGES AND RETURNS</p></div>
                     </div>
                   </div>
                 </div>
@@ -265,3 +267,69 @@ async function details(id) {
 `;
 }
 details();
+
+//cart
+const CARD_URL = "http://localhost:3000/card";
+async function addBasket(id) {
+  let res = await axios(`${PRODUCTS_URL}/${id}`);
+  let obj = await res.data;
+  await axios.post(`${CARD_URL}`, obj);
+  console.log(id);
+}
+
+let card = document.querySelector(".cart");
+console.log(card);
+let close = document.querySelector("#close");
+let cardIcon = document.querySelector("#cardIcon");
+cardIcon.addEventListener("click", () => {
+  card.classList.toggle("active");
+});
+close.addEventListener("click", () => {
+  card.classList.remove("active");
+});
+let cardRow = document.querySelector(".card-row");
+//counter
+let counter = document.querySelector(".counter");
+let count = [];
+let totalPrice;
+async function addBasket2() {
+  let res = await axios(`${CARD_URL}`);
+  let data = await res.data;
+  count = data;
+  let totalInner = document.querySelector(".total-price");
+  var totalChild = data.reduce((accum, item) => accum + +item.productprice, 0);
+  totalInner.innerHTML = totalChild;
+  counter.innerHTML = count.length;
+  cardRow.innerHTML = "";
+  data.forEach((obj) => {
+    cardRow.innerHTML += `
+    <div class="cart-content">
+              <div class="cart-box">
+                <img
+                  src="${obj.img}"
+                  alt=""
+                />
+                <div class="details-box">
+                  <div class="card-product-title">${obj.productName}</div>
+                  <div class="card-price">${obj.productprice}$</div>
+                </div>
+                <i class="fa-solid fa-trash-can" onclick=delFun(${obj.id})></i>
+              </div>
+            </div>
+        
+    `;
+  });
+}
+//total
+
+addBasket2();
+//delete cart
+async function delFun(id, btn) {
+  await axios.delete(`${CARD_URL}/${id}`);
+  // let res = await axios(`${CARD_URL}`);
+  // let obj = await res.data;
+  // let filtered = data.filter((obj) => {
+  //   obj.id != id;
+  // });
+  // addBasket2(filtered);
+}

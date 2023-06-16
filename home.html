@@ -137,7 +137,7 @@
               </li>
               <input class="input" type="text" placeholder="Search....." />
               <div class="shopping-card">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i class="fa-solid fa-bag-shopping" id="cardIcon"></i>
                 <p class="counter">0</p>
               </div>
               <div class="profile column-gap-2">
@@ -158,7 +158,7 @@
         <div class="cart">
           <h5 class="title">You Cart</h5>
           <div class="card-row">
-            <div class="cart-content">
+            <!-- <div class="cart-content">
               <div class="cart-box">
                 <img
                   src="./assets/products-image/9863054400_6_1_1.jpg"
@@ -170,24 +170,11 @@
                 </div>
                 <i class="fa-solid fa-trash-can"></i>
               </div>
-            </div>
-            <div class="cart-content">
-              <div class="cart-box">
-                <img
-                  src="./assets/products-image/9863054400_6_1_1.jpg"
-                  alt=""
-                />
-                <div class="details-box">
-                  <div class="card-product-title">Product Name</div>
-                  <div class="card-price">44$</div>
-                </div>
-                <i class="fa-solid fa-trash"></i>
-              </div>
-            </div>
-            <div class="total">
-              <div class="total-title">Total</div>
-              <div class="total-price">5$</div>
-            </div>
+            </div> -->
+          </div>
+          <div class="total">
+            <div class="total-title">Total:   </div>
+            <div class="total-price">5$</div>
           </div>
           <button class="">Buy Now</button>
           <i id="close" class="fa-solid fa-xmark"></i>
@@ -291,6 +278,7 @@
             tabindex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
+            style="padding: 120px 0"
           >
             <div class="modal-dialog modal-lg">
               <!-- <div class="modal-content">
