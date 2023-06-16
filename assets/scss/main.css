@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -2144,6 +2145,22 @@ header .head nav .navUl .dropdown .dropdown-menu {
      object-fit: cover;
 }
 
+#makeup {
+  height: 100vh;
+  background-image: url(../../../assets/makup-img/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#makeup .makeup h5 {
+  font-size: 46px;
+  font-family: "Caveat", cursive;
+}
+#makeup .makeup h4 {
+  font-size: 28px;
+  font-family: "Caveat", cursive;
+}
+
 #workers h4 {
   color: red;
 }
@@ -2396,4 +2413,63 @@ header .head nav .navUl .dropdown .dropdown-menu {
 #latest-shoses .latest-shoses p {
   font-size: 23px;
   font-family: "Caveat", cursive;
+}
+
+#makeup {
+  height: 100vh;
+  background-image: url(../../../assets/makup-img/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#makeup .makeup h5 {
+  font-size: 46px;
+  font-family: "Caveat", cursive;
+}
+#makeup .makeup h4 {
+  font-size: 28px;
+  font-family: "Caveat", cursive;
+}
+
+#products-makeup {
+  height: 100vh;
+}
+#products-makeup .images img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#products-makeup .top-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#products-makeup .top-side h4 {
+  font-family: "Caveat", cursive;
+  font-size: 78px;
+  font-weight: 200;
+}
+#products-makeup .top-side h5 {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 30px;
+}
+#products-makeup .card {
+  border: none;
+}
+#products-makeup .card .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 17px;
+}
+#products-makeup .card .text h6 {
+  margin: 0;
+}
+
+#mode video {
+  width: 100%;
+  height: 1000px;
 }/*# sourceMappingURL=main.css.map */

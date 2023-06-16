@@ -1,0 +1,17 @@
+#makeup {
+  height: 100vh;
+  background-image: url(../../../assets/makup-img/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .makeup {
+    h5 {
+      font-size: 46px;
+      font-family: "Caveat", cursive;
+    }
+    h4 {
+      font-size: 28px;
+      font-family: "Caveat", cursive;
+    }
+  }
+}
