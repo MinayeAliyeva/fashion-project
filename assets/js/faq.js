@@ -1,33 +1,23 @@
-//accardion
-const accardionContent = document.querySelectorAll(".accardion-content");
-accardionContent.forEach((item, index) => {
-  let header1 = item.querySelector(".header1");
-  header1.addEventListener("click", () => {
-    item.classList.toggle("open");
-    let description = item.querySelector(".description");
-    console.log(item);
-    console.log(description.scrollHeight);
-    console.log(description);
-    if (item.classList.contains("open")) {
-      description.style.height = `${description.scrollHeight}px`;
-      item.querySelector("i").classList.replace("fa-plus", "fa-minus");
-      console.log("hh");
+const accordionItemHeaders = document.querySelectorAll(
+  ".accordion-item-header"
+);
+
+accordionItemHeaders.forEach((accordionItemHeader) => {
+  accordionItemHeader.addEventListener("click", (event) => {
+    // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+
+    // const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+    // if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+    //   currentlyActiveAccordionItemHeader.classList.toggle("active");
+    //   currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+    // }
+
+    accordionItemHeader.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if (accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     } else {
-      description.style.height = "0px";
-      item.querySelector("i").classList.replace("fa-minus", "fa-plus");
-      console.log("nn");
+      accordionItemBody.style.maxHeight = 0;
     }
-    removeOpen(index);
   });
 });
-
-function removeOpen(index1) {
-  accardionContent.forEach((item2, index2) => {
-    if (index1 != index2) {
-      item2.classList.remove("open");
-      let des = item2.querySelector(".description");
-      des.style.height = "0px";
-      item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
-    }
-  });
-}
