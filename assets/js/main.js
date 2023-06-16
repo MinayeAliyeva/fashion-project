@@ -275,6 +275,7 @@ async function addBasket(id) {
   let obj = await res.data;
   await axios.post(`${CARD_URL}`, obj);
   console.log(id);
+  addBasket2()
 }
 
 let card = document.querySelector(".cart");
@@ -326,10 +327,11 @@ addBasket2();
 //delete cart
 async function delFun(id, btn) {
   await axios.delete(`${CARD_URL}/${id}`);
+  addBasket2();
   // let res = await axios(`${CARD_URL}`);
-  // let obj = await res.data;
-  // let filtered = data.filter((obj) => {
-  //   obj.id != id;
-  // });
-  // addBasket2(filtered);
+  // // let obj = await res.data;
+  // // let filtered = data.filter((obj) => {
+  // //   obj.id != id;
+  // // });
+  // // addBasket2(filtered);
 }
