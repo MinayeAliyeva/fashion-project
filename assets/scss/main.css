@@ -2255,7 +2255,10 @@ header .head nav .navUl .dropdown .dropdown-menu {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #161616;
+  background-image: url(../../../assets/shoses-img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #catagories .container0 {
   position: relative;
@@ -2296,15 +2299,16 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 #catagories .container0 .card .content h2 {
   position: absolute;
-  top: -80px;
+  top: -30px;
   right: 30px;
   font-size: 8em;
-  color: rgba(255, 255, 255, 0.05);
+  color: rgba(8, 7, 7, 0.593);
   pointer-events: none;
+  z-index: 0;
 }
 #catagories .container0 .card .content h3 {
   font-size: 1.8em;
-  color: #fff;
+  color: rgba(35, 34, 34, 0.7215686275);
   z-index: 1;
 }
 #catagories .container0 .card .content p {
@@ -2312,36 +2316,10 @@ header .head nav .navUl .dropdown .dropdown-menu {
   color: #fff;
   font-weight: 300;
 }
-#catagories .container0 .card .content a {
-  position: relative;
-  display: inline-block;
-  padding: 8px 20px;
-  margin-top: 15px;
-  background: #fff;
-  color: #000;
-  border-radius: 20px;
-  font-weight: 500;
-  box-shadow: 0 5px 15px rgb(0, 0, 0);
-}
-#catagories::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#f00, #f0f);
-  -webkit-clip-path: circle(30% at right 70%);
-          clip-path: circle(30% at right 70%);
-}
-#catagories::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#2196f3, #e91e63);
-  -webkit-clip-path: circle(20% at 10% 10%);
-          clip-path: circle(20% at 10% 10%);
+#catagories .container0 .card .content p img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 3000;
 }/*# sourceMappingURL=main.css.map */

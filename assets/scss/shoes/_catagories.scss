@@ -3,7 +3,10 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #161616;
+  background-image: url(../../../assets/shoses-img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   .container0 {
     position: relative;
     display: flex;
@@ -39,54 +42,51 @@
         opacity: 0;
         h2 {
           position: absolute;
-          top: -80px;
+          top: -30px;
           right: 30px;
           font-size: 8em;
-          color: rgba(255, 255, 255, 0.05);
+          color: rgba(8, 7, 7, 0.593);
           pointer-events: none;
+          z-index: 0;
         }
         h3 {
           font-size: 1.8em;
-          color: #fff;
+          color: #232222b8;
           z-index: 1;
         }
         p {
           font-size: 1em;
           color: #fff;
           font-weight: 300;
+          img{
+            width: 300px;
+            height: 200px;
+            object-fit: contain;
+            z-index: 3000;
+          }
         }
-        a {
-          position: relative;
-          display: inline-block;
-          padding: 8px 20px;
-          margin-top: 15px;
-          background: #fff;
-          color: #000;
-          border-radius: 20px;
-          font-weight: 500;
-          box-shadow: 0 5px 15px rgb(0, 0, 0.2);
-        }
+
       }
     }
   }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#f00, #f0f);
-    clip-path: circle(30% at right 70%);
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#2196f3, #e91e63);
-    clip-path: circle(20% at 10% 10%);
-  }
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: linear-gradient(#f00, #f0f);
+//     clip-path: circle(30% at right 70%);
+//   }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: linear-gradient(#2196f3, #e91e63);
+//     clip-path: circle(20% at 10% 10%);
+//   }
 }
