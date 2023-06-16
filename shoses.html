@@ -239,7 +239,43 @@
         </button>
       </div>
     </section>
-
+    <section id="catagories">
+      <div class="container0">
+        <div class="card">
+          <div class="content">
+            <h2>01</h2>
+            <h3>card one</h3>
+            <p>
+              Loremuri delectus ex aut pariatur nulla perferendis dolor fugit,
+              blanditiis ipsam officia totam vel!
+              <a href="">Read More</a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>02</h2>
+            <h3>card two</h3>
+            <p>
+              Loremuri delectus ex aut pariatur nulla perferendis dolor fugit,
+              blanditiis ipsam officia totam vel!
+              <a href="">Read More</a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>03</h2>
+            <h3>card three</h3>
+            <p>
+              Loremuri delectus ex aut pariatur nulla perferendis dolor fugit,
+              blanditiis ipsam officia totam vel!
+              <a href="">Read More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="container">
         <div class="footer">
@@ -377,6 +413,15 @@
       //   origin: "left",
       // });
     </script>
+    <!-- //vanilla tilt js -->
+    <script src="./assets/js/vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelector(".card"), {
+        max: 25,
+        speed: 400,
+      });
+      VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
     <!-- swipper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script
@@ -387,5 +432,6 @@
 
     <i id="toTop" class="fa-solid fa-arrow-up"></i>
     <script src="./assets/js/shoses.js"></script>
+    <script src="./assets/js/vanilla-tilt.js"></script>
   </body>
 </html>
