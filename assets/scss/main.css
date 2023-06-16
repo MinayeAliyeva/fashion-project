@@ -1148,7 +1148,12 @@ footer .footer .cards-side .card-right-container {
        column-gap: 30px;
 }
 footer .footer .cards-side .card-right-container img {
-  width: 50px;
+  width: 30px;
+}
+@media only screen and (max-width: 676) {
+  footer .footer .cards-side .card-right-container img {
+    width: 20px !important;
+  }
 }
 footer .footer input {
   padding: 7px 10px;
@@ -2507,4 +2512,40 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 #news-makeup .card .text h6 {
   margin: 0;
+}
+
+#beauty {
+  margin-top: 60px;
+}
+#beauty .beauty {
+  padding: 10px 11px;
+}
+#beauty .beauty h2 {
+  font-size: 100px;
+  font-family: "Dancing Script", cursive;
+}
+@media only screen and (max-width: 992px) {
+  #beauty .beauty h2 {
+    font-size: 53px;
+  }
+}
+#beauty .beauty .text h3 {
+  font-size: 87px;
+  font-family: "Dancing Script", cursive;
+}
+#beauty .beauty .imgSide {
+  overflow: hidden;
+}
+#beauty .beauty .imgSide img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 20px 0;
+  border-radius: 50%;
+  transition: 0.6s;
+}
+#beauty .beauty .imgSide img:hover {
+  transform: translateX(50px);
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */

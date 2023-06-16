@@ -59,6 +59,14 @@
       "password": "Pa$$w0rd!",
       "img": "./assets/userImg/user2.png",
       "id": 5
+    },
+    {
+      "userName": "Doris",
+      "lastName": "Curry",
+      "email": "jacaw@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "img": "./assets/userImg/undefined",
+      "id": 6
     }
   ],
   "newProducts": [

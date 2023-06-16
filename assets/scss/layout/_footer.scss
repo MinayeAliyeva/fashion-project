@@ -3,21 +3,25 @@ footer {
   background-color: rgba(205, 156, 97, 0.421);
   .footer {
     padding: 30px;
-    .cards-side{
+    .cards-side {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .card-right-container{
+      .card-right-container {
         display: flex;
         align-items: center;
         column-gap: 30px;
-        img{
-          width: 50px;
+
+        img {
+          width: 30px;
+          @media only screen and (max-width: 676) {
+            width: 20px !important;
+          }
         }
       }
     }
-    input{
-        padding: 7px 10px;
+    input {
+      padding: 7px 10px;
     }
     p {
       color: rgba(0, 0, 0, 0.477);
