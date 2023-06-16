@@ -1073,6 +1073,7 @@ body #form button {
 footer {
   background-color: #24262b;
   padding: 70px 0;
+  transition: all 0.5s ease;
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
 }
@@ -2706,15 +2707,10 @@ header .head nav .navUl .dropdown .dropdown-menu {
 
 #accardion {
   font-family: "Montserrat", sans-serif;
-  background-image: url(../../../assets/faq-img/pexels-dids-12430980.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 h1 {
-  color: white;
+  color: black;
   text-align: center;
   margin: 2rem 0;
   font-size: 2.5rem;
@@ -2725,6 +2721,7 @@ h1 {
   max-width: 1000px;
   margin: 2rem auto;
   margin-top: 100px;
+  padding: 50px 0 100px 0;
 }
 
 .accordion-item {
