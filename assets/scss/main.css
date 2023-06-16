@@ -1128,8 +1128,8 @@ body #form button {
 }
 
 footer {
-  margin-top: 50px;
-  background-color: bisque;
+  margin-top: 90px;
+  background-color: rgba(205, 156, 97, 0.421);
 }
 footer .footer {
   padding: 30px;
@@ -2322,4 +2322,78 @@ header .head nav .navUl .dropdown .dropdown-menu {
   -o-object-fit: contain;
      object-fit: contain;
   z-index: 3000;
+}
+
+#shoses-trendings {
+  margin-top: 60px;
+}
+#shoses-trendings .shoses-trendings h3 {
+  font-size: 56px !important;
+  font-family: "Caveat", cursive;
+}
+#shoses-trendings .shoses-trendings h5 {
+  font-size: 56px !important;
+  font-family: "Caveat", cursive;
+}
+#shoses-trendings .shoses-trendings img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#shoses-trendings .shoses-trendings img:hover {
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 576px) {
+  #shoses-trendings .shoses-trendings img {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #shoses-trendings .shoses-trendings img {
+    width: 200px;
+  }
+}
+#shoses-trendings .shoses-trendings p {
+  font-size: 23px;
+  font-family: "Caveat", cursive;
+}
+
+#latest-shoses {
+  margin-top: 60px;
+}
+#latest-shoses .latest-shoses h3 {
+  font-size: 56px !important;
+  font-family: "Caveat", cursive;
+}
+#latest-shoses .latest-shoses h5 {
+  font-size: 56px !important;
+  font-family: "Caveat", cursive;
+}
+#latest-shoses .latest-shoses img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#latest-shoses .latest-shoses img:hover {
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 576px) {
+  #latest-shoses .latest-shoses img {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #latest-shoses .latest-shoses img {
+    width: 200px;
+  }
+}
+#latest-shoses .latest-shoses p {
+  font-size: 23px;
+  font-family: "Caveat", cursive;
 }/*# sourceMappingURL=main.css.map */
