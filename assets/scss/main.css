@@ -2432,14 +2432,11 @@ header .head nav .navUl .dropdown .dropdown-menu {
   font-family: "Caveat", cursive;
 }
 
-#products-makeup {
-  height: 100vh;
-}
 #products-makeup .images img {
   width: 100%;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #products-makeup .top-side {
   display: flex;
@@ -2459,6 +2456,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 #products-makeup .card {
   border: none;
+  width: 300px;
 }
 #products-makeup .card .text {
   display: flex;
@@ -2475,14 +2473,11 @@ header .head nav .navUl .dropdown .dropdown-menu {
   height: 1000px;
 }
 
-#news-makeup {
-  height: 100vh;
-}
 #news-makeup .images img {
   width: 100%;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #news-makeup .top-side {
   display: flex;
@@ -2502,6 +2497,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 #news-makeup .card {
   border: none;
+  width: 300px;
 }
 #news-makeup .card .text {
   display: flex;
