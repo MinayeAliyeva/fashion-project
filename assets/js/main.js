@@ -84,17 +84,8 @@ async function addFav(id) {
     alert("Sign in Pleas!!!");
   }
 }
-// //basket
-
-// let counter = document.querySelector(".counter");
-// async function addBasket(id) {
-//   let res = await axios(`${PRODUCTS_URL}/${id}`);
-//   let obj = await res.data;
-//   counter += 1;
-//   console.log(counter);
-// }
 //new trending outfits
-const NEW_TRENDINGS = "http://localhost:3000/newtrending-products";
+const NEW_TRENDINGS = "http://localhost:3000/newProducts";
 let arrCopy2 = [];
 let filteredData2 = [];
 let num2 = 7;
@@ -102,6 +93,7 @@ let mainRow3 = document.querySelector(".mainRow3");
 async function fillProducts2() {
   let res = await axios(NEW_TRENDINGS);
   let data = await res.data;
+  console.log(data);
   arrCopy2 = data;
   filteredData2 = filteredData2.length
     ? filteredData2.slice(0, num)
@@ -159,39 +151,7 @@ window.addEventListener("scroll", () => {
     heading.style.color = "white";
   }
 });
-//accardion
-const accardionContent = document.querySelectorAll(".accardion-content");
-accardionContent.forEach((item, index) => {
-  let header1 = item.querySelector(".header1");
-  header1.addEventListener("click", () => {
-    item.classList.toggle("open");
-    let description = item.querySelector(".description");
-    console.log(item);
-    console.log(description.scrollHeight);
-    console.log(description);
-    if (item.classList.contains("open")) {
-      description.style.height = `${description.scrollHeight}px`;
-      item.querySelector("i").classList.replace("fa-plus", "fa-minus");
-      console.log("hh");
-    } else {
-      description.style.height = "0px";
-      item.querySelector("i").classList.replace("fa-minus", "fa-plus");
-      console.log("nn");
-    }
-    removeOpen(index);
-  });
-});
 
-function removeOpen(index1) {
-  accardionContent.forEach((item2, index2) => {
-    if (index1 != index2) {
-      item2.classList.remove("open");
-      let des = item2.querySelector(".description");
-      des.style.height = "0px";
-      item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
-    }
-  });
-}
 //
 let toTop = document.getElementById("toTop");
 toTop.style.display = "none";

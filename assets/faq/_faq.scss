@@ -1,0 +1,80 @@
+#summer-collaction-woman {
+    margin-top: 100px;
+    .summer-collaction-woman {
+      h1{
+          font-family: 'Satisfy', cursive;
+          font-size: 55px;
+      }
+      .row {
+        img {
+          height: 450px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .accardion {
+        max-width: 530px;
+        width: 100%;
+        background-color: #fff;
+        margin: 0 15px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        .accardion-content {
+          border-radius: 4px;
+          // background-color: rgb(180, 73, 89);
+          // border-color: rgb(242, 4, 36);
+          margin: 10px 0;
+          overflow: hidden;
+          // &:nth-child(2){
+          //     background-color: rgb(180, 73, 89);
+          //     border-color: rgb(242, 4, 36);
+          // }
+          // &:nth-child(3){
+          //     background-color: rgb(180, 73, 89);
+          //     border-color: rgb(242, 4, 36);
+          // }
+          // &:nth-child(4){
+          //     background-color: rgb(180, 73, 89);
+          //     border-color: rgb(242, 4, 36);
+          // }
+          &.open {
+            padding-bottom: 10px;
+            .header1 {
+              min-height: 35px;
+            }
+          }
+          .description {
+            padding: 0 15px;
+            font-size: 12px;
+            color: #333;
+            font-weight: 400;
+          }
+          .header1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            min-height: 50px;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            i {
+              font-size: 15px;
+              color: #333;
+            }
+            .title {
+              font-size: 14px;
+              font-weight: 500;
+              color: #333;
+            }
+          }
+          .description {
+            padding: 0 15px;
+            height: 0;
+            transition: all 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+  

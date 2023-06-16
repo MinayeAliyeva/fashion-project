@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="./assets/scss/main.css" />
   </head>
   <body>
-    <header id="head">
+    <header>
       <div class="container">
         <div class="header">
           <h2>Shilly</h2>
@@ -83,11 +83,12 @@
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Make up </a>
+                      <a class="dropdown-item" href="makeup.html">Make up's </a>
                     </li>
                   </ul>
                 </div>
               </li>
+
               <li>
                 <div class="dropdown">
                   <button
@@ -106,19 +107,82 @@
                       <a class="dropdown-item" href="team.html"> Our Team</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Contact Us</a>
+                      <a class="dropdown-item" href="contact-us.html"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="faq.html">Faq</a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li>
-                <a href="">Wishlist</a>
+                <a href="favorites.html">Wishlist</a>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Registration
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="signin.html">Sign in</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="login.html"> Login</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <input class="input" type="text" placeholder="Search....." />
+              <div class="shopping-card">
+                <i class="fa-solid fa-bag-shopping" id="cardIcon"></i>
+                <p class="counter">0</p>
+              </div>
+              <div class="profile column-gap-2">
+                <div class="d-flex align-items-center column-gap-2">
+                  <img src="./assets/profile-images/girl.png" alt="" />
+                  <div
+                    class="d-flex column-gap-2 align-items-center flex-column"
+                  >
+                    <p>Elliy</p>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  </div>
+                </div>
+              </div>
             </ul>
           </nav>
-
           <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </div>
+        <div class="cart">
+          <h5 class="title">You Cart</h5>
+          <div class="card-row">
+            <!-- <div class="cart-content">
+              <div class="cart-box">
+                <img
+                  src="./assets/products-image/9863054400_6_1_1.jpg"
+                  alt=""
+                />
+                <div class="details-box">
+                  <div class="card-product-title">Product Name</div>
+                  <div class="card-price">44$</div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+            </div> -->
+          </div>
+          <div class="total">
+            <div class="total-title">Total:</div>
+            <div class="total-price">5$</div>
+          </div>
+          <button class="">Buy Now</button>
+          <i id="close" class="fa-solid fa-xmark"></i>
         </div>
       </div>
     </header>

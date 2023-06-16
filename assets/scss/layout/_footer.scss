@@ -11,11 +11,19 @@ footer {
         display: flex;
         align-items: center;
         column-gap: 30px;
-
+        @media only screen and (max-width: 676px) {
+         
+          flex-direction: column;
+        }
         img {
           width: 30px;
-          @media only screen and (max-width: 676) {
+          @media only screen and (max-width: 676px) {
             width: 20px !important;
+            flex-direction: column;
+          }
+          @media only screen and (max-width: 255px) {
+            width: 10px !important;
+            column-gap: 10px;
           }
         }
       }

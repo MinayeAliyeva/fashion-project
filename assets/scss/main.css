@@ -43,9 +43,8 @@ header .cart {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 360px;
   min-height: 100vh;
-  padding: 25px;
+  padding: 0 0 20px;
   background-color: #fff;
 }
 header .cart.active {
@@ -1069,66 +1068,6 @@ body #form button {
      object-fit: cover;
 }
 
-#summer-collaction-woman .summer-collaction-woman h1 {
-  font-family: "Satisfy", cursive;
-  font-size: 55px;
-}
-#summer-collaction-woman .summer-collaction-woman .row img {
-  height: 450px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion {
-  max-width: 530px;
-  width: 100%;
-  background-color: #fff;
-  margin: 0 15px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content {
-  border-radius: 4px;
-  margin: 10px 0;
-  overflow: hidden;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content.open {
-  padding-bottom: 10px;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content.open .header1 {
-  min-height: 35px;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .description {
-  padding: 0 15px;
-  font-size: 12px;
-  color: #333;
-  font-weight: 400;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .header1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 15px;
-  min-height: 50px;
-  transition: all 0.2s linear;
-  cursor: pointer;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .header1 i {
-  font-size: 15px;
-  color: #333;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .header1 .title {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-}
-#summer-collaction-woman .summer-collaction-woman .accardion .accardion-content .description {
-  padding: 0 15px;
-  height: 0;
-  transition: all 0.2s linear;
-}
-
 footer {
   margin-top: 90px;
   background-color: rgba(205, 156, 97, 0.421);
@@ -1147,12 +1086,25 @@ footer .footer .cards-side .card-right-container {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media only screen and (max-width: 676px) {
+  footer .footer .cards-side .card-right-container {
+    flex-direction: column;
+  }
+}
 footer .footer .cards-side .card-right-container img {
   width: 30px;
 }
-@media only screen and (max-width: 676) {
+@media only screen and (max-width: 676px) {
   footer .footer .cards-side .card-right-container img {
     width: 20px !important;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 255px) {
+  footer .footer .cards-side .card-right-container img {
+    width: 10px !important;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 footer .footer input {
@@ -2547,4 +2499,168 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 #beauty .beauty .imgSide img:hover {
   transform: scale(1.1);
+}
+
+#products-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.1254901961);
+}
+@media only screen and (max-width: 615px) {
+  #products-gallery {
+    display: none;
+  }
+}
+#products-gallery .box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+#products-gallery .box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  --webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #004);
+}
+#products-gallery .box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media only screen and (max-width: 992px) {
+  #products-gallery .box span img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 694px) {
+  #products-gallery .box span img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #products-gallery .box span img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #products-gallery .box span img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+@media only screen and (max-width: 860px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(160deg);
+    }
+  }
+}
+@media only screen and (max-width: 748px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(140deg);
+    }
+  }
+}
+@media only screen and (max-width: 728px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(130deg);
+    }
+  }
+}
+@media only screen and (max-width: 711px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(120deg);
+    }
+  }
+}
+@media only screen and (max-width: 694px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(100deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+  }
+}
+@media only screen and (max-width: 690px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(80deg);
+    }
+  }
+}
+@media only screen and (max-width: 633px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(50deg);
+    }
+  }
+}
+@media only screen and (max-width: 621px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(40deg);
+    }
+  }
+}
+@media only screen and (max-width: 619px) {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(37deg);
+    }
+  }
 }/*# sourceMappingURL=main.css.map */
