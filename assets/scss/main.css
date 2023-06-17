@@ -689,22 +689,19 @@ body #form button {
   font-family: "Satisfy", cursive;
 }
 #extra-summer-collaction .tet-side a {
-  font-family: "Satisfy", cursive;
-  border: 1px solid;
+  font-family: Satisfy, cursive;
+  background-color: rgba(127, 122, 80, 0.56);
   margin-top: 20px;
   color: black;
   width: 120px;
+  border-radius: 100px;
   padding: 10px 8px;
-  transition: 0.6s;
+  transition: all 0.6s ease 0s;
   text-align: center;
-}
-#extra-summer-collaction .tet-side a:hover {
-  color: white;
-  background-color: rgb(127, 122, 80);
 }
 
 #new-trending-outfits {
-  padding: 50px;
+  padding: 90px;
 }
 #new-trending-outfits .new-trending-outfits h3 {
   font-family: "Satisfy", cursive;
@@ -715,9 +712,10 @@ body #form button {
   overflow: hidden;
   border: none;
   box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.125);
+  border-radius: 50%;
 }
 #new-trending-outfits .new-trending-outfits .mainRow3 .card:hover .content {
-  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.136);
 }
 #new-trending-outfits .new-trending-outfits .mainRow3 .card img {
   width: 100%;
@@ -725,21 +723,50 @@ body #form button {
 }
 #new-trending-outfits .new-trending-outfits .mainRow3 .card .content {
   position: absolute;
-  bottom: -100%;
+  bottom: 0;
   width: 100%;
   height: 100%;
   transition: all 0.6s ease;
   color: white;
-  background-color: rgba(0, 0, 0, 0.285);
 }
 #new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text {
   position: absolute;
-  bottom: 1px;
+  bottom: 96px;
   color: white;
   display: flex;
   flex-direction: column;
   row-gap: 190px;
   padding: 10px 20px;
+}
+@media only screen and (max-width: 775px) {
+  #new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text {
+    bottom: 606px;
+    left: 20px;
+  }
+}
+@media only screen and (max-width: 735px) {
+  #new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text {
+    bottom: 806px;
+    left: 20px;
+  }
+}
+#new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text .text-side h5 {
+  color: black;
+  font-size: 12px;
+}
+@media only screen and (max-width: 775px) {
+  #new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text .text-side h5 {
+    font-size: 26px;
+  }
+}
+#new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text .text-side i span {
+  font-size: 10px;
+  color: black;
+}
+@media only screen and (max-width: 775px) {
+  #new-trending-outfits .new-trending-outfits .mainRow3 .card .content .text .text-side i span {
+    font-size: 20px;
+  }
 }
 
 #body2 {

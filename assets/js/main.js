@@ -141,7 +141,7 @@ async function fillProducts2() {
   mainRow3.innerHTML = "";
   filteredData2.forEach((obj) => {
     mainRow3.innerHTML += `
-     <div class="col-lg-3 col-md-4 col-sm-12">
+    <div class="col-lg-3 col-md-4 col-sm-12">
     <div class="card">
       <img
         src="${obj.img}"
@@ -149,14 +149,10 @@ async function fillProducts2() {
       />
       <div class="content">
         <div class="text">
-      <div> <div class="actions">
-       <i class="fa-solid fa-heart" onclick=addFav2(${obj.id},this)></i>
-        <i class="fa-solid fa-eye"></i>
-      </div>
-      <div class="actions2" onclick=addBasket(${obj.id})>add basket</div></div>
+     
           <div class="text-side">
-            <h5 >${obj.productName}</h5>
-            <i><span> ${obj.productprice}</span></i>
+            <h5>${obj.productName}</h5>
+            <i><span> ${obj.productprice} TL</span></i>
           </div>
         </div>
       </div>
