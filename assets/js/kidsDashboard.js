@@ -1,5 +1,4 @@
 const KIDS_URL = "http://localhost:3000/kids";
-
 let tBody = document.querySelector("tbody");
 let searchInput = document.querySelector(".searchInput");
 let arrCopy = [];
@@ -22,7 +21,6 @@ async function drawTable() {
         <div class="actions">
          <a href="kids-add-edit.html?id=${obj.id}"><i class="fa-solid fa-pen"></i></a>
          <i class="fa-solid fa-trash"  onclick=delFun(${obj.id})></i>
-
         </div>
        </td>
       </tr>

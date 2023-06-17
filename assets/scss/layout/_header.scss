@@ -3,6 +3,28 @@ header {
   z-index: 1000;
   left: 0;
   top: 0;
+  &.signIn {
+    background-color: rgb(36, 38, 43);
+    .logo {
+      color: white;
+    }
+    .header {
+      nav {
+        .navUl {
+          li {
+            .dropdown{
+              button{
+                color: white;
+              }
+            }
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
   .cart {
     position: fixed;
     top: 0;
@@ -83,7 +105,6 @@ header {
   }
 
   .header {
-    
     .shopping-card {
       position: relative;
       .fa-bag-shopping {
@@ -137,7 +158,6 @@ header {
     h2 {
       font-size: 28px;
       font-weight: 600;
-      // color: white;
     }
     nav {
       &.show {
@@ -192,16 +212,8 @@ header {
         }
       }
     }
-    &.kids{
-      .logo{
-        color: #fff;
-      }
-      }
   }
-
 }
-
-
 
 .cart-content {
   margin-top: 50px;

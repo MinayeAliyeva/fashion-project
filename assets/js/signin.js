@@ -10,9 +10,39 @@ form.addEventListener("submit", (e) => {
     lastName: allInputs[1].value,
     email: allInputs[2].value,
     password: allInputs[3].value,
-    img: `./assets/userImg/${imgInput.value.split("\\")[2]}`,
+    img: base64,
   };
   localStorage.setItem("signName", userObj.userName);
   axios.post(`${USERS_URL}`, userObj);
   window.location = "home.html";
+});
+
+const convertBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
+const uploadImg = async (e) => {
+  const file = e.target.files[0];
+  base64 = await convertBase64(file);
+};
+imgInput.addEventListener("change", (e) => {
+  uploadImg(e);
+});
+
+//menubar
+let meniIcon = document.querySelector("#menuIcon");
+let nav = document.querySelector("nav");
+meniIcon.addEventListener("click", () => {
+  nav.classList.toggle("show");
+  meniIcon.classList.contains("fa-bars")
+    ? (meniIcon.classList = "fa-solid fa-xmark")
+    : (meniIcon.classList = "fa-solid fa-bars");
 });

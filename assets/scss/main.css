@@ -41,6 +41,18 @@ header {
   left: 0;
   top: 0;
 }
+header.signIn {
+  background-color: rgb(36, 38, 43);
+}
+header.signIn .logo {
+  color: white;
+}
+header.signIn .header nav .navUl li .dropdown button {
+  color: white;
+}
+header.signIn .header nav .navUl li a {
+  color: white;
+}
 header .cart {
   position: fixed;
   top: 0;
@@ -229,9 +241,6 @@ header .header nav .navUl .dropdown .dropdown-menu {
 header .header nav .navUl .dropdown .dropdown-menu .dropdown-item {
   background-color: transparent !important;
   color: black !important;
-}
-header .header.kids .logo {
-  color: #fff;
 }
 
 .cart-content {
