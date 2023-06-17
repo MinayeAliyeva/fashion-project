@@ -9,11 +9,17 @@ header {
       color: white;
     }
     .header {
+      .fa-bars {
+        color: white;
+      }
+      .fa-xmark {
+        color: white;
+      }
       nav {
         .navUl {
           li {
-            .dropdown{
-              button{
+            .dropdown {
+              button {
                 color: white;
               }
             }

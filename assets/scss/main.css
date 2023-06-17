@@ -47,6 +47,12 @@ header.signIn {
 header.signIn .logo {
   color: white;
 }
+header.signIn .header .fa-bars {
+  color: white;
+}
+header.signIn .header .fa-xmark {
+  color: white;
+}
 header.signIn .header nav .navUl li .dropdown button {
   color: white;
 }

@@ -14,7 +14,7 @@ form.addEventListener("submit", (e) => {
   };
   localStorage.setItem("signName", userObj.userName);
   axios.post(`${USERS_URL}`, userObj);
-  window.location = "home.html";
+  window.location = "login.html";
 });
 
 const convertBase64 = (file) => {
