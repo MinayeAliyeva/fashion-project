@@ -45,9 +45,21 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   on: {
-    autoplayTimeLeft(s, time, progress) {
+    autoplayTimeLeft( time, progress) {
       progressCircle.style.setProperty("--progress", 1 - progress);
       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
     },
   },
 });
+
+//video
+let videoPlayer = document.querySelector("#videoPlayer");
+let myVideo = document.querySelector("#myVideo");
+function stopVideo() {
+  videoPlayer.style.display = "none";
+}
+function playVideo(file) {
+  myVideo.scr = file;
+  videoPlayer.style.display = "block";
+}
+

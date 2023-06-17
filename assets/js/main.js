@@ -1,3 +1,4 @@
+//menubar
 let meniIcon = document.querySelector("#menuIcon");
 let nav = document.querySelector("nav");
 meniIcon.addEventListener("click", () => {
@@ -6,7 +7,6 @@ meniIcon.addEventListener("click", () => {
     ? (meniIcon.classList = "fa-solid fa-xmark")
     : (meniIcon.classList = "fa-solid fa-bars");
 });
-
 const USERS_URL = "http://localhost:3000/users";
 let signUpForm = document.querySelector(".signUpForm");
 let nameInput = document.querySelector(".nameInput");
@@ -81,7 +81,6 @@ select.addEventListener("change", (e) => {
     fillProducts();
   }
 });
-
 //loadmore
 let loadMore = document.querySelector(".loadMore");
 console.log(loadMore);
@@ -100,20 +99,35 @@ loadMore.addEventListener("click", (e) => {
 let profile = document.querySelector(".profile");
 const FAV_URL = "http://localhost:3000/favorites";
 let signinUsers = JSON.parse(localStorage.getItem("isSign"));
-let logProfile = document.querySelector(".fa-arrow-right-from-bracket");
-logProfile.addEventListener("click", () => {
-  localStorage.clear("signinUsers");
-  console.log("o");
-});
 profile.display = "none";
-window.addEventListener("load", () => {
-  if (signinUsers) {
-    profile.style.display = "block";
-  } else {
-    profile.style.display = "none";
-  }
-});
 
+window.addEventListener("load", async () => {
+  const SIGN_USERS = "http://localhost:3000/users";
+  let res = await axios(`${SIGN_USERS}`);
+  let data = await res.data;
+  let signName = localStorage.getItem("signName");
+  data.filter((obj) => {
+    if (obj.userName == signName && signinUsers) {
+      profile.innerHTML = `
+  <div class="d-flex align-items-center column-gap-2">
+                <img src="${obj.img}" alt="" />
+                <div
+                  class="d-flex column-gap-2 align-items-center flex-column"
+                >
+                  <p>${obj.userName}</p>
+                  <i class="fa-solid fa-arrow-right-from-bracket" onclick=logProfile()></i>
+                </div>
+              </div> `;
+      profile.style.display = "block";
+    } else {
+      profile.style.display = "none";
+    }
+  });
+});
+function logProfile() {
+  localStorage.clear("signinUsers");
+  localStorage.clear("signName");
+}
 async function addFav(id) {
   let res = await axios(`${PRODUCTS_URL}/${id}`);
   let obj = await res.data;
@@ -124,6 +138,81 @@ async function addFav(id) {
     alert("Sign in Pleas!!!");
   }
 }
+
+//cart
+const CARD_URL = "http://localhost:3000/card";
+async function addBasket(id) {
+  let res = await axios(`${PRODUCTS_URL}/${id}`);
+  let obj = await res.data;
+  await axios.post(`${CARD_URL}`, obj);
+  console.log(id);
+  addBasket2();
+}
+
+let card = document.querySelector(".cart");
+console.log(card);
+let close = document.querySelector("#close");
+let cardIcon = document.querySelector("#cardIcon");
+cardIcon.addEventListener("click", () => {
+  card.classList.toggle("active");
+});
+close.addEventListener("click", () => {
+  card.classList.remove("active");
+});
+let cardRow = document.querySelector(".card-row");
+//counter
+let counter = document.querySelector(".counter");
+let count = [];
+let totalPrice;
+async function addBasket2() {
+  if (signinUsers) {
+    let res = await axios(`${CARD_URL}`);
+    let data = await res.data;
+    count = data;
+    let totalInner = document.querySelector(".total-price");
+    var totalChild = data.reduce(
+      (accum, item) => accum + +item.productprice,
+      0
+    );
+    totalInner.innerHTML = totalChild;
+    counter.innerHTML = count.length;
+    cardRow.innerHTML = "";
+    data.forEach((obj) => {
+      cardRow.innerHTML += `
+    <div class="cart-content">
+              <div class="cart-box">
+                <img
+                  src="${obj.img}"
+                  alt=""
+                />
+                <div class="details-box">
+                  <div class="card-product-title">${obj.productName}</div>
+                  <div class="card-price">${obj.productprice}$</div>
+                </div>
+                <i class="fa-solid fa-trash-can" onclick=delFun(${obj.id})></i>
+              </div>
+            </div>
+        
+    `;
+    });
+  } else {
+    alert("Pleas Sign In!!!");
+  }
+}
+//total
+addBasket2();
+//delete cart
+async function delFun(id, btn) {
+  await axios.delete(`${CARD_URL}/${id}`);
+  addBasket2();
+  // let res = await axios(`${CARD_URL}`);
+  // // let obj = await res.data;
+  // // let filtered = data.filter((obj) => {
+  // //   obj.id != id;
+  // // });
+  // // addBasket2(filtered);
+}
+
 //new trending outfits
 const NEW_TRENDINGS = "http://localhost:3000/newProducts";
 let arrCopy2 = [];
@@ -166,27 +255,6 @@ function addFav2(id, icon) {
   console.log(id);
   console.log(icon);
 }
-
-//video
-let videoPlayer = document.querySelector("#videoPlayer");
-let myVideo = document.querySelector("#myVideo");
-function stopVideo() {
-  videoPlayer.style.display = "none";
-}
-function playVideo(file) {
-  myVideo.scr = file;
-  videoPlayer.style.display = "block";
-}
-
-let header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-  header.style.backgroundColor = "white";
-  header.style.transition = "0.5s";
-  if (scrollY == 0) {
-    header.style.backgroundColor = "transparent";
-    heading.style.color = "white";
-  }
-});
 
 //
 let toTop = document.getElementById("toTop");
@@ -263,71 +331,3 @@ async function details(id) {
 `;
 }
 details();
-
-//cart
-const CARD_URL = "http://localhost:3000/card";
-async function addBasket(id) {
-  let res = await axios(`${PRODUCTS_URL}/${id}`);
-  let obj = await res.data;
-  await axios.post(`${CARD_URL}`, obj);
-  console.log(id);
-  addBasket2();
-}
-
-let card = document.querySelector(".cart");
-console.log(card);
-let close = document.querySelector("#close");
-let cardIcon = document.querySelector("#cardIcon");
-cardIcon.addEventListener("click", () => {
-  card.classList.toggle("active");
-});
-close.addEventListener("click", () => {
-  card.classList.remove("active");
-});
-let cardRow = document.querySelector(".card-row");
-//counter
-let counter = document.querySelector(".counter");
-let count = [];
-let totalPrice;
-async function addBasket2() {
-  let res = await axios(`${CARD_URL}`);
-  let data = await res.data;
-  count = data;
-  let totalInner = document.querySelector(".total-price");
-  var totalChild = data.reduce((accum, item) => accum + +item.productprice, 0);
-  totalInner.innerHTML = totalChild;
-  counter.innerHTML = count.length;
-  cardRow.innerHTML = "";
-  data.forEach((obj) => {
-    cardRow.innerHTML += `
-    <div class="cart-content">
-              <div class="cart-box">
-                <img
-                  src="${obj.img}"
-                  alt=""
-                />
-                <div class="details-box">
-                  <div class="card-product-title">${obj.productName}</div>
-                  <div class="card-price">${obj.productprice}$</div>
-                </div>
-                <i class="fa-solid fa-trash-can" onclick=delFun(${obj.id})></i>
-              </div>
-            </div>
-        
-    `;
-  });
-}
-//total
-
-addBasket2();
-//delete cart
-async function delFun(id, btn) {
-  await axios.delete(`${CARD_URL}/${id}`);
-  addBasket2();
-  // let res = await axios(`${CARD_URL}`);
-  // // let obj = await res.data;
-  // // let filtered = data.filter((obj) => {
-  // //   obj.id != id;
-  // // });
-  // // addBasket2(filtered);
-}

@@ -12,6 +12,7 @@ form.addEventListener("submit", (e) => {
     password: allInputs[3].value,
     img: `./assets/userImg/${imgInput.value.split("\\")[2]}`,
   };
+  localStorage.setItem("signName", userObj.userName);
   axios.post(`${USERS_URL}`, userObj);
   window.location = "home.html";
 });
