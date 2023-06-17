@@ -128,7 +128,7 @@ header .header .shopping-card .fa-bag-shopping {
   font-size: 23px;
 }
 header .header .shopping-card p {
-  color: red;
+  color: black;
   font-size: 13px;
   position: absolute;
   bottom: 1px;
@@ -136,7 +136,7 @@ header .header .shopping-card p {
   border-radius: 50%;
   padding: 0 4px;
   font-size: 8px;
-  background-color: pink;
+  background: rgb(212, 176, 148);
 }
 header .header .cart {
   display: flex;
@@ -1830,6 +1830,103 @@ header {
 #our-workers .our-workers .swiper .swiper-slide .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+#kidsDash {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+#kidsDash .input-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 30px;
+}
+#kidsDash .input-select button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: black;
+}
+#kidsDash .arrow {
+  color: black;
+}
+#kidsDash .arrow i {
+  color: black;
+}
+#kidsDash table .actions {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#kidsDash table .actions a {
+  color: black;
+}
+#kidsDash table img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#kidsDash .title-add {
+  font-family: "Crimson Text", serif;
+}
+#kidsDash #form {
+  width: 300px;
+  margin: 20vh auto 0 auto;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+#kidsDash #form .input-control {
+  display: flex;
+  flex-direction: column;
+}
+#kidsDash #form .input-control:focus {
+  outline: 0;
+}
+#kidsDash #form h1 {
+  text-align: center;
+  color: #0f2027;
+}
+#kidsDash #form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgb(85, 83, 83);
+  border: none;
+  border-radius: 4px;
+}
+
+.admin-arrow {
+  color: black;
+}
+
+.searchInput {
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid;
+}
+.searchInput::-moz-placeholder {
+  color: black;
+}
+.searchInput::placeholder {
+  color: black;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.users h4 {
+  font-size: 58px;
+  font-family: "Crimson Text", serif;
+}
+
+.admin-arrow {
+  color: black;
 }
 
 #team {

@@ -89,8 +89,7 @@ header {
         font-size: 23px;
       }
       p {
-        color: red;
-        // top: 0;
+        color: black;
         font-size: 13px;
         position: absolute;
         bottom: 1px;
@@ -98,7 +97,7 @@ header {
         border-radius: 50%;
         padding: 0 4px;
         font-size: 8px;
-        background-color: pink;
+        background: rgb(212, 176, 148);
       }
     }
     display: flex;
