@@ -1334,21 +1334,32 @@ header {
 #best-sellers-kids {
   padding: 50px;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 h3 {
-  font-weight: 400;
-  font-size: 34px;
+@media only screen and (max-width: 370px) {
+  #best-sellers-kids .best-sellers-kids .input-select {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card {
+#best-sellers-kids .best-sellers-kids h3 {
+  font-weight: 400;
+  font-size: 44px;
+  font-family: "Satisfy", cursive;
+  text-transform: capitalize;
+}
+#best-sellers-kids .best-sellers-kids .mainRow8 {
+  row-gap: 20px;
+}
+#best-sellers-kids .best-sellers-kids .mainRow8 .card {
   position: relative;
   border: none;
   margin: 6px;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card .actions2 {
+#best-sellers-kids .best-sellers-kids .mainRow8 .card .actions2 {
   position: absolute;
   left: 30%;
   bottom: 80px;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card .actions {
+#best-sellers-kids .best-sellers-kids .mainRow8 .card .actions {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1357,26 +1368,27 @@ header {
        column-gap: 25px;
   padding: 10px;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card .actions i {
-  padding: 8px;
-  border: 1px solid;
+#best-sellers-kids .best-sellers-kids .mainRow8 .card .actions i {
+  padding: 10px;
+  box-shadow: 2px 2px 11px 2px rgba(0, 0, 0, 0.125);
+  /* border: 1px solid; */
   border-radius: 50%;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card .text-side {
+#best-sellers-kids .best-sellers-kids .mainRow8 .text-side {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card .text-side i span {
+#best-sellers-kids .best-sellers-kids .mainRow8 .text-side i span {
   font-weight: 300;
   font-size: 15px;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card .text-side h5 {
+#best-sellers-kids .best-sellers-kids .mainRow8 .text-side h5 {
   font-weight: 300;
   font-size: 15px;
   margin-bottom: 0;
 }
-#best-sellers-kids .best-sellers-kids .mainRow2 .card img {
+#best-sellers-kids .best-sellers-kids .mainRow8 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

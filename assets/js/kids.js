@@ -18,13 +18,13 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//spinner
-let loader = document.querySelector(".loader");
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 2000);
-});
+// //spinner
+// let loader = document.querySelector(".loader");
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     loader.style.display = "none";
+//   }, 2000);
+// });
 
 //accardion
 const accardionContent = document.querySelectorAll(".accardion-content");
@@ -78,3 +78,86 @@ toTop.addEventListener("click", () => {
   });
 });
 
+//
+
+//products
+const KIDS_URL = "http://localhost:3000/kids";
+let arrCopy = [];
+let filteredData = [];
+let num = 4;
+let mainRow8 = document.querySelector(".mainRow8");
+async function fillProducts() {
+  let res = await axios(KIDS_URL);
+  let data = await res.data;
+  arrCopy = data;
+  filteredData = filteredData.length
+    ? filteredData.slice(0, num)
+    : data.slice(0, num);
+  mainRow8.innerHTML = "";
+  filteredData.forEach((obj) => {
+    mainRow8.innerHTML += `
+    <div class="col-lg-3 col-md-4 col-sm-12 products-title">
+    <div class="card ">
+      <img
+        src="${obj.img}"
+        alt=""
+      />
+      <div class="actions">
+        <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
+ <i  data-bs-toggle="modal"
+     data-bs-target="#exampleModal" class="fa-solid fa-eye" onclick=details(${obj.id})></i>
+     <i style="    font-size: 17px;"  onclick=addBasket(${obj.id}) class="fa-solid fa-bag-shopping"></i>
+
+      </div>
+     
+      <div class="text-side">
+        <h5>${obj.productName}</h5>
+        <i><span> ${obj.productprice} TL</span></i>
+      </div>
+    </div>
+  </div>
+`;
+  });
+}
+fillProducts();
+// //search product
+// let searchProduct = document.querySelector(".searchProduct");
+// searchProduct.addEventListener("input", (e) => {
+//   filteredData = arrCopy
+//     .filter((obj) => {
+//       return obj.productName
+//         .toLocaleLowerCase()
+//         .includes(e.target.value.toLocaleLowerCase());
+//     })
+//     .slice(0, num);
+//   fillProducts();
+// });
+// //sort
+// let select = document.querySelector("#select");
+// select.addEventListener("change", (e) => {
+//   console.log(e.target.value);
+//   if (e.target.value == "from low to high") {
+//     filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
+//     fillProducts();
+//   } else if (e.target.value == "from high to low") {
+//     filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
+//     fillProducts();
+//   } else {
+//     filteredData = arrCopy;
+//     fillProducts();
+//   }
+// });
+// //loadmore
+// let loadMore = document.querySelector(".loadMore");
+// console.log(loadMore);
+// loadMore.addEventListener("click", (e) => {
+//   num += 3;
+//   filteredData = arrCopy
+//     .filter((obj) => {
+//       return obj.productName
+//         .toLocaleLowerCase()
+//         .includes(e.target.value.toLocaleLowerCase());
+//     })
+//     .slice(0, num);
+//   fillProducts();
+// });
