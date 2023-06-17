@@ -11,7 +11,8 @@ form.addEventListener("submit", async (e) => {
         obj.userName == allInputs[0].value && obj.password == allInputs[1].value
     )
   ) {
+    window.location = "home.html";
   } else {
-    alert("please sign in");
+    alert("such user is not exisist");
   }
 });

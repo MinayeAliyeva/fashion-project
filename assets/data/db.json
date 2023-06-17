@@ -61,11 +61,11 @@
       "id": 5
     },
     {
-      "userName": "Doris",
-      "lastName": "Curry",
-      "email": "jacaw@mailinator.com",
+      "userName": "Minaya",
+      "lastName": "Ramsey",
+      "email": "fypada@mailinator.com",
       "password": "Pa$$w0rd!",
-      "img": "./assets/userImg/undefined",
+      "img": "./assets/userImg/user1.png",
       "id": 6
     }
   ],

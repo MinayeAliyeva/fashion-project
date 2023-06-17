@@ -317,8 +317,9 @@ header .header nav .navUl .dropdown .dropdown-menu .dropdown-item {
 }
 #best-selling-products .best-selling-products h3 {
   font-weight: 400;
-  font-size: 34px;
+  font-size: 44px;
   font-family: "Satisfy", cursive;
+  text-transform: capitalize;
 }
 #best-selling-products .best-selling-products .mainRow2 .card {
   position: relative;
@@ -340,25 +341,26 @@ header .header nav .navUl .dropdown .dropdown-menu .dropdown-item {
   padding: 10px;
 }
 #best-selling-products .best-selling-products .mainRow2 .card .actions i {
-  padding: 8px;
-  border: 1px solid;
+  padding: 10px;
+  box-shadow: 2px 2px 11px 2px rgba(0, 0, 0, 0.125);
+  /* border: 1px solid; */
   border-radius: 50%;
 }
-#best-selling-products .best-selling-products .mainRow2 .card .text-side {
+#best-selling-products .best-selling-products .mainRow2 .text-side {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#best-selling-products .best-selling-products .mainRow2 .card .text-side i span {
+#best-selling-products .best-selling-products .mainRow2 .text-side i span {
   font-weight: 300;
   font-size: 15px;
 }
-#best-selling-products .best-selling-products .mainRow2 .card .text-side h5 {
+#best-selling-products .best-selling-products .mainRow2 .text-side h5 {
   font-weight: 300;
   font-size: 15px;
   margin-bottom: 0;
 }
-#best-selling-products .best-selling-products .mainRow2 .card img {
+#best-selling-products .best-selling-products .mainRow2 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -708,6 +710,8 @@ body #form button {
 #new-trending-outfits .new-trending-outfits .mainRow3 .card {
   margin-top: 20px;
   overflow: hidden;
+  border: none;
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.125);
 }
 #new-trending-outfits .new-trending-outfits .mainRow3 .card:hover .content {
   bottom: 0;
@@ -964,13 +968,6 @@ body #form button {
   color: white;
   font-family: "Satisfy", cursive;
   color: rgb(240, 239, 235);
-}
-#fashion-friendly .fashion-friendly a {
-  color: white;
-  background-color: rgb(70, 60, 50);
-  padding: 10px;
-  border-radius: 3px;
-  transition: 0.5s;
 }
 
 #video-images .video-images {
