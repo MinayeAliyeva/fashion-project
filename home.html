@@ -255,6 +255,27 @@
       <div class="container">
         <div class="best-selling-products">
           <h3 class="text-center selling-title">Best selling fashion items</h3>
+          <div
+            style="
+              display: flex !important;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <input
+              style="border: none; border-bottom: 1px solid"
+              type="search"
+              placeholder="Search here..."
+              class="searchProduct"
+            />
+            <select style="border: none" name="" id="select">
+              <option style="border: none" value="sort by price">
+                sort by price
+              </option>
+              <option value="from high to low">from high to low</option>
+              <option value="from low to high">from low to high</option>
+            </select>
+          </div>
           <div class="row mainRow2 selling-products">
             <!-- <div class="col-lg-3 col-md-4 col-sm-12">
               <div class="card">
@@ -274,6 +295,17 @@
               </div>
             </div> -->
           </div>
+          <button
+            class="loadMore"
+            style="
+              background: transparent;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid;
+            "
+          >
+            Load More
+          </button>
           <!-- Modal -->
           <div
             class="modal fade"
@@ -395,7 +427,7 @@
         </div>
       </div>
     </section>
- 
+
     <section id="products-gallery">
       <div class="box">
         <span style="--i: 1">

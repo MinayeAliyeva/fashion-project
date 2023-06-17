@@ -18,7 +18,7 @@ let passwordInput2 = document.querySelector(".passwordInput2");
 const PRODUCTS_URL = "http://localhost:3000/products";
 let arrCopy = [];
 let filteredData = [];
-let num = 7;
+let num = 4;
 let mainRow2 = document.querySelector(".mainRow2");
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);
@@ -40,8 +40,10 @@ async function fillProducts() {
         <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
  <i  data-bs-toggle="modal"
      data-bs-target="#exampleModal" class="fa-solid fa-eye" onclick=details(${obj.id})></i>
+     <i style="    font-size: 17px;"  onclick=addBasket(${obj.id}) class="fa-solid fa-bag-shopping"></i>
+
       </div>
-      <div class="actions2" onclick=addBasket(${obj.id})>add basket</div>
+     
       <div class="text-side">
         <h5>${obj.productName}</h5>
         <i><span> ${obj.productprice} TL</span></i>
@@ -52,10 +54,48 @@ async function fillProducts() {
   });
 }
 fillProducts();
-///
-function details() {
-  console.log("jjj");
-}
+//search product
+let searchProduct = document.querySelector(".searchProduct");
+searchProduct.addEventListener("input", (e) => {
+  filteredData = arrCopy
+    .filter((obj) => {
+      return obj.productName
+        .toLocaleLowerCase()
+        .includes(e.target.value.toLocaleLowerCase());
+    })
+    .slice(0, num);
+  fillProducts();
+});
+//sort
+let select = document.querySelector("#select");
+select.addEventListener("change", (e) => {
+  console.log(e.target.value);
+  if (e.target.value == "from low to high") {
+    filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
+    fillProducts();
+  } else if (e.target.value == "from high to low") {
+    filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
+    fillProducts();
+  } else {
+    filteredData = arrCopy;
+    fillProducts();
+  }
+});
+
+//loadmore
+let loadMore = document.querySelector(".loadMore");
+console.log(loadMore);
+loadMore.addEventListener("click", (e) => {
+  num += 3;
+  filteredData = arrCopy
+    .filter((obj) => {
+      return obj.productName
+        .toLocaleLowerCase()
+        .includes(e.target.value.toLocaleLowerCase());
+    })
+    .slice(0, num);
+  fillProducts();
+});
 //add fav
 let profile = document.querySelector(".profile");
 const FAV_URL = "http://localhost:3000/favorites";
@@ -235,7 +275,7 @@ async function addBasket(id) {
   let obj = await res.data;
   await axios.post(`${CARD_URL}`, obj);
   console.log(id);
-  addBasket2()
+  addBasket2();
 }
 
 let card = document.querySelector(".cart");

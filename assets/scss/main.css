@@ -321,6 +321,9 @@ header .header nav .navUl .dropdown .dropdown-menu .dropdown-item {
   font-family: "Satisfy", cursive;
   text-transform: capitalize;
 }
+#best-selling-products .best-selling-products .mainRow2 {
+  row-gap: 20px;
+}
 #best-selling-products .best-selling-products .mainRow2 .card {
   position: relative;
   border: none;
