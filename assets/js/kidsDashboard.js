@@ -1,0 +1,68 @@
+const KIDS_URL = "http://localhost:3000/kids";
+
+let tBody = document.querySelector("tbody");
+let searchInput = document.querySelector(".searchInput");
+let arrCopy = [];
+let filteredData = [];
+let num = 10;
+async function drawTable() {
+  let res = await axios(KIDS_URL);
+  let data = await res.data;
+  arrCopy = data;
+  filteredData = filteredData.length ? filteredData : data;
+  tBody.innerHTML = "";
+  filteredData.forEach((obj) => {
+    tBody.innerHTML += `
+        <tr>
+        <td>${obj.id}</td>
+        <td>  <img src="${obj.img}" alt=""></td>
+        <td>${obj.productName}</td>
+        <td>${obj.productprice}</td>
+        <td>
+        <div class="actions">
+         <a href="kids-add-edit.html?id=${obj.id}"><i class="fa-solid fa-pen"></i></a>
+         <i class="fa-solid fa-trash"  onclick=delFun(${obj.id})></i>
+
+        </div>
+       </td>
+      </tr>
+        `;
+  });
+}
+drawTable();
+
+//delete
+async function delFun(id) {
+  await axios.delete(`${KIDS_URL}/${id}`);
+  filteredData = arrCopy.filter((obj) => {
+    obj.id != id;
+  });
+}
+//search
+searchInput.addEventListener("input", (e) => {
+  filteredData = arrCopy.filter((obj) => {
+    return obj.productName
+      .toLocaleLowerCase()
+      .includes(e.target.value.toLocaleLowerCase());
+  });
+
+  drawTable();
+});
+//sort
+let select = document.querySelector("#select");
+select.addEventListener("change", (e) => {
+  if (e.target.value == "from cheap to expensive") {
+    filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
+    drawTable();
+  } else if (e.target.value == "from expensive to cheap") {
+    filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
+    drawTable();
+  } else {
+    filteredData = arrCopy;
+    drawTable();
+  }
+});
+let addBtn = document.querySelector(".addBtn");
+addBtn.addEventListener("click", () => {
+  window.location = "kids-add-edit.html";
+});
