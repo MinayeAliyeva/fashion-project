@@ -2257,7 +2257,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
   color: #4b4b4b;
 }
 
-#catagories {
+#catagories2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2267,7 +2267,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
   background-repeat: no-repeat;
   background-position: center;
 }
-#catagories .container0 {
+#catagories2 .container0 {
   position: relative;
   display: flex;
   justify-content: center;
@@ -2276,7 +2276,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
   flex-wrap: wrap;
   z-index: 1;
 }
-#catagories .container0 .card {
+#catagories2 .container0 .card {
   position: relative;
   width: 280px;
   height: 400px;
@@ -2293,18 +2293,18 @@ header .head nav .navUl .dropdown .dropdown-menu {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-#catagories .container0 .card:hover .content {
+#catagories2 .container0 .card:hover .content {
   transform: translateY(0px);
   opacity: 1;
 }
-#catagories .container0 .card .content {
+#catagories2 .container0 .card .content {
   padding: 20px;
   text-align: center;
   transition: 0.5s;
   transform: translateY(100px);
   opacity: 0;
 }
-#catagories .container0 .card .content h2 {
+#catagories2 .container0 .card .content h2 {
   position: absolute;
   top: -30px;
   right: 30px;
@@ -2313,17 +2313,17 @@ header .head nav .navUl .dropdown .dropdown-menu {
   pointer-events: none;
   z-index: 0;
 }
-#catagories .container0 .card .content h3 {
+#catagories2 .container0 .card .content h3 {
   font-size: 1.8em;
   color: rgba(35, 34, 34, 0.7215686275);
   z-index: 1;
 }
-#catagories .container0 .card .content p {
+#catagories2 .container0 .card .content p {
   font-size: 1em;
   color: #fff;
   font-weight: 300;
 }
-#catagories .container0 .card .content p img {
+#catagories2 .container0 .card .content p img {
   width: 300px;
   height: 200px;
   -o-object-fit: contain;
