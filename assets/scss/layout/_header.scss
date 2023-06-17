@@ -83,6 +83,7 @@ header {
   }
 
   .header {
+    
     .shopping-card {
       position: relative;
       .fa-bag-shopping {
@@ -191,8 +192,17 @@ header {
         }
       }
     }
+    &.kids{
+      .logo{
+        color: #fff;
+      }
+      }
   }
+
 }
+
+
+
 .cart-content {
   margin-top: 50px;
   .card {

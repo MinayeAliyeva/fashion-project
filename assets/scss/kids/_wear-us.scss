@@ -22,14 +22,15 @@
     color: white;
   }
   a {
-    color: rgb(59, 24, 20);
-    background: wheat;
+    /* color: rgb(59, 24, 20); */
+    background: #f5deb394;
+    color: white;
     padding: 6px;
     border-radius: 30px;
     transition: 0.5s;
-    &:hover {
-      background-color: rgb(179, 112, 24);
-      color: wheat;
-    }
+    // &:hover {
+    //   background-color: rgb(179, 112, 24);
+    //   color: wheat;
+    // }
   }
 }

@@ -19,7 +19,7 @@ const PRODUCTS_URL = "http://localhost:3000/products";
 let arrCopy = [];
 let filteredData = [];
 let num = 4;
-let mainRow2 = document.querySelector(".mainRow2");
+let mainRow = document.querySelector(".mainRow");
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);
   let data = await res.data;
@@ -27,9 +27,9 @@ async function fillProducts() {
   filteredData = filteredData.length
     ? filteredData.slice(0, num)
     : data.slice(0, num);
-  mainRow2.innerHTML = "";
+  mainRow.innerHTML = "";
   filteredData.forEach((obj) => {
-    mainRow2.innerHTML += `
+    mainRow.innerHTML += `
     <div class="col-lg-3 col-md-4 col-sm-12 products-title">
     <div class="card ">
       <img
@@ -66,6 +66,7 @@ searchProduct.addEventListener("input", (e) => {
     .slice(0, num);
   fillProducts();
 });
+
 //sort
 let select = document.querySelector("#select");
 select.addEventListener("change", (e) => {

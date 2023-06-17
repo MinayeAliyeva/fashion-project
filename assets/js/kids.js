@@ -8,14 +8,18 @@ meniIcon.addEventListener("click", () => {
     : (meniIcon.classList = "fa-solid fa-bars");
 });
 
+
+
+// let logo=document.querySelector(".logo")
 let header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.style.backgroundColor = "white";
   header.style.transition = "0.5s";
-  if (scrollY == 0) {
-    header.style.backgroundColor = "transparent";
-    heading.style.color = "white";
-  }
+  // logo.style.color="black"
+  // if (scrollY == 0) {
+  //   header.style.backgroundColor = "transparent";
+  //   heading.style.color = "black";
+  // }
 });
 
 // //spinner
@@ -161,3 +165,4 @@ fillProducts();
 //     .slice(0, num);
 //   fillProducts();
 // });
+
