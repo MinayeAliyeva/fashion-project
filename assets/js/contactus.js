@@ -27,3 +27,12 @@ if (toastTrigger) {
 }
 const toastContaainer = document.querySelector(".toast-container");
 toastContaainer.style.top="60px"
+//menubar
+let meniIcon = document.querySelector("#menuIcon");
+let nav = document.querySelector("nav");
+meniIcon.addEventListener("click", () => {
+  nav.classList.toggle("show");
+  meniIcon.classList.contains("fa-bars")
+    ? (meniIcon.classList = "fa-solid fa-xmark")
+    : (meniIcon.classList = "fa-solid fa-bars");
+});

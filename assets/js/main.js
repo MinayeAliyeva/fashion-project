@@ -143,11 +143,15 @@ async function addFav(id) {
 //cart
 const CARD_URL = "http://localhost:3000/card";
 async function addBasket(id) {
-  let res = await axios(`${PRODUCTS_URL}/${id}`);
-  let obj = await res.data;
-  await axios.post(`${CARD_URL}`, obj);
-  console.log(id);
-  addBasket2();
+  if (signinUsers) {
+    let res = await axios(`${PRODUCTS_URL}/${id}`);
+    let obj = await res.data;
+    await axios.post(`${CARD_URL}`, obj);
+    console.log(id);
+    addBasket2();
+  } else {
+    alert("Pleas Sign In!!!");
+  }
 }
 
 let card = document.querySelector(".cart");
@@ -166,20 +170,16 @@ let counter = document.querySelector(".counter");
 let count = [];
 let totalPrice;
 async function addBasket2() {
-  if (signinUsers) {
-    let res = await axios(`${CARD_URL}`);
-    let data = await res.data;
-    count = data;
-    let totalInner = document.querySelector(".total-price");
-    var totalChild = data.reduce(
-      (accum, item) => accum + +item.productprice,
-      0
-    );
-    totalInner.innerHTML = totalChild;
-    counter.innerHTML = count.length;
-    cardRow.innerHTML = "";
-    data.forEach((obj) => {
-      cardRow.innerHTML += `
+  let res = await axios(`${CARD_URL}`);
+  let data = await res.data;
+  count = data;
+  let totalInner = document.querySelector(".total-price");
+  var totalChild = data.reduce((accum, item) => accum + +item.productprice, 0);
+  totalInner.innerHTML = totalChild;
+  counter.innerHTML = count.length;
+  cardRow.innerHTML = "";
+  data.forEach((obj) => {
+    cardRow.innerHTML += `
     <div class="cart-content">
               <div class="cart-box">
                 <img
@@ -195,10 +195,7 @@ async function addBasket2() {
             </div>
         
     `;
-    });
-  } else {
-    alert("Pleas Sign In!!!");
-  }
+  });
 }
 //total
 addBasket2();
@@ -206,57 +203,7 @@ addBasket2();
 async function delFun(id, btn) {
   await axios.delete(`${CARD_URL}/${id}`);
   addBasket2();
-  // let res = await axios(`${CARD_URL}`);
-  // // let obj = await res.data;
-  // // let filtered = data.filter((obj) => {
-  // //   obj.id != id;
-  // // });
-  // // addBasket2(filtered);
 }
-
-//new trending outfits
-const NEW_TRENDINGS = "http://localhost:3000/newProducts";
-let arrCopy2 = [];
-let filteredData2 = [];
-let num2 = 7;
-let mainRow3 = document.querySelector(".mainRow3");
-async function fillProducts2() {
-  let res = await axios(NEW_TRENDINGS);
-  let data = await res.data;
-  console.log(data);
-  arrCopy2 = data;
-  filteredData2 = filteredData2.length
-    ? filteredData2.slice(0, num)
-    : data.slice(0, num);
-  mainRow3.innerHTML = "";
-  filteredData2.forEach((obj) => {
-    mainRow3.innerHTML += `
-    <div class="col-lg-3 col-md-4 col-sm-12">
-    <div class="card">
-      <img 
-        src="${obj.img}"
-        alt=""
-      />
-      <div class="content">
-        <div class="text">
-     
-          <div class="text-side">
-            <h5>${obj.productName}</h5>
-            <i><span> ${obj.productprice} TL</span></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-`;
-  });
-}
-fillProducts2();
-function addFav2(id, icon) {
-  console.log(id);
-  console.log(icon);
-}
-
 //
 let toTop = document.getElementById("toTop");
 toTop.style.display = "none";
@@ -267,7 +214,6 @@ window.addEventListener("scroll", () => {
     toTop.style.display = "none";
   }
 });
-
 toTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -281,6 +227,8 @@ toTop.addEventListener("click", () => {
 //     loader.style.display = "none";
 //   }, 2000);
 // });
+
+
 //modal
 let modalDialog = document.querySelector(".modal-dialog");
 
@@ -332,3 +280,47 @@ async function details(id) {
 `;
 }
 details();
+
+
+//new trending outfits
+const NEW_TRENDINGS = "http://localhost:3000/newProducts";
+let arrCopy2 = [];
+let filteredData2 = [];
+let num2 = 7;
+let mainRow3 = document.querySelector(".mainRow3");
+async function fillProducts2() {
+  let res = await axios(NEW_TRENDINGS);
+  let data = await res.data;
+  console.log(data);
+  arrCopy2 = data;
+  filteredData2 = filteredData2.length
+    ? filteredData2.slice(0, num)
+    : data.slice(0, num);
+  mainRow3.innerHTML = "";
+  filteredData2.forEach((obj) => {
+    mainRow3.innerHTML += `
+    <div class="col-lg-3 col-md-4 col-sm-12">
+    <div class="card">
+      <img 
+        src="${obj.img}"
+        alt=""
+      />
+      <div class="content">
+        <div class="text">
+     
+          <div class="text-side">
+            <h5>${obj.productName}</h5>
+            <i><span> ${obj.productprice} TL</span></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+  });
+}
+fillProducts2();
+function addFav2(id, icon) {
+  console.log(id);
+  console.log(icon);
+}

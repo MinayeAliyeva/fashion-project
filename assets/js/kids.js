@@ -11,16 +11,16 @@ meniIcon.addEventListener("click", () => {
 
 
 // let logo=document.querySelector(".logo")
-let header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-  header.style.backgroundColor = "white";
-  header.style.transition = "0.5s";
+// let header = document.querySelector("header");
+// window.addEventListener("scroll", () => {
+//   header.style.backgroundColor = "white";
+//   header.style.transition = "0.5s";
   // logo.style.color="black"
   // if (scrollY == 0) {
   //   header.style.backgroundColor = "transparent";
   //   heading.style.color = "black";
   // }
-});
+// });
 
 // //spinner
 // let loader = document.querySelector(".loader");

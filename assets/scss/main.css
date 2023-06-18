@@ -44,9 +44,6 @@ header {
 header.signIn {
   background-color: rgb(36, 38, 43);
 }
-header.signIn .logo {
-  color: white;
-}
 header.signIn .header .fa-bars {
   color: white;
 }
@@ -1218,10 +1215,6 @@ footer .container .row .footer-col h4::before {
     width: 100%;
   }
 }
-header {
-  background-color: white;
-}
-
 #hero-section {
   background-color: rgba(0, 0, 0, 0.781);
 }
@@ -2068,7 +2061,6 @@ header .head nav .navUl .dropdown .dropdown-menu {
 }
 
 .contact-sec {
-  margin-top: 50px;
   background-image: url(../../../assets/images/contact.jpg);
 }
 .contact-sec .contact {
