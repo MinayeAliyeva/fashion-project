@@ -67,6 +67,11 @@ header .cart {
   padding: 50px 100px 0 30px;
   background-color: #fff;
 }
+@media only screen and (max-width: 380px) {
+  header .cart {
+    right: -400px;
+  }
+}
 header .cart.active {
   right: 0;
 }
@@ -1128,12 +1133,12 @@ footer {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
 }
-footer .container .row4 {
+footer .container .row {
   display: flex;
   flex-wrap: wrap;
 }
 @media only screen and (max-width: 475px) {
-  footer .container .row4 {
+  footer .container .row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -1141,12 +1146,12 @@ footer .container .row4 {
     row-gap: 30px;
   }
 }
-footer .container .row4 .footer-col {
+footer .container .row .footer-col {
   width: 25%;
   padding: 0 15px;
   transition: all 0.3s ease;
 }
-footer .container .row4 .footer-col .social-link a {
+footer .container .row .footer-col .social-link a {
   display: inline-block;
   height: 40px;
   width: 40px;
@@ -1158,29 +1163,29 @@ footer .container .row4 .footer-col .social-link a {
   color: #fff;
   transition: all 0.5s ease;
 }
-footer .container .row4 .footer-col .social-link a:hover {
+footer .container .row .footer-col .social-link a:hover {
   color: #24262b;
   background-color: #fff;
 }
-footer .container .row4 .footer-col ul {
+footer .container .row .footer-col ul {
   margin: 0;
   padding: 0;
 }
-footer .container .row4 .footer-col ul li:not(:last-child) {
+footer .container .row .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
-footer .container .row4 .footer-col ul li a {
+footer .container .row .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
   color: #fff;
   font-weight: 300;
   color: #bbb;
 }
-footer .container .row4 .footer-col ul li a:hover {
+footer .container .row .footer-col ul li a:hover {
   color: #fff;
   padding-left: 10px;
 }
-footer .container .row4 .footer-col h4 {
+footer .container .row .footer-col h4 {
   font-size: 18px;
   color: #fff;
   text-transform: capitalize;
@@ -1188,7 +1193,7 @@ footer .container .row4 .footer-col h4 {
   font-weight: 500;
   position: relative;
 }
-footer .container .row4 .footer-col h4::before {
+footer .container .row .footer-col h4::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1863,7 +1868,7 @@ header {
 }
 
 #kidsDash {
-  margin-left: 100px;
+  margin-left: 230px !important;
   margin-top: 50px;
 }
 #kidsDash .input-select {

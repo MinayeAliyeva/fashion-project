@@ -11,12 +11,15 @@ form.addEventListener("submit", (e) => {
     email: allInputs[2].value,
     password: allInputs[3].value,
     img: base64,
+    isAdmin: false,
   };
+  console.log(userObj);
   localStorage.setItem("signName", userObj.userName);
   axios.post(`${USERS_URL}`, userObj);
   window.location = "login.html";
 });
-
+//
+let base64;
 const convertBase64 = (file) => {
   return new Promise((resolve, reject) => {
     const fileReader = new FileReader();

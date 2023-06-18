@@ -388,12 +388,20 @@
     </section>
     <section id="new-trending-outfits">
       <div class="container">
-        <div class="new-trending-outfits">
+        <div
+          class="new-trending-outfits"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          "
+        >
           <h3 class="text-center trending-title">New trending outfits</h3>
           <div class="row mainRow3 trending-item">
-            <div class="col-lg-3 col-md-4 col-sm-12">
+            <!-- <div class="col-lg-3 col-md-4 col-sm-12">
               <div class="card">
-                <img
+                <img "
                   src="./assets/products-image/2756378620_6_1_1.jpg"
                   alt=""
                 />
@@ -406,7 +414,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -460,7 +468,7 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="row4">
+        <div class="row">
           <div class="footer-col">
             <h4>company</h4>
             <ul>
@@ -535,7 +543,7 @@
       });
     </script>
     <!-- scrollreveal -->
-    <script>
+    <!-- <script>
       ScrollReveal({
         reset: true,
         distance: "10px",
@@ -543,20 +551,20 @@
         delay: 500,
       });
       ScrollReveal().reveal(
-        "#banner,.products-title,.extra-img,.trending-title,.fashion-friendly ",
+        "#banner,.products-title,.extra-img,.fashion-friendly ",
         {
           delay: 500,
           origin: "left",
         }
       );
       ScrollReveal().reveal(
-        ".owl-theme,.selling-title,.selling-products,.extra-text,.trending-item,.footer  ",
+        ".owl-theme,.selling-title,.selling-products,.extra-text,.trending-item,.trending-title,.footer  ",
         {
           delay: 500,
           origin: "right",
         }
       );
-    </script>
+    </script> -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

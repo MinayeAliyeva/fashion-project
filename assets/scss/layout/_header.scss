@@ -38,6 +38,9 @@ header {
     min-height: 100vh;
     padding: 50px 100px 0 30px;
     background-color: #fff;
+    @media only screen and (max-width:380px){
+      right: -400px;
+    }
     &.active {
       right: 0;
     }

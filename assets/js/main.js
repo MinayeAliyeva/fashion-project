@@ -31,7 +31,7 @@ async function fillProducts() {
   filteredData.forEach((obj) => {
     mainRow.innerHTML += `
     <div class="col-lg-3 col-md-4 col-sm-12 products-title">
-    <div class="card ">
+    <div class="card " >
       <img
         src="${obj.img}"
         alt=""
@@ -233,7 +233,7 @@ async function fillProducts2() {
     mainRow3.innerHTML += `
     <div class="col-lg-3 col-md-4 col-sm-12">
     <div class="card">
-      <img
+      <img 
         src="${obj.img}"
         alt=""
       />
