@@ -90,7 +90,6 @@ select.addEventListener("change", (e) => {
   }
 });
 //loadmore
-//loadmore
 let loadMore = document.querySelector(".loadMore");
 loadMore.addEventListener("click", (e) => {
   num += 4;

@@ -94,8 +94,8 @@ toggle.addEventListener("click", () => {
   toggle.classList.toggle("bi-moon-fill");
   if (toggle.classList.toggle("bi-brightness-high-fill")) {
     body.style.background = "white";
-    sideNav.style.border="1px solid white"
-    sideNav.style.borderColor="white"
+    sideNav.style.border = "1px solid white";
+    sideNav.style.borderColor = "white";
     body.style.color = "black";
     body.style.transition = "2s";
     icons.forEach((i) => {
@@ -107,10 +107,62 @@ toggle.addEventListener("click", () => {
     body.style.transition = "2s";
     table.style.background = "white";
     table2.style.background = "white";
-    sideNav.style.border="1px solid white"
+    sideNav.style.border = "1px solid white";
     icons.forEach((i) => {
       i.style.color = "white";
     });
     table3.style.background = "white";
   }
 });
+
+//
+const USERS_URL = "http://localhost:3000/users";
+let userCount = document.querySelector(".user-count");
+let containCount = [];
+
+async function countInner() {
+  let res = await axios(`${USERS_URL}`);
+  let data = await res.data;
+  containCount = data;
+  console.log(containCount.length);
+  userCount.innerHTML = containCount.length;
+}
+countInner();
+
+const PRODUCT_URL = "http://localhost:3000/products";
+let userCount2 = document.querySelector(".user-count2");
+let containCount2 = [];
+
+async function countInner2() {
+  let res = await axios(`${PRODUCT_URL}`);
+  let data = await res.data;
+  containCount2 = data;
+  userCount2.innerHTML = containCount2.length;
+}
+countInner2();
+const KID_URL="http://localhost:3000/kids"
+let userCount3 = document.querySelector(".user-count3");
+let containCount3 = [];
+
+async function countInner3() {
+  let res = await axios(`${KID_URL}`);
+  let data = await res.data;
+  containCount3 = data;
+  userCount3.innerHTML = containCount3.length;
+}
+countInner3();
+
+
+
+
+const MESSAGE_URL="http://localhost:3000/message"
+let userCount4 = document.querySelector(".user-count4");
+let containCount4 = [];
+
+async function countInner4() {
+  let res = await axios(`${MESSAGE_URL}`);
+  let data = await res.data;
+  containCount4 = data;
+  userCount4.innerHTML = containCount4.length;
+}
+countInner4();
