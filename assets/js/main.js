@@ -28,6 +28,7 @@ let arrCopy = [];
 let filteredData = [];
 let num = 4;
 let mainRow = document.querySelector(".mainRow");
+
 async function fillProducts() {
   let res = await axios(PRODUCTS_URL);
   let data = await res.data;
@@ -65,13 +66,11 @@ fillProducts();
 //search product
 let searchProduct = document.querySelector(".searchProduct");
 searchProduct.addEventListener("input", (e) => {
-  filteredData = arrCopy
-    .filter((obj) => {
-      return obj.productName
-        .toLocaleLowerCase()
-        .includes(e.target.value.toLocaleLowerCase());
-    })
-    .slice(0, num);
+  filteredData = arrCopy.slice(0, num).filter((obj) => {
+    return obj.productName
+      .toLocaleLowerCase()
+      .includes(e.target.value.toLocaleLowerCase());
+  });
   fillProducts();
 });
 
@@ -91,10 +90,10 @@ select.addEventListener("change", (e) => {
   }
 });
 //loadmore
+//loadmore
 let loadMore = document.querySelector(".loadMore");
-console.log(loadMore);
 loadMore.addEventListener("click", (e) => {
-  num += 3;
+  num += 4;
   filteredData = arrCopy
     .filter((obj) => {
       return obj.productName
@@ -102,6 +101,8 @@ loadMore.addEventListener("click", (e) => {
         .includes(e.target.value.toLocaleLowerCase());
     })
     .slice(0, num);
+  console.log(filteredData);
+
   fillProducts();
 });
 //add fav
@@ -163,7 +164,6 @@ async function addBasket(id) {
 }
 
 let card = document.querySelector(".cart");
-console.log(card);
 let close = document.querySelector("#close");
 let cardIcon = document.querySelector("#cardIcon");
 cardIcon.addEventListener("click", () => {
@@ -228,13 +228,13 @@ toTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-// //spinner
-// let loader = document.querySelector(".loader");
-// window.addEventListener("load", () => {
-//   setTimeout(() => {
-//     loader.style.display = "none";
-//   }, 2000);
-// });
+//spinner
+let loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
+});
 
 //modal
 let modalDialog = document.querySelector(".modal-dialog");

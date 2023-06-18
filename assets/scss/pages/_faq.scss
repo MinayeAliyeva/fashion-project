@@ -1,73 +1,63 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+#faq {
+  padding: 100px 0;
+  font-family: 'Caveat', cursive;
+  .accardion {
+    padding-left: 0;
+    li {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.688);
+      color: white;
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"]:checked + label + .content {
+        max-height: 400px;
+        padding: 10px 10px 20px;
+      }
+      input[type="radio"]:checked + label::before {
+        content: "-";
+        margin-right: 10px;
+        font-size: 60px;
+        font-weight: 600;
+        color: white;
+      }
+      input[type="radio"]:checked + label::after {
+        bottom: 0;
+        position: absolute;
+        content: "";
+        width: 100%;
+        display: block;
+        height: 1px;
+        background-color: #7777;
+      }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-#accardion {
-  font-family: "Montserrat", sans-serif;
-  // background-color: #34495e;
-  // color: #fff;
-}
-h1 {
-  color: black;
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 2.5rem;
-}
-
-.accordion {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2rem auto;
-  margin-top: 100px;
-  padding: 50px 0 100px 0;
-  // height: 50vh;
-}
-.accordion-item {
-  // background-color: #fff;
-  // color: #111;
-  margin: 1rem 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-}
-.accordion-item-header {
-  padding: 0.5rem 3rem 0.5rem 1rem;
-  min-height: 3.5rem;
-  line-height: 1.25rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-}
-.accordion-item-header::after {
-  content: "\002B";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-}
-.accordion-item-header.active::after {
-  content: "\2212";
-}
-.accordion-item-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-.accordion-item-body-content {
-  padding: 1rem;
-  line-height: 1.5rem;
-  border-top: 1px solid;
-  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
-}
-
-@media (max-width: 767px) {
-  html {
-    font-size: 14px;
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+        color: #d1d0cf;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: 48px;
+        font-weight: 400;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "+";
+          margin-right: 10px;
+          font-size: 40px;
+          font-weight: 300;
+          color: white;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+    }
   }
-}
-.footer2 {
-  background-color: transparent;
 }

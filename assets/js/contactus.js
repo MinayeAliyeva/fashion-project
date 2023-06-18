@@ -70,3 +70,10 @@ meniIcon.addEventListener("click", () => {
     ? (meniIcon.classList = "fa-solid fa-xmark")
     : (meniIcon.classList = "fa-solid fa-bars");
 });
+//spinner
+let loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
+});
