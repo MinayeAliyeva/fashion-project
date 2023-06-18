@@ -226,7 +226,6 @@ header .header nav .navUl {
        column-gap: 30px;
   margin: 0;
   padding: 15px;
-  background: white;
 }
 @media only screen and (max-width: 992px) {
   header .header nav .navUl {
@@ -253,6 +252,9 @@ header .header nav .navUl .dropdown .dropdown-menu {
 header .header nav .navUl .dropdown .dropdown-menu .dropdown-item {
   background-color: transparent !important;
   color: black !important;
+}
+header.mainNav {
+  background: white !important;
 }
 
 .cart-content {

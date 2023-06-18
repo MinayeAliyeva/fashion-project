@@ -106,7 +106,14 @@
       "id": 1
     }
   ],
-  "card": [],
+  "card": [
+    {
+      "productName": "Perry Vasquez",
+      "productprice": "567",
+      "img": "./assets/products-image/2756378620_6_1_1.jpg",
+      "id": 18
+    }
+  ],
   "favorites": [],
   "kids": [
     {

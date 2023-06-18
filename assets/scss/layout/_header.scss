@@ -38,7 +38,7 @@ header {
     min-height: 100vh;
     padding: 50px 100px 0 30px;
     background-color: #fff;
-    @media only screen and (max-width:380px){
+    @media only screen and (max-width: 380px) {
       right: -400px;
     }
     &.active {
@@ -192,7 +192,7 @@ header {
         column-gap: 30px;
         margin: 0;
         padding: 15px;
-        background: white;
+
         @media only screen and (max-width: 992px) {
           flex-direction: column;
           position: absolute;
@@ -222,6 +222,9 @@ header {
         }
       }
     }
+  }
+  &.mainNav {
+    background: white !important;
   }
 }
 
