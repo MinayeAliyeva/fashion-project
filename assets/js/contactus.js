@@ -3,6 +3,7 @@ let form = document.querySelector("form");
 let fullName = document.querySelector(".fullName");
 let email = document.querySelector(".email");
 let message = document.querySelector(".message");
+let imgInputC = document.querySelector(".imgInputC");
 const MES_URL = "http://localhost:3000/message";
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -10,12 +11,36 @@ form.addEventListener("submit", (e) => {
     fullName: fullName.value,
     email: email.value,
     message: message.value,
+    img: base64,
   };
+  console.log(obj);
   fullName.value = "";
   email.value = "";
   message.value = "";
   axios.post(`${MES_URL}`, obj);
 });
+
+let base64;
+const convertBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
+const uploadImg = async (e) => {
+  const file = e.target.files[0];
+  base64 = await convertBase64(file);
+};
+imgInputC.addEventListener("change", (e) => {
+  uploadImg(e);
+});
+
 //header
 let header = document.querySelector("header");
 window.addEventListener("scroll", () => {
@@ -35,7 +60,7 @@ if (toastTrigger) {
   });
 }
 const toastContaainer = document.querySelector(".toast-container");
-toastContaainer.style.top="60px"
+toastContaainer.style.top = "60px";
 //menubar
 let meniIcon = document.querySelector("#menuIcon");
 let nav = document.querySelector("nav");

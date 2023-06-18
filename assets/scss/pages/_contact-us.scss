@@ -44,6 +44,13 @@
           position: relative;
           width: 100%;
           margin-top: 10px;
+          .imgInputC{
+            border: none !important;
+          }
+          .label{
+            font-family: "Caveat", cursive;
+            font-size: 25px;
+          }
           input[type="submit"] {
             width: 100px;
             background: rgb(80, 80, 80);

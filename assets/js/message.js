@@ -8,11 +8,11 @@ async function fillMesage() {
   row.innerHTML = "";
   data.forEach((obj) => {
     row.innerHTML += `
-    <div class="col-lg-6">
+    <div class="col-lg-4 column-gap-4">
             <div class="testimional-box">
               <div class="box-top">
                 <div class="profile">
-                  <img src="./assets/userImg/user2.png" alt="" />
+                  <img src="${obj.img}" />
                 </div>
                 <div class="name-user">
                   <strong>${obj.fullName}</strong>
