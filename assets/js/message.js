@@ -37,3 +37,16 @@ async function fillMesage() {
   });
 }
 fillMesage();
+
+//
+const MESSAGE_URL = "http://localhost:3000/message";
+let counter2 = document.querySelector(".counter2");
+let count2 = [];
+
+async function notification() {
+  let res = await axios(`${MESSAGE_URL}`);
+  let data = await res.data;
+  count2 = data;
+  counter2.innerHTML = count2.length;
+}
+notification()

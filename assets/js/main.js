@@ -145,7 +145,7 @@ async function addFav(id) {
     axios.post(`${FAV_URL}`, obj);
     window.location = "favorites.html";
   } else {
-    alert("Sign in Pleas!!!");
+    window.location = "signin.html";
   }
 }
 
@@ -159,7 +159,7 @@ async function addBasket(id) {
     console.log(id);
     addBasket2();
   } else {
-    alert("Pleas Sign In!!!");
+    window.location = "signin.html";
   }
 }
 

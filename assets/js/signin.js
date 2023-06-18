@@ -13,7 +13,6 @@ form.addEventListener("submit", (e) => {
     img: base64,
     isAdmin: false,
   };
-  console.log(userObj);
   localStorage.setItem("signName", userObj.userName);
   axios.post(`${USERS_URL}`, userObj);
   window.location = "login.html";
@@ -48,4 +47,18 @@ meniIcon.addEventListener("click", () => {
   meniIcon.classList.contains("fa-bars")
     ? (meniIcon.classList = "fa-solid fa-xmark")
     : (meniIcon.classList = "fa-solid fa-bars");
+});
+
+
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  let res = await axios(`${USERS_URL}`);
+  allUsers = res.data;
+ let admin= allInputs.forEach((obj) => {
+    return obj.userName === allInputs[0].value;
+  });
+  if (admin) {
+    console.log("ok");
+  }
 });

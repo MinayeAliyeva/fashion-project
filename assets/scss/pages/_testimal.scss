@@ -4,87 +4,110 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  .testimionals-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    .testimional-box {
+      /* width: 500px; */
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      padding: 20px;
+      margin: 15px;
+      cursor: pointer;
+      .comments p {
+        font-size: 0.9rem;
+        color: #4b4b4b;
+        text-align: center;
+      }
+
+      .box-top {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+      }
+    }
+    .name-user {
+      display: flex;
+      flex-direction: column;
+      strong {
+        color: #3d3d3d;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+      }
+      span {
+        color: #979797;
+        font-size: 0.8rem;
+      }
+    }
+    .reviews {
+      color: #f9d71c;
+    }
+  }
+  .testimional-heading {
+    letter-spacing: 1px;
+    margin: 30px 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 1.5rem;
+      color: #252525;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      background-color: #202020;
+      color: white;
+      padding: 20px 30px;
+    }
+  }
 }
-#testimonials .testimional-heading {
-  letter-spacing: 1px;
-  margin: 30px 0;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#testimonials .testimional-heading h1 {
-  font-size: 2.2rem;
-  font-weight: 500;
-  background-color: #202020;
-  color: white;
-  padding: 20px 30px;
-}
-#testimonials .testimional-heading span {
-  font-size: 1.5rem;
-  color: #252525;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-#testimonials .testimionals-box-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-#testimonials .testimionals-box-container .reviews {
-  color: #f9d71c;
-}
-#testimonials .testimionals-box-container .name-user {
-  display: flex;
-  flex-direction: column;
-}
-#testimonials .testimionals-box-container .name-user span {
-  color: #979797;
-  font-size: 0.8rem;
-}
-#testimonials .testimionals-box-container .name-user strong {
-  color: #3d3d3d;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-#testimonials .testimionals-box-container .profile {
-  display: flex;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 10px;
-}
-#testimonials .testimionals-box-container .profile img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-}
-#testimonials .testimionals-box-container .testimional-box {
-    /* width: 500px; */
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 20px;
-    margin: 15px;
-    cursor: pointer;
-}
-#testimonials .testimionals-box-container .testimional-box .box-top {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-#testimonials .testimionals-box-container .testimional-box .comments p {
-  font-size: 0.9rem;
-  color: #4b4b4b;
-  text-align: center;
+
+.notification {
+  position: relative;
+  margin-left: 1300px;
+  .fa-bell {
+    // margin-left: 1300px;
+    margin-top: 50px;
+    font-size: 23px;
+    margin-left: 20px;
+  }
+  p {
+    color: black;
+    font-size: 13px;
+    position: absolute;
+    bottom: 1px;
+    left: 30px;
+    border-radius: 50%;
+    padding: 0 5px;
+    font-size: 10px;
+    background: #f9d71c;
+  }
 }

@@ -3,9 +3,9 @@ header {
   z-index: 1000;
   left: 0;
   top: 0;
+
   &.signIn {
     background-color: rgb(36, 38, 43);
-
     .header {
       .fa-bars {
         color: white;
