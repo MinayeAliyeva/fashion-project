@@ -10,8 +10,9 @@ form.addEventListener("submit", (e) => {
     lastName: allInputs[1].value,
     email: allInputs[2].value,
     password: allInputs[3].value,
+    isAdmin: "false",
     img: base64,
-    isAdmin: false,
+  
   };
   localStorage.setItem("signName", userObj.userName);
   axios.post(`${USERS_URL}`, userObj);
