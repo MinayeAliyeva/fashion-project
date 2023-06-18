@@ -26,7 +26,15 @@ window.addEventListener("load", () => {
 });
 
 //
-
+//header
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.background = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+  }
+});
 const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
 var swiper = new Swiper(".mySwiper", {

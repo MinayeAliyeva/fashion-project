@@ -16,6 +16,15 @@ form.addEventListener("submit", (e) => {
   message.value = "";
   axios.post(`${MES_URL}`, obj);
 });
+//header
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.background = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+  }
+});
 //
 const toastTrigger = document.getElementById("liveToastBtn");
 const toastLiveExample = document.getElementById("liveToast");

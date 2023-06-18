@@ -13,7 +13,15 @@ let nameInput = document.querySelector(".nameInput");
 let emailInput = document.querySelector(".emailInput");
 let passwordInput = document.querySelector(".passwordInput");
 let passwordInput2 = document.querySelector(".passwordInput2");
-
+//header
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.background = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+  }
+});
 //products
 const PRODUCTS_URL = "http://localhost:3000/products";
 let arrCopy = [];
@@ -228,7 +236,6 @@ toTop.addEventListener("click", () => {
 //   }, 2000);
 // });
 
-
 //modal
 let modalDialog = document.querySelector(".modal-dialog");
 
@@ -280,7 +287,6 @@ async function details(id) {
 `;
 }
 details();
-
 
 //new trending outfits
 const NEW_TRENDINGS = "http://localhost:3000/newProducts";

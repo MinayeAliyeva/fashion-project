@@ -1,11 +1,12 @@
-// let header = document.querySelector("header");
-// window.addEventListener("scroll", () => {
-//   header.style.backgroundColor = "white";
-//   header.style.transition = "0.5s";
-//   if (scrollY == 0) {
-//     header.style.backgroundColor = "transparent";
-//   }
-// });
+//header
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.background = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+  }
+});
 let meniIcon = document.querySelector("#menuIcon");
 let nav = document.querySelector("nav");
 console.log(nav);

@@ -15,6 +15,15 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+//header
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.background = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+  }
+});
 // let heading = document.querySelector(".header h2");
 // let anchors = document.querySelectorAll(".navUl a");
 // let drops = document.querySelectorAll(".dropdown button");

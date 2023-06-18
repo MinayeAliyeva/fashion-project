@@ -29,7 +29,15 @@ meniIcon.addEventListener("click", () => {
 //     loader.style.display = "none";
 //   }, 2000);
 // });
-
+//header
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.style.background = "white";
+  header.style.transition = "0.5s";
+  if (scrollY == 0) {
+    header.style.backgroundColor = "transparent";
+  }
+});
 //accardion
 const accardionContent = document.querySelectorAll(".accardion-content");
 accardionContent.forEach((item, index) => {
