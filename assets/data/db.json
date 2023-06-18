@@ -106,34 +106,8 @@
       "id": 1
     }
   ],
-  "card": [
-    {
-      "productName": "Perry Vasquez",
-      "productprice": "567",
-      "img": "./assets/products-image/2756378620_6_1_1.jpg",
-      "id": 18
-    },
-    {
-      "productName": "William Gibbs",
-      "productprice": "694",
-      "img": "./assets/products-image/2337110001_6_1_1.jpg",
-      "id": 22
-    }
-  ],
-  "favorites": [
-    {
-      "productName": "Perry Vasquez",
-      "productprice": "567",
-      "img": "./assets/products-image/2756378620_6_1_1.jpg",
-      "id": 18
-    },
-    {
-      "productName": "William Gibbs",
-      "productprice": "694",
-      "img": "./assets/products-image/2337110001_6_1_1.jpg",
-      "id": 22
-    }
-  ],
+  "card": [],
+  "favorites": [],
   "kids": [
     {
       "productName": "Shelby Greene",

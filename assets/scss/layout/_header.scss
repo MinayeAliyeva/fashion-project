@@ -191,7 +191,8 @@ header {
         align-items: center;
         column-gap: 30px;
         margin: 0;
-        padding: 0;
+        padding: 15px;
+        background: white;
         @media only screen and (max-width: 992px) {
           flex-direction: column;
           position: absolute;
