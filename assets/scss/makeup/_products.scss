@@ -24,17 +24,28 @@
       font-size: 30px;
     }
   }
-  .card{
+  .card {
     border: none;
     width: 300px;
-    .text{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 17px;
-        h6{
-            margin: 0;
-        }
+    .actions {
+      display: flex;
+      align-items: center;
+      row-gap: 20px;
+      column-gap: 20px;
+      position: absolute;
+      flex-direction: column;
+      padding: 16px 15px;
+
+  
+    }
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 17px;
+      h6 {
+        margin: 0;
+      }
     }
   }
 }

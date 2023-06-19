@@ -2634,6 +2634,16 @@ header .head nav .navUl .dropdown .dropdown-menu {
   border: none;
   width: 300px;
 }
+#products-makeup .card .actions {
+  display: flex;
+  align-items: center;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  position: absolute;
+  flex-direction: column;
+  padding: 16px 15px;
+}
 #products-makeup .card .text {
   display: flex;
   align-items: center;
