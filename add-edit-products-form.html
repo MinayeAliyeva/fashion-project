@@ -21,33 +21,42 @@
           class="container"
         >
           <form class="add-edit-form" id="form" action="">
-            <h1>Add or Edit Product</h1>
+            <h1
+              class="heading"
+              style="color: white; font-family: 'Caveat', cursive"
+            >
+              Add or Edit Product
+            </h1>
             <div class="input-control">
-              <label for="productName">Product Name</label>
+              <label style="color: white" for="productName">Product Name</label>
               <input
-                style="border-bottom: 2px solid white; "
+                style="border-bottom: 2px solid white"
                 id="productName"
                 name="productName"
                 type="text"
-             
               />
             </div>
             <div class="input-control">
-              <label for="productPrice">Price</label>
+              <label style="color: white" for="productPrice">Price</label>
               <input
                 style="border-bottom: 2px solid white"
                 id="productPrice"
                 type="number"
               />
             </div>
-            <label for="">Product Image</label>
-            <div class="input-group mb-3">
-              <input type="file"  id="imgInput" />
+            <label style="color: white" for="">Product Image</label>
+            <div class="input-group mb-3" data-show-upload="false">
+              <input type="file" id="imgInput" />
             </div>
             <div class="submit-button">
-            <div>
-              <button type="submit" style="width: 140px;">Add</button>
-            </div>
+              <div>
+                <button
+                  type="submit"
+                  style="width: 140px; background: rgb(161, 154, 126)"
+                >
+                  Add
+                </button>
+              </div>
             </div>
           </form>
         </div>

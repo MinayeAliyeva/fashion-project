@@ -13,6 +13,9 @@ async function fillInputsValue() {
   productPrice.value = data.productprice;
 }
 fillInputsValue();
+let heading = document.querySelector(".heading");
+console.log(heading);
+// heading.innerHTML = "j";
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   let productObj = {
@@ -21,11 +24,13 @@ form.addEventListener("submit", async (e) => {
     img: base64,
   };
   if (id) {
+    heading.innerHTML = "Edit Product";
     await axios.patch(`${PRODUCTS_URL}/${id}`, productObj);
-    window.location = "adminDashboard.html";
+    window.location = "products.html";
   } else {
     await axios.post(`${PRODUCTS_URL}`, productObj);
-    window.location = "adminDashboard.html";
+    heading.innerHTML = "Add Product";
+    window.location = "products.html";
   }
 });
 
