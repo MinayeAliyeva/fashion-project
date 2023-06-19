@@ -10,8 +10,10 @@ async function fillCard() {
   arrCopy = data;
   filteredData = filteredData.length ? filteredData : data;
   row.innerHTML = "";
-  filteredData.forEach((obj) => {
-    row.innerHTML += `
+  filteredData
+    .filter((obj) => obj.isAdmin === false)
+    .forEach((obj) => {
+      row.innerHTML += `
     <div class="col-lg-3">
     <div class="card">
       <img src="${obj.img}" alt="" />
@@ -19,11 +21,12 @@ async function fillCard() {
         <p>${obj.userName}  ${obj.lastName}</p>
         <span>${obj.email}</span> <br>
       <button onclick=delFun(${obj.id})>Delete User</button>
+      <button onclick=makeAdmin(${obj.id})>Make admin</button>
       </div>
     </div>
   </div> 
         `;
-  });
+    });
 }
 fillCard();
 //delete
@@ -33,7 +36,6 @@ async function delFun(id) {
     obj.id != id;
   });
 }
-//
 searchInput2.addEventListener("input", (e) => {
   filteredData = arrCopy.filter((obj) => {
     return obj.userName
@@ -43,3 +45,7 @@ searchInput2.addEventListener("input", (e) => {
 
   fillCard();
 });
+//
+async function makeAdmin(id) {
+  axios.patch(`${BASE_URL}/${id}`, { isAdmin: true });
+}
