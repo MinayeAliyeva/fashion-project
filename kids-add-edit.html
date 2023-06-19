@@ -16,21 +16,68 @@
   <body id="body9">
     <section>
       <div class="container">
-        <div class="container">
+        <div
+          class="container"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 200px;
+          "
+        >
           <form class="add-edit-form" id="form5" action="">
-            <h1>Add or Edit Kids Product</h1>
+            <h1 style="color: white; font-family: 'Caveat', cursive">
+              Add or Edit Kids Product
+            </h1>
             <div class="input-control3">
-              <label for="productName5">Product Name</label>
-              <input id="productName5" name="productName" type="text" />
+              <label style="color: white" for="productName5"
+                >Product Name</label
+              >
+              <br />
+              <input
+                style="
+                  border: none;
+                  background: transparent;
+                  border-bottom: 2px solid white;
+                  width: 100%;
+                  border-radius: 5px;
+                  color: white;
+                "
+                id="productName5"
+                name="productName"
+                type="text"
+              />
             </div>
             <div class="input-control5">
-              <label for="productPrice5">Price</label>
-              <input id="productPrice5" type="number" />
+              <label style="color: white" for="productPrice5">Price</label>
+              <br />
+              <input
+                style="
+                  border-bottom: 2px solid white;
+                  border-radius: 5px;
+                  color: white;
+                "
+                id="productPrice5"
+                type="number"
+                ;
+              />
             </div>
-            <div class="input-group mt-5 mb-3">
-              <input type="file" class="form-control" id="imgInput5" />
+            <div class="input-group">
+              <label style="color: white" for="">Product Image</label>
+              <input
+                style="color: white;"
+                type="file"
+                class="form-control"
+                id="imgInput5"
+              />
             </div>
-            <button type="submit">Add</button>
+            <button
+              class="text-center"
+              style="width: 200px; margin-left: 150px; background-color: rgb(138 139 0 / 43%);;"
+              type="submit"
+            >
+              Add
+            </button>
           </form>
         </div>
       </div>

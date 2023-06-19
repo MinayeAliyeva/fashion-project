@@ -14,23 +14,50 @@
     <link rel="stylesheet" href="./assets/scss/main.css" />
   </head>
   <body id="body2">
-    <section>
+    <section id="edit-section">
       <div class="container">
-        <div class="container">
+        <div
+          style="display: flex; align-items: center; justify-content: center"
+          class="container"
+        >
           <form class="add-edit-form" id="form2" action="">
-            <h1>Add or Edit New Trendings</h1>
-            <div class="input-control2">
-              <label for="productName2">Product Name</label>
-              <input id="productName2" name="productName" type="text" />
+            <h1
+              class="heading"
+              style="color: white; font-family: 'Caveat', cursive"
+            >
+              Add or Edit Product
+            </h1>
+            <div class="input-control">
+              <label style="color: white" for="productName">Product Name</label>
+              <input
+                style="border-bottom: 2px solid white"
+                id="productName2"
+                name="productName2"
+                type="text"
+              />
             </div>
-            <div class="input-control2">
-              <label for="productPrice2">Price</label>
-              <input id="productPrice2" type="number" />
+            <div class="input-control">
+              <label style="color: white" for="productPrice2">Price</label>
+              <input
+                style="border-bottom: 2px solid white"
+                id="productPrice2"
+                type="number"
+              />
             </div>
-            <div class="input-group mb-3">
-              <input type="file" class="form-control" id="imgInput2" />
+            <label style="color: white" for="">Product Image</label>
+            <div class="input-group mb-3" data-show-upload="false">
+              <input type="file" id="imgInput2" />
             </div>
-            <button type="submit">Add</button>
+            <div class="submit-button">
+              <div>
+                <button
+                  type="submit"
+                  style="width: 140px; background: rgb(161, 154, 126)"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

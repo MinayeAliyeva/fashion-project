@@ -664,7 +664,7 @@ body #edit-section {
      object-fit: cover;
   background-repeat: no-repeat;
 }
-body #edit-section #form {
+body #edit-section #form2 {
   width: 300px;
   border: 1px solid white;
   border-radius: 10px;
@@ -673,20 +673,20 @@ body #edit-section #form {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
-body #edit-section #form .input-control {
+body #edit-section #form2 .input-control {
   display: flex;
   flex-direction: column;
 }
-body #edit-section #form .input-control::-moz-placeholder {
+body #edit-section #form2 .input-control::-moz-placeholder {
   color: white;
 }
-body #edit-section #form .input-control::placeholder {
+body #edit-section #form2 .input-control::placeholder {
   color: white;
 }
-body #edit-section #form .input-control:focus {
+body #edit-section #form2 .input-control:focus {
   outline: 0;
 }
-body #edit-section #form .input-control input {
+body #edit-section #form2 .input-control input {
   border: 2px solid #f0f0f0;
   display: block;
   font-size: 12px;
@@ -697,7 +697,7 @@ body #edit-section #form .input-control input {
   background: none;
   border: none;
 }
-body #edit-section #form .input-group input {
+body #edit-section #form2 .input-group input {
   border: 2px solid #f0f0f0;
   display: block;
   font-size: 12px;
@@ -708,22 +708,22 @@ body #edit-section #form .input-group input {
   border-bottom: 2px solid white;
   padding: 7px;
 }
-body #edit-section #form .input-group input::-moz-placeholder {
+body #edit-section #form2 .input-group input::-moz-placeholder {
   color: white;
 }
-body #edit-section #form .input-group input::placeholder {
+body #edit-section #form2 .input-group input::placeholder {
   color: white;
 }
-body #edit-section #form h1 {
+body #edit-section #form2 h1 {
   text-align: center;
   color: #0f2027;
 }
-body #edit-section #form .submit-button {
+body #edit-section #form2 .submit-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body #edit-section #form button {
+body #edit-section #form2 button {
   padding: 10px;
   margin-top: 10px;
   width: 100%;
@@ -840,181 +840,88 @@ body #edit-section #form button {
   }
 }
 
-#body2 {
+body {
   font-family: "Poppins", sans-serif;
-  background-image: url(/assets/images/0000002771_9_2_1.jpg);
+}
+body #edit-section {
+  padding-top: 200px;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../../../assets/forms/b6.jpg);
   background-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+  background-repeat: no-repeat;
 }
-#body2 #form2 {
+body #edit-section #form {
   width: 300px;
-  margin: 20vh auto 0 auto;
+  border: 1px solid white;
+  border-radius: 10px;
   padding: 20px;
-  background-color: rgba(245, 245, 245, 0.44);
+  width: 55%;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
-#body2 #form2 .input-group #imgInput2 {
-  margin-top: 13px;
-}
-#body2 #form2 .input-control2 {
+body #edit-section #form .input-control {
   display: flex;
   flex-direction: column;
 }
-#body2 #form2 .input-control2:focus {
-  outline: 0;
-}
-#body2 #form2 .input-control2 input {
-  border: 2px solid #f0f0f0;
-  border-radius: 4px;
-  display: block;
-  font-size: 12px;
-  padding: 10px;
-  width: 100%;
-}
-#body2 #form2 h1 {
-  text-align: center;
-  color: #0f2027;
-  font-size: 34px;
-}
-#body2 #form2 button {
-  padding: 10px;
-  margin-top: 10px;
-  width: 100%;
+body #edit-section #form .input-control::-moz-placeholder {
   color: white;
-  background-color: rgb(139, 50, 0);
-  border: none;
-  border-radius: 4px;
 }
-
-.header .side-nav {
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 30px 15px;
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  transition: width 0.5s;
+body #edit-section #form .input-control::placeholder {
+  color: white;
 }
-.header .side-nav ul {
-  padding: 0 15px;
-  margin: 0;
-}
-.header .side-nav ul li {
-  margin: 30px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  cursor: pointer;
-  transition: 0.8s;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 12px 16px;
-  border-radius: 8px;
-}
-.header .side-nav ul li:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-.header .side-nav ul li a {
-  display: flex !important;
-  justify-content: flex-start;
-  align-items: center;
-  color: black;
-  font-family: "Crimson Text", serif;
-}
-.header .side-nav ul li a p {
-  display: block;
-  white-space: nowrap;
-  margin: 0;
-}
-.header .side-nav ul li a i {
-  width: 30px;
-  margin-right: 10px;
-}
-.header .side-nav .admin {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 12px;
-  padding: 10px;
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-.header .side-nav .admin div {
-  display: block;
-}
-.header .side-nav .admin h2 {
-  font-size: 15px;
-  font-weight: 600;
-  white-space: nowrap;
-  font-family: "Crimson Text", serif;
-}
-.header .side-nav .admin .admin-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 0;
-}
-
-#users {
-  margin-left: 290px;
-  margin-top: 50px;
-}
-#users .input-select {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-}
-#users table .actions {
-  display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-#users table .actions a {
-  color: black;
-}
-#users table img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#users .title-add {
-  font-family: "Crimson Text", serif;
-}
-#users #form {
-  width: 300px;
-  margin: 20vh auto 0 auto;
-  padding: 20px;
-  background-color: whitesmoke;
-}
-#users #form .input-control {
-  display: flex;
-  flex-direction: column;
-}
-#users #form .input-control:focus {
+body #edit-section #form .input-control:focus {
   outline: 0;
 }
-#users #form h1 {
+body #edit-section #form .input-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  font-size: 12px;
+  padding: 7px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid white;
+  background: none;
+  border: none;
+}
+body #edit-section #form .input-control input::-moz-placeholder {
+  color: white;
+}
+body #edit-section #form .input-control input::placeholder {
+  color: white;
+}
+body #edit-section #form .input-control input:focus {
+  outline: 0;
+}
+body #edit-section #form .input-group input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 7px;
+}
+body #edit-section #form .input-group input::-moz-placeholder {
+  color: white;
+}
+body #edit-section #form .input-group input::placeholder {
+  color: white;
+}
+body #edit-section #form h1 {
   text-align: center;
   color: #0f2027;
 }
-#users #form button {
+body #edit-section #form .submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #edit-section #form button {
   padding: 10px;
   margin-top: 10px;
   width: 100%;
@@ -1022,28 +929,6 @@ body #edit-section #form button {
   background-color: rgb(85, 83, 83);
   border: none;
   border-radius: 4px;
-}
-
-.searchInput {
-  width: 350px;
-  border: none;
-  border-bottom: 1px solid;
-}
-.searchInput::-moz-placeholder {
-  color: black;
-}
-.searchInput::placeholder {
-  color: black;
-}
-
-.users {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.users h4 {
-  font-size: 58px;
-  font-family: "Crimson Text", serif;
 }
 
 #fashion-friendly {
@@ -2945,12 +2830,36 @@ header .head nav .navUl .dropdown .dropdown-menu {
 
 #body9 {
   font-family: "Poppins", sans-serif;
+  background-image: url(../../../assets/forms/kbg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #body9 #form5 {
   width: 300px;
-  margin: 20vh auto 0 auto;
+  border: 1px solid white;
+  border-radius: 10px;
   padding: 20px;
-  background-color: rgba(245, 245, 245, 0.44);
+  width: 55%;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+#body9 #form5 .input-group input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 7px;
+}
+#body9 #form5 .input-group input::-moz-placeholder {
+  color: white;
+}
+#body9 #form5 .input-group input::placeholder {
+  color: white;
 }
 #body9 #form5 .input-group #imgInput5 {
   margin-top: 13px;
@@ -2959,16 +2868,25 @@ header .head nav .navUl .dropdown .dropdown-menu {
   display: flex;
   flex-direction: column;
 }
+#body9 #form5 .input-control5::-moz-placeholder {
+  color: white;
+}
+#body9 #form5 .input-control5::placeholder {
+  color: white;
+}
 #body9 #form5 .input-control5:focus {
   outline: 0;
 }
 #body9 #form5 .input-control5 input {
   border: 2px solid #f0f0f0;
-  border-radius: 4px;
   display: block;
   font-size: 12px;
-  padding: 10px;
+  padding: 7px;
   width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid white;
+  background: none;
+  border: none;
 }
 #body9 #form5 h1 {
   text-align: center;

@@ -15,7 +15,7 @@ async function fillInputsValue() {
 fillInputsValue();
 let heading = document.querySelector(".heading");
 console.log(heading);
-// heading.innerHTML = "j";
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   let productObj = {
