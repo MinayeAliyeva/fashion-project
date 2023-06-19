@@ -654,32 +654,76 @@ header.mainNav {
 body {
   font-family: "Poppins", sans-serif;
 }
-body #form {
-  width: 300px;
-  margin: 20vh auto 0 auto;
-  padding: 20px;
-  background-color: whitesmoke;
+body #edit-section {
+  padding-top: 200px;
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/images/IMAGE-landscape-default-fill-53c67ecf-62ae-4087-a1a7-2c575c06c8f2-default_0.jpg);
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
 }
-body #form .input-control {
+body #edit-section #form {
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 55%;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+body #edit-section #form .input-control {
   display: flex;
   flex-direction: column;
 }
-body #form .input-control:focus {
+body #edit-section #form .input-control::-moz-placeholder {
+  color: white;
+}
+body #edit-section #form .input-control::placeholder {
+  color: white;
+}
+body #edit-section #form .input-control:focus {
   outline: 0;
 }
-body #form .input-control input {
+body #edit-section #form .input-control input {
   border: 2px solid #f0f0f0;
-  border-radius: 4px;
   display: block;
   font-size: 12px;
-  padding: 10px;
+  padding: 7px;
   width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid white;
+  background: none;
+  border: none;
 }
-body #form h1 {
+body #edit-section #form .input-group input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 7px;
+}
+body #edit-section #form .input-group input::-moz-placeholder {
+  color: white;
+}
+body #edit-section #form .input-group input::placeholder {
+  color: white;
+}
+body #edit-section #form h1 {
   text-align: center;
   color: #0f2027;
 }
-body #form button {
+body #edit-section #form .submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #edit-section #form button {
   padding: 10px;
   margin-top: 10px;
   width: 100%;
@@ -2641,39 +2685,24 @@ header .head nav .navUl .dropdown .dropdown-menu {
   margin: 0;
 }
 
-#beauty {
-  margin-top: 60px;
+#beauty .row {
+  position: relative;
 }
-#beauty .beauty {
-  padding: 10px 11px;
+#beauty .swiper {
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-#beauty .beauty h2 {
-  font-size: 100px;
-  font-family: "Dancing Script", cursive;
-}
-@media only screen and (max-width: 992px) {
-  #beauty .beauty h2 {
-    font-size: 53px;
-  }
-}
-#beauty .beauty .text h3 {
-  font-size: 87px;
-  font-family: "Dancing Script", cursive;
-}
-#beauty .beauty .imgSide {
-  overflow: hidden;
-}
-#beauty .beauty .imgSide img {
+#beauty .swiper-slide {
+  background-position: center;
+  background-size: cover;
   width: 300px;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 20px 0;
-  border-radius: 50%;
-  transition: 0.6s;
+  height: 500px;
 }
-#beauty .beauty .imgSide img:hover {
-  transform: scale(1.1);
+#beauty .swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
 #products-gallery {

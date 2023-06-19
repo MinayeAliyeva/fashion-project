@@ -23,3 +23,25 @@ window.addEventListener("load", () => {
     loader.style.display = "none";
   }, 2000);
 });
+
+/// carusel
+
+let swiper = new Swiper(".mySwiper", {
+  autoHeight: true,
+  effect: "coverflow",
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 40,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+

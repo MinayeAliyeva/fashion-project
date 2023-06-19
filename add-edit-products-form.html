@@ -14,23 +14,41 @@
     <link rel="stylesheet" href="./assets/scss/main.css" />
   </head>
   <body>
-    <section>
+    <section id="edit-section">
       <div class="container">
-        <div class="container">
+        <div
+          style="display: flex; align-items: center; justify-content: center"
+          class="container"
+        >
           <form class="add-edit-form" id="form" action="">
             <h1>Add or Edit Product</h1>
             <div class="input-control">
               <label for="productName">Product Name</label>
-              <input id="productName" name="productName" type="text" />
+              <input
+                style="border-bottom: 2px solid white; "
+                id="productName"
+                name="productName"
+                type="text"
+             
+              />
             </div>
             <div class="input-control">
               <label for="productPrice">Price</label>
-              <input id="productPrice" type="number" />
+              <input
+                style="border-bottom: 2px solid white"
+                id="productPrice"
+                type="number"
+              />
             </div>
+            <label for="">Product Image</label>
             <div class="input-group mb-3">
-              <input type="file" class="form-control" id="imgInput" />
+              <input type="file"  id="imgInput" />
             </div>
-            <button type="submit">Add</button>
+            <div class="submit-button">
+            <div>
+              <button type="submit" style="width: 140px;">Add</button>
+            </div>
+            </div>
           </form>
         </div>
       </div>

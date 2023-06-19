@@ -1,38 +1,86 @@
 body {
   font-family: "Poppins", sans-serif;
-  #form {
-    width: 300px;
-    margin: 20vh auto 0 auto;
-    padding: 20px;
-    background-color: whitesmoke;
-    .input-control {
-      display: flex;
-      flex-direction: column;
+  #edit-section {
+    padding-top: 200px;
+    height: 100vh;
+    width: 100%;
+    background-image: url(/assets/images/IMAGE-landscape-default-fill-53c67ecf-62ae-4087-a1a7-2c575c06c8f2-default_0.jpg);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
 
-      &:focus {
-        outline: 0;
+    #form {
+      
+      width: 300px;
+      // margin: 20vh auto 0 auto;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 55%;
+      backdrop-filter: blur(20px);
+      .input-control {
+        display: flex;
+        flex-direction: column;
+        &::placeholder{
+          color: white;
+        }
+        &:focus {
+          outline: 0;
+        }
+        input {
+          border: 2px solid #f0f0f0;
+          // border-radius: 4px;
+          display: block;
+          font-size: 12px;
+          padding: 7px;
+          width: 100%;
+          margin-bottom: 15px;
+          // border-radius: 10px;
+          border-bottom: 1px solid white;
+          background: none;
+          border: none;
+         ;
+        }
       }
-      input {
-        border: 2px solid #f0f0f0;
-        border-radius: 4px;
-        display: block;
-        font-size: 12px;
+      .input-group{
+        input{
+          // color: white;
+          border: 2px solid #f0f0f0;
+          // border-radius: 4px;
+          display: block;
+          font-size: 12px;
+          // padding: 10px;
+          width: 100%;
+          margin-bottom: 15px;
+          // border-radius: 10px;
+          background: none;
+          border: none;
+          border-bottom: 2px solid white;
+          padding: 7px;
+          &::placeholder{
+            color: white;
+          }
+        }
+
+      }
+      h1 {
+        text-align: center;
+        color: #0f2027;
+      }
+      .submit-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
         padding: 10px;
+        margin-top: 10px;
         width: 100%;
+        color: white;
+        background-color: rgb(85, 83, 83);
+        border: none;
+        border-radius: 4px;
       }
-    }
-    h1 {
-      text-align: center;
-      color: #0f2027;
-    }
-    button {
-      padding: 10px;
-      margin-top: 10px;
-      width: 100%;
-      color: white;
-      background-color: rgb(85, 83, 83);
-      border: none;
-      border-radius: 4px;
     }
   }
 }
