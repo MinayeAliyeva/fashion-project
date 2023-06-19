@@ -1126,30 +1126,42 @@ body #form button {
 
 footer {
   background-color: #24262b;
-  padding: 70px 0;
-  transition: all 0.5s ease;
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5;
+  padding: 58px 0;
 }
-footer .container .row {
-  display: flex;
-  flex-wrap: wrap;
+footer .row h5 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
 }
-@media only screen and (max-width: 475px) {
-  footer .container .row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 30px;
-  }
+footer .row h5::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
-footer .container .row .footer-col {
-  width: 25%;
-  padding: 0 15px;
-  transition: all 0.3s ease;
+footer .row ul {
+  margin: 0;
+  padding: 0;
 }
-footer .container .row .footer-col .social-link a {
+footer .row ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 300;
+  color: #bbb;
+}
+footer .row ul li a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+footer .row ul .social-links a {
   display: inline-block;
   height: 40px;
   width: 40px;
@@ -1161,58 +1173,11 @@ footer .container .row .footer-col .social-link a {
   color: #fff;
   transition: all 0.5s ease;
 }
-footer .container .row .footer-col .social-link a:hover {
+footer .row ul .social-links a:hover {
   color: #24262b;
   background-color: #fff;
 }
-footer .container .row .footer-col ul {
-  margin: 0;
-  padding: 0;
-}
-footer .container .row .footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-footer .container .row .footer-col ul li a {
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #fff;
-  font-weight: 300;
-  color: #bbb;
-}
-footer .container .row .footer-col ul li a:hover {
-  color: #fff;
-  padding-left: 10px;
-}
-footer .container .row .footer-col h4 {
-  font-size: 18px;
-  color: #fff;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-  font-weight: 500;
-  position: relative;
-}
-footer .container .row .footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #e91e63;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
 
-@media (max-width: 767px) {
-  .footer-col {
-    margin-bottom: 30px;
-    width: 50%;
-  }
-}
-@media (max-width: 574px) {
-  .footer-col {
-    width: 100%;
-  }
-}
 #hero-section {
   background-color: rgba(0, 0, 0, 0.781);
 }

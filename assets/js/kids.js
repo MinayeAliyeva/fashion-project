@@ -7,21 +7,6 @@ meniIcon.addEventListener("click", () => {
     ? (meniIcon.classList = "fa-solid fa-xmark")
     : (meniIcon.classList = "fa-solid fa-bars");
 });
-
-
-
-// let logo=document.querySelector(".logo")
-// let header = document.querySelector("header");
-// window.addEventListener("scroll", () => {
-//   header.style.backgroundColor = "white";
-//   header.style.transition = "0.5s";
-  // logo.style.color="black"
-  // if (scrollY == 0) {
-  //   header.style.backgroundColor = "transparent";
-  //   heading.style.color = "black";
-  // }
-// });
-
 //spinner
 let loader = document.querySelector(".loader");
 window.addEventListener("load", () => {
@@ -89,9 +74,6 @@ toTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
-//
-
 //products
 const KIDS_URL = "http://localhost:3000/kids";
 let arrCopy = [];
@@ -132,6 +114,9 @@ async function fillProducts() {
   });
 }
 fillProducts();
+
+
+
 // //search product
 // let searchProduct = document.querySelector(".searchProduct");
 // searchProduct.addEventListener("input", (e) => {
@@ -173,4 +158,5 @@ fillProducts();
 //     .slice(0, num);
 //   fillProducts();
 // });
+
 
