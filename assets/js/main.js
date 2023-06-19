@@ -174,14 +174,17 @@ close.addEventListener("click", () => {
 let cardRow = document.querySelector(".card-row");
 //counter
 let counter = document.querySelector(".counter");
+let totalInner = document.querySelector(".total-price");
 let count = [];
+let priceCount=[]
 let totalPrice;
 async function addBasket2() {
   let res = await axios(`${CARD_URL}`);
   let data = await res.data;
   count = data;
+  priceCount=data
   let totalInner = document.querySelector(".total-price");
-  var totalChild = data.reduce((accum, item) => accum + +item.productprice, 0);
+  let totalChild = data.reduce((accum, item) => accum + +item.productprice, 0);
   totalInner.innerHTML = totalChild;
   counter.innerHTML = count.length;
   cardRow.innerHTML = "";
@@ -196,6 +199,7 @@ async function addBasket2() {
                 <div class="details-box">
                   <div class="card-product-title">${obj.productName}</div>
                   <div class="card-price">${obj.productprice}$</div>
+                  <input type="number" style="width: 30px;" value="1" oninput=onInput(${obj.productprice},this) class="cart-quantity"/>
                 </div>
                 <i class="fa-solid fa-trash-can" onclick=delFun(${obj.id})></i>
               </div>
@@ -206,6 +210,15 @@ async function addBasket2() {
 }
 //total
 addBasket2();
+
+// oninput
+function onInput(price,input){
+  let totalChild = priceCount.reduce((accum, item) => accum*input.value  + +item.productprice, 0);
+  totalInner.innerHTML=totalChild
+  console.log(totalChild)
+  
+}
+
 //delete cart
 async function delFun(id, btn) {
   await axios.delete(`${CARD_URL}/${id}`);
