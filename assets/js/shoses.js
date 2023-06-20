@@ -16,7 +16,7 @@ meniIcon.addEventListener("click", () => {
     ? (meniIcon.classList = "fa-solid fa-xmark")
     : (meniIcon.classList = "fa-solid fa-bars");
 });
-//
+// 
 let toTop = document.getElementById("toTop");
 toTop.style.display = "none";
 window.addEventListener("scroll", () => {
@@ -33,6 +33,7 @@ toTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
 //spinner
 let loader = document.querySelector(".loader");
 window.addEventListener("load", () => {
@@ -97,7 +98,6 @@ let profile = document.querySelector(".profile");
 const FAV_URL = "http://localhost:3000/favorites";
 let signinUsers = JSON.parse(localStorage.getItem("isSign"));
 profile.display = "none";
-
 window.addEventListener("load", async () => {
   const SIGN_USERS = "http://localhost:3000/users";
   let res = await axios(`${SIGN_USERS}`);
@@ -196,9 +196,7 @@ async function addBasket2() {
     `;
   });
 }
-//total
 addBasket2();
-
 // oninput
 function onInput(price, input) {
   let totalChild = priceCount.reduce(
@@ -208,13 +206,11 @@ function onInput(price, input) {
   totalInner.innerHTML = totalChild;
   console.log(totalChild);
 }
-
 //delete cart
 async function delFun(id, btn) {
   await axios.delete(`${CARD_URL}/${id}`);
   addBasket2();
 }
-
 //details
 let modalDialog = document.querySelector(".modal-dialog");
 async function details(id) {

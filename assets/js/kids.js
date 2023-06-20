@@ -100,7 +100,7 @@ async function fillProducts() {
         <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
  <i type="button"  data-bs-toggle="modal"
      data-bs-target="#exampleModal" class="fa-solid fa-eye" onclick=details(${obj.id})></i>
-     <i type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick=details(${obj.id})  style="    font-size: 17px;"  onclick=addBasket(${obj.id}) class="fa-solid fa-bag-shopping"></i>
+     <i style="    font-size: 17px;"  onclick=addBasket(${obj.id}) class="fa-solid fa-bag-shopping"></i>
 
       </div>
      
@@ -285,8 +285,6 @@ async function details(id) {
                   </div>
     `;
 }
-
-
 
 //search product
 let searchProduct = document.querySelector(".searchProduct");
