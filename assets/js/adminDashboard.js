@@ -123,7 +123,7 @@ let containCount = [];
 async function countInner() {
   let res = await axios(`${USERS_URL}`);
   let data = await res.data;
-  containCount = data;
+  containCount = data.filter((obj) => obj.isAdmin === false);
   console.log(containCount.length);
   userCount.innerHTML = containCount.length;
 }
@@ -140,7 +140,7 @@ async function countInner2() {
   userCount2.innerHTML = containCount2.length;
 }
 countInner2();
-const KID_URL="http://localhost:3000/kids"
+const KID_URL = "http://localhost:3000/kids";
 let userCount3 = document.querySelector(".user-count3");
 let containCount3 = [];
 
@@ -152,10 +152,7 @@ async function countInner3() {
 }
 countInner3();
 
-
-
-
-const MESSAGE_URL="http://localhost:3000/message"
+const MESSAGE_URL = "http://localhost:3000/message";
 let userCount4 = document.querySelector(".user-count4");
 let containCount4 = [];
 
@@ -166,3 +163,25 @@ async function countInner4() {
   userCount4.innerHTML = containCount4.length;
 }
 countInner4();
+
+let tBody = document.querySelector("tbody");
+async function fillTable() {
+  let res = await axios(`${USERS_URL}`);
+  let data = await res.data;
+  containCount = data.filter((obj) => obj.isAdmin === true);
+  containCount.forEach((obj) => {
+    tBody.innerHTML += `
+    <tr>
+              <th scope="row">${obj.id}</th>
+              <td>${obj.userName}</td>
+              <td>${obj.email}</td>
+              <td><button class="btn btn-danger" onclick=deleteAdmin(${obj.id})>Delete admin</button></td>
+            </tr>
+    `;
+  });
+}
+fillTable();
+//
+async function deleteAdmin(id) {
+  axios.patch(`${USERS_URL}/${id}`, { isAdmin: false });
+}
