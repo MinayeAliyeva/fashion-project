@@ -7,6 +7,19 @@ meniIcon.addEventListener("click", () => {
     ? (meniIcon.classList = "fa-solid fa-xmark")
     : (meniIcon.classList = "fa-solid fa-bars");
 });
+//buy now
+
+const toastTrigger = document.getElementById("liveToastBtn");
+const toastLiveExample = document.getElementById("liveToast");
+let toastBody = document.querySelector(".toast-body");
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  toastTrigger.addEventListener("click", () => {
+    toastBootstrap.show();
+    toastBody.innerHTML = "Your order has been sent";
+  });
+}
+
 const USERS_URL = "http://localhost:3000/users";
 let signUpForm = document.querySelector(".signUpForm");
 let nameInput = document.querySelector(".nameInput");
@@ -296,58 +309,6 @@ window.addEventListener("load", () => {
     loader.style.display = "none";
   }, 2000);
 });
-
-//modal
-// let modalDialog = document.querySelector(".modal-dialog");
-
-// async function details(id) {
-//   let res = await axios(`${PRODUCTS_URL}/${id}`);
-//   let obj = await res.data;
-//   modalDialog.innerHTML = `
-//   <div class="modal-content">
-//                 <div class="modal-header">
-//                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-//                     View Details:
-//                   </h1>
-//                   <button
-//                     type="button"
-//                     class="btn-close"
-//                     data-bs-dismiss="modal"
-//                     aria-label="Close"
-//                   ></button>
-//                 </div>
-//                 <div class="modal-body">
-//                   <div class="row">
-//                     <div class="col col-6">
-//                       <div class="img">
-//                         <img style="height: 400px;
-//                         width: 100%;
-//                         object-fit: cover;"
-//                           src="${obj.img}"
-//                           alt=""
-//                         />
-//                       </div>
-//                     </div>
-//                     <div class="col col-6" style="display: flex;
-//                     flex-direction: column;
-//                     row-gap: 20px;
-//                     padding: 40px 0;">
-
-//                       <div class="text-side">
-//                         <h5>${obj.productName}</h5>
-//                         <i><span> ${obj.productprice} TL</span></i>
-//                       </div>
-//                       <div class="description"> <h5>Description:</h5>Thin straps, straight neck dress. Cotton fabric, side gathers, medallion-trimmed tassels and concealed back zip.</div>
-//                       <div><h6>STOCK STATUS IN THE STORE:
-//                     </h6><p>  SHIPPING, EXCHANGES AND RETURNS</p></div>
-//                     </div>
-//                   </div>
-//                 </div>
-//                 <div class="modal-footer"></div>
-//               </div>
-// `;
-// }
-// details();
 
 //new trending outfits
 const NEW_TRENDINGS = "http://localhost:3000/newProducts";
