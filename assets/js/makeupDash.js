@@ -62,10 +62,7 @@ select.addEventListener("change", (e) => {
     drawTable();
   }
 });
-let addBtn = document.querySelector(".addBtn");
-addBtn.addEventListener("click", () => {
-  window.location = "add-edit-products-form.html";
-});
+
 
 let addButton = document.querySelector(".addButton");
 addButton.addEventListener("click", () => {
