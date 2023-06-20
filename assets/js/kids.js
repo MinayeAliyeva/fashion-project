@@ -98,9 +98,9 @@ async function fillProducts() {
       />
       <div class="actions">
         <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
- <i  data-bs-toggle="modal"
+ <i type="button"  data-bs-toggle="modal"
      data-bs-target="#exampleModal" class="fa-solid fa-eye" onclick=details(${obj.id})></i>
-     <i style="    font-size: 17px;"  onclick=addBasket(${obj.id}) class="fa-solid fa-bag-shopping"></i>
+     <i type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick=details(${obj.id})  style="    font-size: 17px;"  onclick=addBasket(${obj.id}) class="fa-solid fa-bag-shopping"></i>
 
       </div>
      
@@ -236,4 +236,52 @@ function onInput(price, input) {
 async function delFun(id, btn) {
   await axios.delete(`${CARD_URL}/${id}`);
   addBasket2();
+}
+//details
+let modalDialog = document.querySelector(".modal-dialog");
+async function details(id) {
+  let res = await axios(`${KIDS_URL}/${id}`);
+  let obj = await res.data;
+  modalDialog.innerHTML = `
+    <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div style="border: none" class="card">
+                        <img
+                          style="width: 100%; height: 400px; object-fit: cover"
+                          src="${obj.img}"
+                          alt=""
+                        />
+    
+                        <div
+                          class="text-side"
+                          style="
+                            display: flex;
+                            flex-direction: column;
+                            padding: 10px;
+                          "
+                        >
+                          <h5 style="font-size: 17px; font-weight: 300">
+                            Product Name:${obj.productName}
+                          </h5>
+                          <i
+                            ><span><i>Price</i> : $ ${obj.productprice} TL</span></i
+                          >
+                          <span><i>Bush type</i> :Standard Goal</span>
+                          <span
+                            ><i>Material component</i> :52% polyesyer ,48%
+                            elastommultiester</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    `;
 }
