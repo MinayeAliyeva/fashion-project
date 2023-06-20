@@ -76,8 +76,7 @@ async function fillProducts() {
       flex-direction: column;
       padding: 16px 24px;" class="actions">
         <i class="fa-regular fa-heart" onclick=addFav(${obj.id})></i>
- <i  data-bs-toggle="modal"
-     data-bs-target="#exampleModal" class="fa-solid fa-eye" onclick=details(${obj.id})></i>
+ <i   class="fa-solid fa-eye"  onclick=details(${obj.id})></i>
      <i style="    font-size: 17px;"  onclick=addBasket(${obj.id}) class="fa-solid fa-bag-shopping"></i>
 
       </div>
@@ -96,7 +95,6 @@ async function fillProducts() {
   });
 }
 fillProducts();
-
 
 //add fav
 let profile = document.querySelector(".profile");
@@ -218,3 +216,4 @@ async function delFun(id, btn) {
   await axios.delete(`${CARD_URL}/${id}`);
   addBasket2();
 }
+

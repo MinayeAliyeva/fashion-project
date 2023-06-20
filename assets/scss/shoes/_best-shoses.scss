@@ -1,0 +1,69 @@
+#best-sellers-shoses {
+    // height: 100vh;
+    padding: 20px 0 90px 0;
+    .best-sellers-shoses {
+      .input-select{
+        @media only screen and (max-width:370px){
+          flex-direction: column;
+      row-gap: 30px;
+        }
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 44px;
+        font-family: "Satisfy", cursive;
+        text-transform: capitalize;
+      }
+      .mainRow8 {
+        // padding: 50px;
+        row-gap: 20px;
+  
+        .card {
+          position: relative;
+          border: none;
+          margin: 6px;
+          .actions2 {
+            position: absolute;
+            left: 30%;
+            bottom: 80px;
+          }
+          .actions {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            row-gap: 26px;
+            column-gap: 25px;
+            padding: 10px;
+            i {
+              padding: 10px;
+              box-shadow: 2px 2px 11px 2px rgba(0, 0, 0, 0.125);
+              /* border: 1px solid; */
+              border-radius: 50%;
+          }
+            }
+          }
+          .text-side {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            i {
+              span {
+                font-weight: 300;
+                font-size: 15px;
+              }
+            }
+            h5 {
+              font-weight: 300;
+              font-size: 15px;
+              margin-bottom: 0;
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  

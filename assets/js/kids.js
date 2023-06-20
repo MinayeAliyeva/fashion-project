@@ -115,48 +115,125 @@ async function fillProducts() {
 }
 fillProducts();
 
+//add fav
+let profile = document.querySelector(".profile");
+const FAV_URL = "http://localhost:3000/favorites";
+let signinUsers = JSON.parse(localStorage.getItem("isSign"));
+profile.display = "none";
 
+window.addEventListener("load", async () => {
+  const SIGN_USERS = "http://localhost:3000/users";
+  let res = await axios(`${SIGN_USERS}`);
+  let data = await res.data;
+  let signName = localStorage.getItem("signName");
+  data.filter((obj) => {
+    if (obj.userName == signName && signinUsers) {
+      profile.innerHTML = `
+  <div class="d-flex align-items-center column-gap-2">
+                <img src="${obj.img}" alt="" />
+                <div
+                  class="d-flex column-gap-2 align-items-center flex-column"
+                >
+                  <p>${obj.userName}</p>
+                  <i class="fa-solid fa-arrow-right-from-bracket" onclick=logProfile()></i>
+                </div>
+              </div> `;
+      profile.style.display = "block";
+    } else {
+      profile.style.display = "none";
+    }
+  });
+});
+function logProfile() {
+  localStorage.clear("signinUsers");
+  localStorage.clear("signName");
+}
+async function addFav(id) {
+  let res = await axios(`${KIDS_URL}/${id}`);
+  let obj = await res.data;
+  if (signinUsers == true) {
+    axios.post(`${FAV_URL}`, obj);
+    window.location = "favorites.html";
+  } else {
+    window.location = "signin.html";
+  }
+}
 
-// //search product
-// let searchProduct = document.querySelector(".searchProduct");
-// searchProduct.addEventListener("input", (e) => {
-//   filteredData = arrCopy
-//     .filter((obj) => {
-//       return obj.productName
-//         .toLocaleLowerCase()
-//         .includes(e.target.value.toLocaleLowerCase());
-//     })
-//     .slice(0, num);
-//   fillProducts();
-// });
-// //sort
-// let select = document.querySelector("#select");
-// select.addEventListener("change", (e) => {
-//   console.log(e.target.value);
-//   if (e.target.value == "from low to high") {
-//     filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
-//     fillProducts();
-//   } else if (e.target.value == "from high to low") {
-//     filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
-//     fillProducts();
-//   } else {
-//     filteredData = arrCopy;
-//     fillProducts();
-//   }
-// });
-// //loadmore
-// let loadMore = document.querySelector(".loadMore");
-// console.log(loadMore);
-// loadMore.addEventListener("click", (e) => {
-//   num += 3;
-//   filteredData = arrCopy
-//     .filter((obj) => {
-//       return obj.productName
-//         .toLocaleLowerCase()
-//         .includes(e.target.value.toLocaleLowerCase());
-//     })
-//     .slice(0, num);
-//   fillProducts();
-// });
+//cart
+const CARD_URL = "http://localhost:3000/card";
+async function addBasket(id) {
+  if (signinUsers) {
+    let res = await axios(`${KIDS_URL}/${id}`);
+    let obj = await res.data;
+    await axios.post(`${CARD_URL}`, obj);
+    console.log(id);
+    addBasket2();
+  } else {
+    window.location = "signin.html";
+  }
+}
 
+let card = document.querySelector(".cart");
+let close = document.querySelector("#close");
+let cardIcon = document.querySelector("#cardIcon");
+cardIcon.addEventListener("click", () => {
+  card.classList.toggle("active");
+});
+close.addEventListener("click", () => {
+  card.classList.remove("active");
+});
+let cardRow = document.querySelector(".card-row");
+//counter
+let counter = document.querySelector(".counter");
+let totalInner = document.querySelector(".total-price");
+let count = [];
+let priceCount = [];
+let totalPrice;
+async function addBasket2() {
+  let res = await axios(`${CARD_URL}`);
+  let data = await res.data;
+  count = data;
+  priceCount = data;
+  let totalInner = document.querySelector(".total-price");
+  let totalChild = data.reduce((accum, item) => accum + +item.productprice, 0);
+  totalInner.innerHTML = totalChild;
+  counter.innerHTML = count.length;
+  cardRow.innerHTML = "";
+  data.forEach((obj) => {
+    cardRow.innerHTML += `
+    <div class="cart-content">
+              <div class="cart-box">
+                <img
+                  src="${obj.img}"
+                  alt=""
+                />
+                <div class="details-box">
+                  <div class="card-product-title">${obj.productName}</div>
+                  <div class="card-price">${obj.productprice}$</div>
+                  <input type="number" style="width: 30px;" value="1" oninput=onInput(${obj.productprice},this) class="cart-quantity"/>
+                </div>
+                <i class="fa-solid fa-trash-can" onclick=delFun(${obj.id})></i>
+              </div>
+            </div>
+        
+    `;
+  });
+}
+//total
+addBasket2();
 
+// oninput
+function onInput(price, input) {
+  let totalChild = priceCount.reduce(
+    (accum, item) => accum * input.value + +item.productprice,
+    0
+  );
+  totalInner.innerHTML = totalChild;
+  console.log(totalChild);
+}
+
+//delete cart
+async function delFun(id, btn) {
+  await axios.delete(`${CARD_URL}/${id}`);
+  addBasket2();
+}
