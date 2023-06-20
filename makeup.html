@@ -224,6 +224,42 @@
           <h4>Products</h4>
           <h5>Healty Skin ,wildly you</h5>
         </div>
+        <div
+          class="input-select"
+          style="
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <input
+            style="
+              border: none;
+              border-bottom: 1px solid;
+              background: transparent;
+            "
+            type="search"
+            placeholder="Search here..."
+            class="searchProduct"
+          />
+          <select
+            style="border: none; background: transparent"
+            name=""
+            id="select"
+          >
+            <option
+              style="border: none"
+              disabled
+              selected
+              value="sort by price"
+            >
+              sort by price
+            </option>
+            <option value="from high to low">from high to low</option>
+            <option value="from low to high">from low to high</option>
+            <option value="default prices">default prices</option>
+          </select>
+        </div>
         <div class="row mainRrow images p-4">
           <!-- <div
             class="col-lg-3 d-flex align-items-center justify-content-center"
@@ -242,6 +278,17 @@
             </div>
           </div> -->
         </div>
+        <button
+          class="loadMore"
+          style="
+            background: transparent;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid;
+          "
+        >
+          Load More
+        </button>
         <div
           class="modal fade"
           id="exampleModal"

@@ -263,3 +263,45 @@ async function details(id) {
                   </div>
     `;
 }
+
+//search product
+let searchProduct = document.querySelector(".searchProduct");
+searchProduct.addEventListener("input", (e) => {
+  filteredData = arrCopy.slice(0, num).filter((obj) => {
+    return obj.productName
+      .toLocaleLowerCase()
+      .includes(e.target.value.toLocaleLowerCase());
+  });
+  fillProducts();
+});
+
+//sort
+let select = document.querySelector("#select");
+select.addEventListener("change", (e) => {
+  console.log(e.target.value);
+  if (e.target.value == "from low to high") {
+    filteredData = filteredData.sort((a, b) => a.productprice - b.productprice);
+    fillProducts();
+  } else if (e.target.value == "from high to low") {
+    filteredData = filteredData.sort((a, b) => b.productprice - a.productprice);
+    fillProducts();
+  } else {
+    filteredData = arrCopy;
+    fillProducts();
+  }
+});
+//loadmore
+let loadMore = document.querySelector(".loadMore");
+loadMore.addEventListener("click", (e) => {
+  num += 4;
+  filteredData = arrCopy
+    .filter((obj) => {
+      return obj.productName
+        .toLocaleLowerCase()
+        .includes(e.target.value.toLocaleLowerCase());
+    })
+    .slice(0, num);
+  console.log(filteredData);
+
+  fillProducts();
+});
