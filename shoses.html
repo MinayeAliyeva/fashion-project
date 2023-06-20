@@ -227,7 +227,7 @@
         </div>
       </div>
     </header>
-    <section id="shoses">
+    <section style="overflow: hidden;" id="shoses">
       <div
         id="carouselExampleCaptions"
         class="carousel slide"
@@ -346,7 +346,7 @@
         </button>
       </div>
     </section>
-    <section id="catagories2">
+    <section style="overflow: hidden;" id="catagories2">
       <div class="container">
         <div class="card">
           <div class="content">
@@ -377,7 +377,7 @@
         </div>
       </div>
     </section>
-    <section id="shoses-trendings">
+    <section style="overflow: hidden;" id="shoses-trendings">
       <div class="container">
         <div class="shoses-trendings">
           <div class="row">
@@ -405,7 +405,7 @@
         </div>
       </div>
     </section>
-    <section id="latest-shoses">
+    <section style="overflow: hidden;" id="latest-shoses">
       <div class="container">
         <div class="latest-shoses">
           <div class="row text-side">
@@ -432,7 +432,7 @@
         </div>
       </div>
     </section>
-    <section id="swipps" class="vh-100 mt-5 mt-5" style="margin-bottom: 100px">
+    <section style="overflow: hidden;" id="swipps" class="vh-100 mt-5 mt-5" style="margin-bottom: 100px">
       <h5 style="font-size: 67px; font-family: 'Caveat', cursive">
         BEST SELLERS
       </h5>
@@ -469,7 +469,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
-    <footer>
+    <footer style="overflow: hidden;">
       <div class="container">
         <div class="row row-gap-4">
           <div class="col-lg-3 d-flex align-items-center flex-column">
@@ -524,6 +524,7 @@
     </footer>
     <i id="toTop" class="fa-solid fa-arrow-up"></i>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script>
       ScrollReveal({
         reset: true,
@@ -531,33 +532,31 @@
         duration: 2500,
         delay: 400,
       });
-      // ScrollReveal().reveal(".carousel-caption", {
-      //   delay: 500,
-      //   origin: "left",
-      // });
-      ScrollReveal().reveal("#shoses", {
-        delay: 500,
+      ScrollReveal().reveal("#shoses ", {
+        delay: 300,
         origin: "left",
       });
-      ScrollReveal().reveal(".card", {
-        delay: 500,
+      ScrollReveal().reveal(".card ", {
+        delay: 300,
         origin: "left",
       });
       ScrollReveal().reveal(".about-text,.story-text", {
-        delay: 600,
-        origin: "left",
-      });
-      ScrollReveal().reveal(".story-img", {
-        delay: 500,
+        delay: 300,
         origin: "right",
       });
-      ScrollReveal().reveal(".latest-text", {
+      ScrollReveal().reveal(".story-img", {
         delay: 600,
+        origin: "right",
+      });
+      ScrollReveal().reveal(".latest-text  ", {
+        delay: 300,
         origin: "top",
+        interval: 200,
       });
       ScrollReveal().reveal(".latest-img", {
-        delay: 500,
-        origin: "bottom",
+        delay: 300,
+        origin: "left",
+        interval: 200,
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

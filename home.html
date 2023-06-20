@@ -553,40 +553,34 @@
       });
     </script>
     <!-- scrollreveal -->
-    <!-- <script>
+    <script>
       ScrollReveal({
-        reset: true,
+        // reset: true,
         distance: "10px",
         duration: 2500,
         delay: 500,
       });
-      ScrollReveal().reveal(
-        "#banner,.products-title,.extra-img,.fashion-friendly",
-        {
-          delay: 500,
-          origin: "left",
-        }
-      );
-      ScrollReveal().reveal(
-        ".owl-theme,.selling-title,.selling-products  ",
-        {
-          delay: 500,
-          origin: "right",
-        }
-      );
-      ScrollReveal().reveal(
-        ".extra-text,.footer  ",
-        {
-          delay: 700,
-          origin: "bottom",
-        }
-      );
+      ScrollReveal().reveal("#banner,.products-title,.extra-img", {
+        delay: 500,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".owl-theme,.selling-title,.selling-products  ", {
+        delay: 500,
+        origin: "right",
+      });
+      ScrollReveal().reveal(".extra-text,.footer  ", {
+        delay: 700,
+        origin: "bottom",
+      });
       ScrollReveal().reveal(" .trending-item ,.trending-title ", {
         delay: 800,
         origin: "top",
       });
-    </script> -->
-
+      ScrollReveal().reveal(" .fashion-friendly ", {
+        delay: 900,
+        origin: "left",
+      });
+    </script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

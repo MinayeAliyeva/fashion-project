@@ -52,7 +52,7 @@
     </div>
     <header>
       <div class="container">
-        <div class="header kids">
+        <div class="header">
           <h2 class="logo">Shilly</h2>
           <nav>
             <ul class="navUl">
@@ -173,158 +173,6 @@
               </div>
             </div> -->
           </div>
-          <!-- Button trigger modal -->
-          <!-- <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
-          >
-            Launch static backdrop modal
-          </button> -->
-
-          <!-- Modal -->
-          <div
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                    Modal title
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Understood
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-            style="padding: 120px 0"
-          >
-            <div class="modal-dialog modal-lg">
-              <!-- <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Details
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col col-6">
-                  <div class="img">
-                    <img
-                      src="./assets/products-image/2756378620_6_1_1.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col col-6">
-                  <div class="actions">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-eye"></i>
-                  </div>
-                  <div class="actions2">add basket</div>
-                  <div class="text-side">
-                    <h5>LINEN BLEND CROPPED BLAZER</h5>
-                    <i><span> 1299 TL</span></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer"></div>
-          </div> -->
-            </div>
-          </div>
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-            style="padding: 120px 0"
-          >
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Launch static backdrop modal
-            </button>
-
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="staticBackdrop"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                      Modal title
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">...</div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Understood
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="total">
             <div class="total-title">Total:</div>
             <div class="total-price">5$</div>
@@ -334,21 +182,42 @@
         </div>
       </div>
     </header>
-    <section id="hero-section">
+    <section style="overflow: hidden" id="hero-section">
       <div class="container">
         <div class="hero-section">
-          <div class="boy">
+          <div style="flex-direction: column;" class="boy">
             <img src="./assets/kids-img/boy.png" alt="" />
-            <a href=""> Shop Boys</a>
+            <a
+              href=""
+              style="
+                color: white;
+                padding: 10px;
+                text-transform: uppercase;
+                font-family: 'Caveat', cursive;
+                font-size: 34px;
+              "
+            >
+              Shop Boys</a
+            >
           </div>
-          <div class="girl">
+          <div style="flex-direction: column-reverse;" class="girl">
             <img src="./assets/kids-img/girl.png" alt="" />
-            <a href="">Shop Girls</a>
+            <a
+              href=""
+              style="
+                color: white;
+                padding: 10px;
+                text-transform: uppercase;
+                font-family: 'Caveat', cursive;
+                font-size: 34px;
+              "
+              >Shop Girls</a
+            >
           </div>
         </div>
       </div>
     </section>
-    <section id="kids-pruducts">
+    <section style="overflow: hidden" id="kids-pruducts">
       <div class="container">
         <div class="kids-products">
           <div class="row">
@@ -376,7 +245,7 @@
         </div>
       </div>
     </section>
-    <section id="wear-us">
+    <section style="overflow: hidden" id="wear-us">
       <div class="container">
         <div class="wear-us">
           <div class="row vh-100">
@@ -403,7 +272,7 @@
         </div>
       </div>
     </section>
-    <section id="best-sellers-kids">
+    <section style="overflow: hidden" id="best-sellers-kids">
       <div class="container">
         <div class="best-sellers-kids">
           <h3 class="text-center selling-title">Best selling items</h3>
@@ -517,7 +386,7 @@
         </div>
       </div>
     </section>
-    <section id="guys" class="m-5">
+    <section style="overflow: hidden" id="guys" class="m-5">
       <div class="container">
         <div class="guys">
           <video
@@ -533,7 +402,7 @@
         </div>
       </div>
     </section>
-    <section id="summer-collaction">
+    <section style="overflow: hidden" id="summer-collaction">
       <div class="container">
         <div class="summer-collaction">
           <div class="row row-gap-5">
@@ -614,7 +483,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer style="overflow: hidden">
       <div class="container">
         <div class="row row-gap-4">
           <div class="col-lg-3 d-flex align-items-center flex-column">
@@ -668,35 +537,37 @@
       </div>
     </footer>
     <i id="toTop" class="fa-solid fa-arrow-up"></i>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
     <script>
       ScrollReveal({
-        reset: true,
-        distance: "10px",
+        reset: false,
+        distance: "150px",
         duration: 2500,
-        delay: 500,
+        delay: 700,
       });
 
       ScrollReveal().reveal(
         ".girl img,.content,.text,.button,.selling-title,.selling-products",
         {
-          delay: 500,
+          delay: 1000,
           origin: "right",
         }
       );
-      ScrollReveal().reveal(".content", {
-        delay: 500,
-        origin: "right",
-      });
-      ScrollReveal().reveal(".card ", {
-        delay: 500,
-        origin: "top",
-        interval: 200,
-      });
-      ScrollReveal().reveal(".card,.heading,.boy img ", {
+      ScrollReveal().reveal(".card,.boy img,.guys ,.heading", {
         delay: 500,
         origin: "left",
-        interval: 200,
+      });
+      ScrollReveal().reveal(".content ,.accardion", {
+        delay: 500,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".summer-collaction", {
+        delay: 500,
+        origin: "top",
       });
     </script>
     <script
