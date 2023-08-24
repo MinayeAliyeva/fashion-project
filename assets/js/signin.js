@@ -2,7 +2,7 @@ let form = document.querySelector("form");
 let allInputs = document.querySelectorAll(".form-control");
 let imgInput = document.querySelector("#imgInput");
 const USERS_URL = "http://localhost:3000/users";
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   localStorage.setItem("isSign", JSON.stringify(true));
   let userObj = {
@@ -12,11 +12,21 @@ form.addEventListener("submit", (e) => {
     password: allInputs[3].value,
     isAdmin: false,
     img: base64,
-  
   };
   localStorage.setItem("signName", userObj.userName);
-  axios.post(`${USERS_URL}`, userObj);
-  window.location = "login.html";
+  let res = await axios(`${USERS_URL}`);
+  let data = await res.data;
+  console.log(data);
+  let users = data.find(
+    (obj) =>
+      obj.userName === allInputs[0].value && obj.password === allInputs[3].value
+  );
+  if (users) {
+    alert("This user alredy exsits!!!");
+  } else {
+    axios.post(`${USERS_URL}`, userObj);
+    window.location = "login.html";
+  }
 });
 //
 let base64;
@@ -50,13 +60,11 @@ meniIcon.addEventListener("click", () => {
     : (meniIcon.classList = "fa-solid fa-bars");
 });
 
-
-
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let res = await axios(`${USERS_URL}`);
   allUsers = res.data;
- let admin= allInputs.forEach((obj) => {
+  let admin = allInputs.forEach((obj) => {
     return obj.userName === allInputs[0].value;
   });
   if (admin) {

@@ -24,13 +24,17 @@ async function fillMesage() {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star"></i>
                   <i class="fa-regular fa-star"></i>
+        
                 </div>
               </div>
               <div class="comments">
                 <p>
             ${obj.message}
                 </p>
+
               </div>
+              </br>
+              <i onclick=delMes(${obj.id}) style="color:red" class="fa-solid fa-trash"></i>
             </div>
           </div>
     `;
@@ -38,6 +42,10 @@ async function fillMesage() {
 }
 fillMesage();
 
+///
+async function delMes(id) {
+  await axios.delete(`${MESSAG_URL}/${id}`);
+}
 //
 const MESSAGE_URL = "http://localhost:3000/message";
 let counter2 = document.querySelector(".counter2");
@@ -49,4 +57,4 @@ async function notification() {
   count2 = data;
   counter2.innerHTML = count2.length;
 }
-notification()
+notification();

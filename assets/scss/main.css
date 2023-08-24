@@ -1642,7 +1642,7 @@ footer .row ul .social-links a:hover {
 
 #about-us {
   height: 100vh;
-  background-image: url(../../../assets/about-images/bg.jpg);
+  background-image: url(../../assets/about-images/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2199,7 +2199,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
 
 #makeup {
   height: 100vh;
-  background-image: url(../../../assets/makup-img/bg1.jpg);
+  background-image: url(../../assets/makup-img/bg1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2479,7 +2479,7 @@ header .head nav .navUl .dropdown .dropdown-menu {
 
 #makeup {
   height: 100vh;
-  background-image: url(../../../assets/makup-img/bg1.jpg);
+  background-image: url(../../assets/makup-img/bg1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
